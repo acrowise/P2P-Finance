@@ -1,0 +1,105 @@
+@charset "UTF-8";
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, h3 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, h2, h3 {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+body {
+  background-color: #fff;
+}
+
+.mui-content {
+  background-color: #fff;
+  color: #2c2c2c;
+  /*出借介绍start*/
+  /*出借介绍end*/
+  /*风控措施start*/
+  /*风控措施end*/
+}
+.mui-content .investintro {
+  font-size: 14px;
+  display: inline-block;
+  padding: 16px 15px;
+  line-height: 25px;
+  width: 100% !important;
+  white-space: normal !important;
+  word-break: break-all !important;
+}
+.mui-content .investintro table {
+  width: 100% !important;
+}
+.mui-content .investintro img {
+  max-width: 100% !important;
+}
+.mui-content .investintro div {
+  width: 100%;
+  word-break: break-word !important;
+  word-break: break-all !important;
+}
+.mui-content .investintro a {
+  color: #2c2c2c;
+  display: inline-block;
+}
+.mui-content .measures {
+  padding: 16px 15px;
+  width: 100%;
+  word-wrap: break-word !important;
+  word-break: break-all !important;
+}
+.mui-content .measures h3, .mui-content .measures p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #2c2c2c;
+  word-wrap: break-word !important;
+  word-break: break-all !important;
+}
+.mui-content .measures h3 {
+  font-weight: bold;
+}
+.mui-content .measures table {
+  width: 100% !important;
+}
+.mui-content .measures img {
+  max-width: 100% !important;
+}
+.mui-content .measures div {
+  width: 100% !important;
+  word-wrap: break-word !important;
+  word-break: break-all !important;
+}
+.mui-content .measures a {
+  color: #2c2c2c;
+  display: inline-block !important;
+}
+
+/*# sourceMappingURL=pubSection.css.map */

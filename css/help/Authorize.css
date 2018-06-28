@@ -1,0 +1,31 @@
+.mui-content {
+  padding:  20px 15px 30px;
+  background-color:#fff;
+}
+.mui-content h1 {
+  margin: 0 0 10px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.mui-content h2 {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.mui-content p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 23px;
+  color: #000000;
+  text-align: justify;
+}
+.mui-content p span {
+  font-weight: bold;
+}
+.textIndent{text-indent: 2em;}
+
+.textCenter{text-align: center !important;}
+/*# sourceMappingURL=Authorize.css.map */

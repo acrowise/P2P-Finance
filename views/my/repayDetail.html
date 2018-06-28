@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>还款日历</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/repayDetail.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-06-14
+        	描述：还款详情
+        -->
+       <div id="vue-app">
+       	 <nav class="mui-bar mui-bar-tab " v-show="navBar" >
+	        <button class="mui-btn mui-btn-block  mui-btn-rightbottom"  @tap="btnRefund(1)" v-if="model.IsReturn" :class="{'mui-btn-primary':!model.IsAll}">还当期</button>
+	        <button class="mui-btn  mui-btn-block mui-btn-rightbottom mui-btn-primary" @tap="btnRefund(2)"  v-if="model.IsAll">全部还清</button>
+		</nav>
+		<div class="mui-content calendardt " :class="{'ios-scroll-bounce':isIos,pdstyle:navBar}">
+			<div class="item-box" @tap="investDetail(model.LoanId,model.LoanType,model.LoanName)">
+				<div class="title-box title-box2">
+							<h2>
+								<div class="mui-input-row mui-checkbox mui-left txtoption mui-hidden" >								
+									<label for="all"></label>
+								    <input  name="item"  type="checkbox"/>
+								</div> 
+								{{model.LoanName}}
+							</h2>
+						</div>
+						<div class="main">
+							<p>
+								<span>借款本金：<em>{{model.LoanAmount | format}}</em></span> 
+								<span>待还总额：<em>{{model.DaiHuanTotal | format}}</em></span>
+							</p>
+							<p>
+								<span>贷款期数：<em>{{model.Period}}个月</em></span> 
+								<span>借款日期：<em>{{model.LoanDate | getDate}}</em></span>
+							</p>
+							<p>
+								<span>最后还款日期：<em>{{model.NextRefundDate | getDate}}</em></span> 
+								<span>提前还款手续费：<em>{{model.TiQianFee | format}}</em></span>
+							</p>
+							<p>
+								<span>罚息：<em>{{model.FaXi | format}}</em></span> 
+							</p>
+						</div>
+			</div>
+			<div class="calendar-content calendar-content2">
+				<ul >
+					<!--还款状态：1-待还 2-还款中 3-已还 4-提前还款 5-逾期 6-逾期还款 7-垫付 -->
+					<li v-for="item in model.RefundDetailList"  :class="{ystatus:item.State!=1 && item.State!=5 && item.State!=7,wstatus:item.State==1 || item.State==5 || item.State==7}" @tap="investDetail(model.LoanId,model.LoanType,model.LoanName)">
+						<div class="title-box title-box2">
+							<h2>
+								<div class="mui-input-row mui-checkbox mui-left txtoption mui-hidden" >								
+									<label for="all"></label>
+								    <input  name="item"  type="checkbox" value=""/>
+								</div> 
+								第{{item.Period}}期
+							</h2>
+						</div>
+						<div class="main">
+							<p>
+								<span>待还总额：<em>{{item.DaiHuan | format}}</em></span> 
+								<span>状态：<em>{{item.State | getState}}</em></span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>			
+		</div>
+		<div id="repayopt" class="mui-popover mui-popover-action mui-popover-bottom repayalert">
+			<h5>{{refundTitle}} <a href="#repayopt" class="mui-icon iconfont icon-guanbi"></a></h5>
+			<div class="moneyinfo">
+				<p>{{refundAmt | format}}</p>
+				<span>还款金额</span>
+			</div>
+			<div class="balance">
+				<span>账户余额：<em>{{availBal | format}}</em></span>					
+				<a @tap="href('recharge.html','recharge.html','充值')">去充值</a>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block"  @tap="btnSure">确定</button>	
+			</div>				
+		</div>
+       </div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/my/repayDetail.js" ></script>
+	</body>
+</html>

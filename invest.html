@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>出借</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/invest/investment.css" />
+		<style id="stylesheet"></style>
+	</head>
+	<body>		
+		<div id="vue-app">
+		<header class="mui-bar mui-bar-nav main-index nav">
+				<div  class="mui-segmented-control investtag">
+					<!--<a class="mui-control-item"  :class="{'mui-active':activeTap==0,'mui-disabled':isRefresh}" @tap="tapEvent(0)">年月账户</a>-->
+					<a class="mui-control-item"  :class="{'mui-active':activeTap==1,'mui-disabled':isRefresh}" @tap="tapEvent(1)">房易融</a>
+					<a class="mui-control-item "  :class="{'mui-active':activeTap==2,'mui-disabled':isRefresh}" @tap="tapEvent(2)">债权转让</a>
+				</div>
+		</header>	
+			<div class=" mui-scroll-wrapper mui-content investment" id="pullrefresh" >
+		    <div class="mui-scroll">			
+		    	<div class="banner" v-show="isLogin" @tap="btnRisk">
+		    		{{riskTips}}
+		        </div>
+				<div  class="mui-control-content content1" :class="{'mui-active':activeTap==0}">
+					<ul class="mui-table-view pubinvest">
+						<li class="mui-table-view-cell" v-for="obj in years.list" @tap="href(0,obj.LoanType,obj.LoanType==2?'月账户':'年账户')">
+							<div class="publist">
+								<div class="title-box">
+									<h2>{{obj.LoanType==2?"月账户":"年账户"}}</h2>
+								</div>
+								<div class="main" :class="{unenable:obj.SurplusAmount==0}">
+									<div class="item">
+										<h3 v-html="yearsRate(obj.MinRate,obj.MaxRate,obj.RaiseRate,obj.LoanType)"></h3>
+										<span>年利率</span>
+									</div>
+									<div class="item">
+										<p>{{obj.MinLoanTerm | yearsTerm(obj.LoanTermUnit,obj.MaxLoanTerm)}}</p>
+										<span>锁定转让期</span>
+									</div>
+									<div class="item">
+										<p>{{obj.SurplusAmount | getAmount}}</p>
+										<span>可投金额</span>
+									</div>
+								</div>
+							</div>							
+						</li>
+					</ul>											
+				</div>
+				<div  class="mui-control-content content2" :class="{'mui-active':activeTap==1}">
+					<ul class="mui-table-view pubinvest">
+						<li class="mui-table-view-cell" v-for="model in loan.list" @tap="href(model.Id,model.LoanType,model.Name)">
+							<div class="publist">
+								<div class="title-box">
+									<h2>{{model.Name}}</h2>
+									<div class="btn-box">
+										<button class="mui-btn mui-btn-warning mui-btn-outlined">{{model.RiskLevel}}</button>
+										<button class="mui-btn mui-btn-warning mui-btn-outlined">{{model.RefundWays | refundWays}}</button>
+							            <!-- 6-可加入 7-撤标中 8-流标 9-已结束 10-放款中 11-还款中 12-还款完成-->
+							            <button class="mui-btn" :class="{'mui-btn-grey':model.State!=6,'mui-btn-warning':model.State==6}">{{model.State | statusDesc}}</button>
+									</div>
+								</div>
+								<div class="main" :class="{unenable:model.State!=6}">
+									<div class="item">
+										<h3 v-html="getRate(model.Rate,model.RaiseRate)"></h3>
+										<span>年利率</span>
+									</div>
+									<div class="item">
+										<p>{{model.LoanTerm | getTerm(model.LoanTermUnit)}}</p>
+										<span>借款期限</span>
+									</div>
+									<div class="item">
+										<p>{{model.SurplusAmount}}</p>
+										<span>可投金额</span>
+									</div>
+								</div>
+							</div>							
+						</li>
+					</ul>						
+				</div>
+				<div  class="mui-control-content content3" :class="{'mui-active':activeTap==2}">
+					<ul class="mui-table-view pubinvest">
+						<li class="mui-table-view-cell" v-for="entity in transfer.list" @tap="href(entity.Id,4,entity.Name)">
+							<div class="publist">
+								<div class="title-box">
+									<h2>{{entity.Name}}</h2>
+									<div class="btn-box">
+										<button class="mui-btn mui-btn-warning mui-btn-outlined">{{entity.RiskLevel}}</button>
+										<button class="mui-btn mui-btn-warning mui-btn-outlined">{{entity.RefundWays | refundWays}}</button>
+							            <!--状态：1-转让中 2-取消 3-成功 4-失败-->
+							            <button class="mui-btn" :class="{'mui-btn-grey':entity.State!=1,'mui-btn-warning':entity.State==1}">{{entity.State | transferDesc}}</button>
+									</div>
+								</div>
+								<div class="main" :class="{unenable:entity.State!=1}">
+									<div class="item">
+										<h3 v-html="getRate(entity.Rate,entity.RaiseRate)"></h3>
+										<span>年利率</span>
+									</div>
+									<div class="item">
+										<p>{{entity.SurplusPeriod | getTerm(2)}}</p>
+										<span>剩余期数</span>
+									</div>
+									<div class="item">
+										<p>{{entity.SurplusAmount}}</p>
+										<span>可投金额</span>
+									</div>
+								</div>
+							</div>							
+						</li>
+					</ul>						
+				</div>
+			</div>
+		</div>
+		</div>
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/vue2.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/r.immersed.js" ></script>
+		<script type="text/javascript" src="js/invest/invest.js" ></script>
+	</body>
+</html>

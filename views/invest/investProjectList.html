@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>标的列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/invest/investment.css" />
+	</head>
+	<body>
+			<!--
+		    	作者：dingyong
+		    	时间：2018-01-18
+		    	描述：标的列表
+		    -->	
+		<div class="mui-scroll-wrapper mui-content investment projectList" id="pullrefresh">		
+			 <div class="mui-scroll">	
+			  <ul class="mui-table-view pubinvest" id="vue-app" >
+				<li class="mui-table-view-cell" v-for="model in loanList" @tap="href(model.Id,model.LoanType,model.Name)">
+					<div class="publist">
+						<div class="title-box">
+							<h2>{{model.Name}}</h2>
+							<div class="btn-box">
+								<button class="mui-btn mui-btn-warning mui-btn-outlined">{{model.RefundWays | refundWays}}</button>
+								<button class="mui-btn mui-btn-warning mui-btn-outlined" v-if="type!=1 && model.LoanType==4">{{type | transfer}}</button>
+							   <!--状态： 6-可加入 7-撤标中 8-流标 9-已结束 10-放款中 11-还款中 12-还款完成-->
+							   <button class="mui-btn" :class="{'mui-btn-grey':model.State!=6,'mui-btn-warning':model.State==6}">{{model.State | loanState}}</button>
+							</div>
+						</div>
+						<div class="main" :class="{unenable:model.State!=6}">
+							<div class="item">
+								<h3 v-html="getRate(model.MinRate,model.RaiseRate)"></h3>
+								<span>年利率</span>
+							</div>
+							<div class="item">
+								<p>{{model.LoanTerm | getTerm(model.LoanTermUnit)}}</p>
+								<span>锁定转让期</span>
+							</div>
+							<div class="item">
+								<p>{{model.SurplusAmount}}</p>
+								<span>可投金额</span>
+							</div>
+						</div>
+					</div>							
+				</li>
+			</ul>
+          </div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/invest/investProjectList.js" ></script>
+	</body>
+</html>

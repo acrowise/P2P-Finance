@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>出借记录</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../css/assets/assetsRecord.css" />
+	</head>
+	<body>
+		<!--
+        	作者：dingyong 
+        	时间：2018-01-12
+        	描述：用户出借记录 (月账户、年账户、房易融)
+        -->
+         <div class=" mui-scroll-wrapper mui-content assetsrecord" id="pullrefresh" >
+		    <div class="mui-scroll">
+			<!--年月账户-->
+			<ul class="mui-table-view" id="vue-app">
+				<li class="mui-table-view-cell publist publist1"  v-for="item in tenderList"  :class="{publist2:type!=1 && item.KeCuQiShu>0}">
+					<div @tap="href({id:item.LoanId,state:item.LoanStatus,type:item.LoanType,name:item.Name,transferId:item.TransferId,detailId:item.TenderDetailId})">							
+						<div class="title-box">
+							<h2>{{item.Name}}</h2>
+							<div class="btn-box">
+								<button class="mui-btn mui-btn-warning mui-btn-outlined">{{item.RefundWays}}</button>
+								<!--<button class="mui-btn mui-btn-warning mui-btn-outlined" v-if="type!=1 && item.LoanType==4">{{type | transfer}}</button>-->
+							   <!--状态： 6-可加入 7-撤标中 8-流标 9-已结束 10-放款中 11-还款中 12-还款完成-->
+							   <button class="mui-btn" :class="{'mui-btn-grey':item.LoanStatus!=6,'mui-btn-warning':item.LoanStatus==6}">{{item.LoanStatusDesc}}</button>
+							</div>
+						</div>
+						<div class="content">
+							<p class="specline"><span><em>年化利率：</em>{{item.Rate.toFixed(1)}}%</span><span><em>预期收益：</em>{{item.YuQiTotalIncome | format}}</span></p>
+							<p class="specline"><span><em>出借金额：</em>{{item.Amount | format}}</span><span><em>出借期限：</em>{{item.Periods}}个月</span></p>
+							<p>投标时间：{{item.InsertTime | getDate(1)}}</p>
+							<p>到期日期：{{item.DueDate | getDate(2)}}</p>
+						</div>
+					</div>
+					<!--<ul class="mui-table-view specul" v-if="type!=1 && item.KeCuQiShu>0" @tap="btnRenewal(item.TenderDetailId,item.KeCuQiShu)">
+						<li class="mui-table-view-cell mui-text-center specli">
+							续期
+						</li>
+					</ul>-->
+				</li>
+			</ul>
+		</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="../../js/assets/assetsRecord.js" ></script>
+	</body>
+</html>

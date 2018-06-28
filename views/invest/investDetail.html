@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>出借详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/invest/investDetail.css" />
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-11
+        	描述：出借详情
+        -->
+		 <div id="vue-app" v-if="show">
+			<div class="mui-bar mui-bar-tab investopt">
+				<p>项目可投金额:<span>{{getAmount(model.SurplusAmount)}}</span></p>
+				<button type="button" class="mui-btn mui-btn-block mui-btn-primary" :class="{'mui-btn-grey':grey}" :disabled="grey"  @tap="btnEvent">{{btnText}}</button>
+			</div>
+			<div class="mui-content investDetail"  :class="{'ios-scroll-bounce':isIos}">
+				<div class="detailhead">
+					<img src="../../images/mycenter.png"  class="img"/>
+					<div class="wave">
+						<svg xmlns="http://www.w3.org/2000/svg"  
+							 xmlns:xlink="http://www.w3.org/1999/xlink" 
+							 width="100%" 
+							 height="150"
+	                         >     
+							<g fill="rgba(255,255,255,0.03)">       
+							<path d="M 0 70 Q 75 39, 150 70 T 300 70 T 450 70 T 600 70 T 750 70  T 900 70  T 1050 70 T 1200 70 T 1350 70 V 150 H 0 V 0"></path>         
+							<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-300" dur="8s" repeatCount="indefinite"></animateTransform>    
+							</g>    
+							<g fill="rgba(255,255,255,0.045)">        
+							<path d="M 0 70 Q 87.5 47, 175 70 T 350 70 T 525 70 T 700 70 T 875 70 T 1050 70 T 1225 70 T 1400 70  T 1575 70  V 150 H 0 V 0"></path>       
+							<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-350" dur="16s" repeatCount="indefinite"></animateTransform>    
+							</g>    
+							<g fill="rgba(255,255,255,0.057)" transform="translate(-903.868 0)">        
+							<path d="M 0 70 Q 135 36, 270 70 T 540 70 T 810 70 T 1080 70 T 1350 70 T 1620 70  V 150 H 0 V 0" transform="translate(-38.232284367796474, 0)"></path>        
+							<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-540" dur="10s" repeatCount="indefinite"></animateTransform>    
+							</g>
+						</svg>
+					</div>
+					<div class="showhead">
+						<h2 v-html="getRate()"></h2>
+						<p>年利率</p>
+						<div class="schedule-bar schedule-bar2"><i class="schedule-current" :style="{width:progress+ '%'}"></i></div>
+						<div class="detailcontent">
+							<!--月账户-->
+							<div class="detailitem">
+								<p>{{type==4?model.UserName:getAmount(model.MinInvestAmount )}}</p>
+								<p>{{type==4?"债转人":"起投金额"}}</p>
+							</div>
+							<div class="detailitem">
+								<p>{{getTerm()}}</p>
+								<p>{{termNoun()}}</p>
+							</div>
+							<div class="detailitem">
+								<p>{{investedAmt()}}</p>
+								<p>{{type==4?"转让金额":"借款金额"}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--债转start-->
+				<ul class="mui-table-view detailist" v-if="type==4">
+					<li class="mui-table-view-cell">
+						<a>
+							<span>剩余本金：</span>		
+					    	<i class="spaci">{{ getAmount(model.SurplusBenJin)}}</i>
+						</a>				        
+					</li>
+					<li class="mui-table-view-cell">
+						<a>
+							<span>最近还款日：</span>		
+					    	<i class="spaci">{{model.RefundTime | getDate}}</i>
+						</a>				        
+					</li>
+					<li class="mui-table-view-cell">
+						<a>
+							<span>剩余募集时间：</span>		
+					    	<i class="spaci">{{surplusTime}}</i>
+						</a>			        
+					</li>
+				</ul>
+				<!--债转end-->
+				<ul class="mui-table-view detailist">
+					<li class="mui-table-view-cell">
+						<a>
+					        <span>起息日期</span>		
+						    <i>{{InterestTime()}}</i>
+					    </a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a>
+					        <span>还款日期</span>		
+						    <i>计划还款的日期</i>
+					    </a>
+					</li>
+					<!--房易融 多这个-->
+					<li class="mui-table-view-cell" v-if="type==1 || (id && type!=4)">
+						<a>
+					        <span>剩余时间</span>		
+						    <i class="spaci">{{surplusTime}}</i>
+					    </a>
+					</li>
+				</ul>
+				<div class="monthimg" v-if="type==2">
+					<img class="mui-img" src="../../images/monthRate.png" />
+				</div>
+				<ul class="mui-table-view detailist2">
+					<li class="mui-table-view-cell" @tap="href('financeInfo.html','融资信息')" v-if="id">
+						<a class="mui-navigate-right">
+					       <span>融资信息</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="href('houseInfo.html','房产信息')"  v-if="id">
+						<a class="mui-navigate-right">
+					       <span>房产信息</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="href('loanManInfo.html','借款人信息')" v-if="id">
+						<a class="mui-navigate-right">
+					       <span>借款人信息</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="href('riskAssesment.html','风险评估')" v-if="id">
+						<a class="mui-navigate-right">
+					       <span>风险评估</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="href('loanProjectFollow.html','借款项目跟进')" v-if="id">
+						<a class="mui-navigate-right">
+					       <span>借款项目跟进</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="href('investIntro.html','项目介绍')" v-if="!id">
+						<a class="mui-navigate-right">
+					       <span>项目介绍</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="href('measures.html','风控措施')" >
+						<a class="mui-navigate-right">
+					       <span>风控措施</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" v-if="(type==2||type==3)&&!id"  @tap="href('investProjectList.html','标的列表')" >
+						<a class="mui-navigate-right">
+					       <span>标的列表</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell"  @tap="href('investRecord.html','出借记录')" >
+						<a class="mui-navigate-right">
+					       <span>出借记录</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell"  @tap="href('refundRecord.html','还款计划')" v-if="id">
+						<a class="mui-navigate-right">
+					       <span>还款计划</span>				       
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/invest/investDetail.js" ></script>
+	</body>
+</html>

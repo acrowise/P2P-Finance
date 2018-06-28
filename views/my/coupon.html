@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的卡券</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/coupon.css">
+	</head>
+	<body>
+		<!--
+        	作者：hxg
+        	时间：2018-01-23
+        	描述：我的卡券
+        -->	
+       <div id="vue-app">
+			<ul class="menu">
+				<li @tap="quanType">
+					<div class="cen">
+						<span>{{name}}</span>
+						<i class="iconfont icon-xia-copy"></i>
+					</div>
+				</li>
+				<li @tap="quanStatus">
+					<div class="cen">
+						<span>{{stateName}}</span>
+						<i class="iconfont icon-xia-copy"></i>
+					</div>
+				</li>
+			</ul>
+		<div class="mui-conent mui-scroll-wrapper coupon" id="pullrefresh">		
+			<div class="mui-scroll list-box">
+				<ul class="list">
+					<li class="coupon-1" v-for="item in hongbao" :class="{'hb-normal':item.State==3,unusual:item.State!=3}">
+						<div class="icon-box">
+							<div class="money">
+								<span>{{item.Amount | getAmount}}</span>
+							</div>
+						</div>
+						<div class="content">
+							<div class="title">
+								<h2>{{item.Name}}</h2>
+							</div>
+							<div class="text">
+								<p>最低出借金额：{{item.MinInvestAmount}}</p>
+								<p>最少出借期限：{{item.MinInvestPeriod}}个月以上</p>
+								<p>过期时间：{{item.ValidEnd}}</p>
+							</div>
+						</div>
+						<div class="iconfont" v-if="item.State!=3" :class="{'icon-yishiyong':item.State==4,'icon-yiguoqi1':item.State==5}"></div>
+					</li>
+		
+					<li class="coupon-2" v-for="model in coupon" :class="{unusual:model.State!=3}">
+						<div class="interest">
+							<p>{{model.Amount.toFixed(1)}}<i>%</i></p>
+							<span>We券</span>
+						</div>
+						<div class="content">
+							<h2>{{model.Name}}</h2>
+							<div class="text">
+								<p>最低出借金额：{{model.MinInvestAmount}}</p>
+								<p>出借奖励期数：{{model.MinInvestPeriod}}期</p>
+								<p>过期时间：{{model.ValidEnd}}</p>
+							</div>
+						</div>
+						<div class="iconfont" v-if="model.State!=3" :class="{'icon-yishiyong':model.State==4,'icon-yiguoqi1':model.State==5}"></div>
+					</li>
+				</ul>		
+			</div>
+		</div>
+       </div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+	    <script type="text/javascript" src="../../js/my/coupon.js" ></script>
+	</body>
+</html>

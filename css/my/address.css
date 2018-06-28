@@ -1,0 +1,210 @@
+@charset "UTF-8";
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+input, select, textarea {
+  font-size: 16px;
+  color: #2c2c2c;
+}
+
+ul, p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-checkbox input[type=checkbox][disabled]:before,
+.mui-radio input[type=radio][disabled]:before {
+  opacity: 1 !important;
+}
+
+.mui-checkbox input[type=checkbox][disabled]:checked:before {
+  opacity: 1;
+}
+
+input[type=checkbox][disabled=true]:before {
+  font-family: Muiicons;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  color: #aaa;
+  border-radius: 0;
+  background: 0 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type=checkbox][disabled=true]:checked:before {
+  font-family: Muiicons;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  color: #1E81D2;
+  border-radius: 0;
+  background: 0 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*地址管理start*/
+.addressopt-wrapper {
+  color: #2c2c2c;
+  padding-bottom: 50px;
+}
+.addressopt-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.addressopt-wrapper ul > li {
+  margin-bottom: 10px;
+  background: #FFFFFF;
+}
+.addressopt-wrapper ul > li .content {
+  position: relative;
+  padding: 15px;
+}
+.addressopt-wrapper ul > li .content:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.addressopt-wrapper ul > li .content .user {
+  position: relative;
+  margin-bottom: 9px;
+  color: #394659;
+  font-size: 0;
+  line-height: 1;
+}
+.addressopt-wrapper ul > li .content .user > span {
+  display: inline-block;
+  font-size: 16px;
+}
+.addressopt-wrapper ul > li .content .user > span.name {
+  margin-right: 20px;
+}
+.addressopt-wrapper ul > li .content .user > span.cdefault {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #1e82d2;
+}
+.addressopt-wrapper ul > li .content > p {
+  line-height: 22px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: #2c2c2c;
+}
+.addressopt-wrapper ul > li .operate {
+  padding: 0 15px;
+  height: 39px;
+  line-height: 39px;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addressopt-wrapper ul > li .operate > div {
+  display: inline-block;
+}
+.addressopt-wrapper ul > li .operate > .isdefault {
+  display: inline-block;
+  height: 40px;
+  font-size: 15px;
+}
+.addressopt-wrapper ul > li .operate > .isdefault label {
+  padding-left: 32px;
+  padding-right: 0px;
+  font-size: 15px;
+}
+.addressopt-wrapper ul > li .operate > .isdefault input[type="checkbox"] {
+  left: 0;
+  top: 8px;
+}
+.addressopt-wrapper ul > li .operate > .isdefault input[type="checkbox"]:before {
+  font-size: 22px;
+}
+.addressopt-wrapper ul > li .operate .optionadd > a {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 15px;
+  line-height: 39px;
+  color: #2c2c2c;
+}
+.addressopt-wrapper ul > li .operate .optionadd > a:active {
+  opacity: .5;
+}
+.addressopt-wrapper ul > li .operate .optionadd > a.edit {
+  margin-right: 20px;
+}
+.addressopt-wrapper ul > li .operate .optionadd > a i {
+  vertical-align: middle;
+  font-size: 16px;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.addressopt-wrapper ul > li .operate .optionadd > a span {
+  display: inline-block;
+  height: 39px;
+  line-height: 39px;
+  vertical-align: bottom;
+}
+
+.addressoptbtn {
+  position: fixed;
+  bottom: 0;
+  height: 49px;
+  line-height: 49px;
+  width: 100%;
+  background-color: #1e82d2;
+  text-align: center;
+}
+.addressoptbtn .mui-btn-bottom {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  padding: 14px 0;
+}
+.addressoptbtn .mui-btn-bottom:before {
+  border: 0;
+  border-radius: 0;
+}
+.addressoptbtn .mui-btn-bottom.mui-btn:enabled:active {
+  border-radius: 0px;
+}
+
+/*地址管理end*/
+
+/*# sourceMappingURL=address.css.map */

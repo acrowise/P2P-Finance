@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>短信消息设置</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/my.css" />
+	</head>
+	<body >
+		<!--
+        	作者：dingyong
+        	时间：2018-03-10
+        	描述：短信消息设置
+        -->
+		<div class="mui-content account pub" id="vue-app">
+			<ul class="mui-table-view ul1 push"> 
+				<li class="mui-table-view-cell">
+					<a>
+				        <span>短信通知总开关</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'SMSNotice')" :class="{'mui-active':model.SMSNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view ul1 push">
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>新标短信通知</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'LoanSMS')" :class="{'mui-active':model.LoanSMS}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>回款短信通知</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'ReceiptSMS')" :class="{'mui-active':model.ReceiptSMS}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+			 <!--<li class="mui-table-view-cell" > 
+					<a>
+				        <span>自动投标短信通知</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'AutoTenderSMS')" :class="{'mui-active':model.AutoTenderSMS}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>-->
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>还款短信通知</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'RefundSMS')" :class="{'mui-active':model.RefundSMS}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>提现短信通知</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'WithdrawSMS')" :class="{'mui-active':model.WithdrawSMS}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a>
+				        <span>优惠券短信通知</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'CouponSMS')" :class="{'mui-active':model.CouponSMS}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>资讯短信通知</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="btnSwitch($event,'NewsSMS')" :class="{'mui-active':model.NewsSMS}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>		
+        <script type="text/javascript" src="../../js/help/pushSms.js" ></script>		
+	</body>
+</html>

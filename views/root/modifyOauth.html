@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/root/authLogin.css" />
+</head>
+<body>
+  <!--
+  	作者：dingyong
+  	时间：2018-01-08
+  	描述：更换绑定
+  -->
+  <div class="mui-content" id="vue-app">
+  	<div class="login">
+		<div class="line">
+			<div class="logo">
+				<img src="../../images/my-logo.png" :src="pic" class="logo_img"/>
+			</div>
+		    <div class="nickname" >{{txtName}}</div> 
+		    <div class="msg2" >{{loginWay}}</div>
+		</div>
+		<div class="login_btn">
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-block"  @tap="btnChange">确认更换</button>
+		</div>
+		<div class="login_btn">
+			<button type="button" class="mui-btn  mui-btn-block" @tap="btnUnChange">保持原有绑定</button>
+		</div>
+	</div>
+ </div>
+ <script type="text/javascript" src="../../js/mui.min.js" ></script>
+ <script type="text/javascript" src="../../js/common.js" ></script>
+ <script type="text/javascript" src="../../js/vue2.min.js" ></script>
+ <script type="text/javascript" src="../../js/root/modifyOauth.js" ></script>
+</body>
+</html>

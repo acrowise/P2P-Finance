@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>充值</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/recharge.css">
+	</head>
+	<body>
+		<!--
+        	作者：hxg
+        	时间：2018-01-19
+        	描述：充值
+        -->
+		<div class="mui-content recharge" id="vue-app" :class="{'ios-scroll-bounce':isIos}">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a>
+				        <label>账户余额</label>		
+					    <em>{{amount | getAmount}}</em>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a>
+				        <label for="reacharge">充值金额</label>	
+				        <input class="inputTxt" v-model="wAmount"  type="text" placeholder="请输入充值金额"/>
+					</a>
+				</li>
+			</ul>
+			<div class="choose mui-clearfix mui-hidden">
+				<span>充值类型</span>	
+				<div class="mui-input-row mui-radio mui-left ">
+					<label>网银充值</label>
+					<input name="recharge" value="3"  v-model="kind" type="radio"/>
+				</div>
+				<div class="mui-input-row mui-radio mui-left">
+					<label>快捷充值</label>
+					<input name="recharge" value="1"  v-model="kind" type="radio"/>
+				</div>
+			</div>
+			<div class="czbtn">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="btnCommit">充值</button>
+			</div>
+			<div class="tip">
+				<h5>温馨提示</h5>
+				<p>
+					1.您使用手机银行进行充值可能会受到不同银行的限制。如需大额充值建议登录前海领投官网进行操作。
+				</p>
+				<p>
+					2.目前绑定快捷银行卡中，不支持快捷充值的银行包括招商银行、农业银行、民生银行、华夏银行。
+				</p>
+			</div>
+		</div>			
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/my/recharge.js"></script>		
+	</body>
+</html>

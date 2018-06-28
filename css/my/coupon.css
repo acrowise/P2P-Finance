@@ -1,0 +1,267 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, h2 {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.menu {
+  background: #FFFFFF;
+  display: flex;
+  position: relative;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.menu:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.menu li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+.menu li::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  right: -1px;
+  width: 1px;
+  border-left: 1px solid #e5e5e5;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .menu li::after {
+    transform: scaleX(0.7);
+    -webkit-transform: scaleX(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .menu li::after {
+    transform: scaleX(0.5);
+    -webkit-transform: scaleX(0.5);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .menu li::after {
+    -webkit-transform: scaleX(0.35);
+    transform: scaleX(0.35);
+  }
+}
+.menu li:last-child::after {
+  display: none;
+}
+.menu li .cen {
+  height: 44px;
+  line-height: 44px;
+}
+.menu li .cen span {
+  margin-right: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+.menu li .cen i {
+  color: #666666;
+  font-size: 10px;
+}
+
+.coupon {
+  padding-top: 54px;
+}
+.coupon .list-box .list {
+  padding: 0 10px;
+}
+.coupon .list-box .list > li {
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  border-radius: 6px;
+  font-size: 0;
+}
+.coupon .list-box .list > li.coupon-1 {
+  padding: 0 15px;
+  background: #FFFFFF;
+}
+.coupon .list-box .list > li.coupon-1 .icon-box {
+  position: relative;
+  width: 92px;
+  flex: 0 0 92px;
+  background: url("../../images/coupon-hb.png") no-repeat scroll 0/100%;
+}
+.coupon .list-box .list > li.coupon-1 .icon-box .money {
+  position: absolute;
+  left: 14px;
+  top: 69px;
+  width: 58px;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+}
+.coupon .list-box .list > li.coupon-1 .icon-box .money i {
+  display: inline-block;
+  margin-left: -10px;
+}
+.coupon .list-box .list > li.coupon-1 .icon-box .money span {
+  display: inline-block;
+  margin-left: -5px;
+}
+.coupon .list-box .list > li.coupon-1 .content {
+  flex: 1;
+  margin: 15px 0 15px 23px;
+  vertical-align: middle;
+}
+.coupon .list-box .list > li.coupon-1 .content .title {
+  padding-bottom: 12px;
+  position: relative;
+  font-size: 14px;
+}
+.coupon .list-box .list > li.coupon-1 .content .title:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.coupon .list-box .list > li.coupon-1 .content .title h2 {
+  color: #1e82d2;
+  font-size: 14px;
+}
+.coupon .list-box .list > li.coupon-1 .content .text p {
+  margin-top: 11px;
+  font-size: 12px;
+  color: #2c2c2c;
+}
+.coupon .list-box .list > li.coupon-1.unusual .icon-box {
+  background: url("../../images/coupon-hbgray.png") no-repeat scroll 0/100%;
+}
+.coupon .list-box .list > li.coupon-1.unusual .content .title h2 {
+  color: #999999;
+}
+.coupon .list-box .list > li.coupon-1.unusual .content .text p {
+  color: #999999;
+}
+.coupon .list-box .list > li.coupon-1.unusual > .iconfont {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 90px;
+  color: #999999;
+}
+.coupon .list-box .list > li.coupon-2 {
+  background: #ff7070;
+}
+.coupon .list-box .list > li.coupon-2.unusual {
+  background: #d9d9d9;
+}
+.coupon .list-box .list > li.coupon-2.unusual > .iconfont {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 90px;
+  color: #999999;
+}
+.coupon .list-box .list > li.coupon-2:before, .coupon .list-box .list > li.coupon-2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 19px;
+  height: 19px;
+  background: #f7f7f9;
+  border-radius: 50%;
+}
+.coupon .list-box .list > li.coupon-2:before {
+  left: -9px;
+}
+.coupon .list-box .list > li.coupon-2:after {
+  right: -9px;
+}
+.coupon .list-box .list > li.coupon-2 .interest {
+  margin: 15px 0;
+  position: relative;
+  width: 115px;
+  flex: 0 0 115px;
+  text-align: center;
+  border-right: 1px dashed #FFFFFF;
+}
+.coupon .list-box .list > li.coupon-2 .interest p {
+  margin: 10px 0 15px;
+  color: #FFFFFF;
+  font-size: 30px;
+}
+.coupon .list-box .list > li.coupon-2 .interest p i {
+  font-size: 14px;
+}
+.coupon .list-box .list > li.coupon-2 .interest span {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+.coupon .list-box .list > li.coupon-2 .content {
+  flex: 1;
+  margin: 14px 0 14px 25px;
+  vertical-align: middle;
+}
+.coupon .list-box .list > li.coupon-2 .content h2 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1e82d2;
+  color: #ffffff;
+  line-height: 1;
+}
+.coupon .list-box .list > li.coupon-2 .content .text p {
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+/*# sourceMappingURL=coupon.css.map */

@@ -1,0 +1,254 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+p, h2, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.calendarc .moneydata {
+  background-color: #1E81D2;
+  padding: 0 15px;
+}
+.calendarc .moneydata ul {
+  padding: 14px 0;
+}
+.calendarc .moneydata ul .assetdlist {
+  display: flex;
+  justify-content: space-around;
+}
+.calendarc .moneydata ul .assetdlist:first-of-type {
+  margin-bottom: 18px;
+}
+.calendarc .moneydata ul .assetdlist div {
+  width: 50%;
+  text-align: center;
+}
+.calendarc .moneydata ul .assetdlist div p:first-child {
+  line-height: 24px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #9dd3ff;
+}
+.calendarc .moneydata ul .assetdlist div p:first-child i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #9dd3ff;
+  margin-right: 6px;
+}
+.calendarc .moneydata ul .assetdlist div p:last-child {
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+}
+.calendarc .moneydata ul .assetdlist.assetdlist2 div:nth-child(2) {
+  padding-left: 10px;
+}
+.calendarc .moneydata2 {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.calendarc .moneydata2 p {
+  color: #fff;
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+.calendarc .moneydata2 span {
+  font-size: 12px;
+}
+.calendarc .calendar {
+  padding: 0 15px 10px;
+  background-color: #fff;
+}
+.calendarc .calendar h2 {
+  font-size: 15px;
+  text-align: center;
+  line-height: 61px;
+  position: relative;
+}
+.calendarc .calendar h2 span {
+  position: relative;
+}
+.calendarc .calendar h2 span i {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+  color: #666666;
+  font-size: 8px;
+  margin-left: 10px;
+}
+.calendarc .calendar h2 span.mui-icon {
+  position: absolute;
+  top: 20px;
+  font-size: 22px !important;
+}
+.calendarc .calendar h2 span.mui-icon.mui-icon-arrowleft {
+  left: 0;
+}
+.calendarc .calendar h2 span.mui-icon.mui-icon-arrowright {
+  right: 0;
+}
+.calendarc .calendar h2 span:active {
+  opacity: .5;
+}
+.calendarc .calendar table {
+  width: 100%;
+  cellspacing: "1";
+  cellpadding: "1";
+  text-align: center;
+  font-size: 14px;
+}
+.calendarc .calendar table tr {
+  height: 34px;
+  line-height: 34px;
+}
+.calendarc .calendar table td {
+  width: 14%;
+}
+.calendarc .calendar table td span {
+  display: block;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.calendarc .calendar table thead {
+  color: #999;
+}
+.calendarc .calendar table tbody {
+  color: #2c2c2c;
+}
+.calendarc .calendar table tbody tr td.curr span {
+  color: #fff;
+  background-color: #1e82d2;
+}
+.calendarc .calendar table tbody tr td.repay span {
+  color: #fff;
+  background-color: #cbcbcb;
+}
+.calendarc .calendar table tbody tr td.nopay span {
+  color: #fff;
+  background-color: #ff6600;
+}
+.calendarc .calendar table tbody tr td.overdue span {
+  color: #fff;
+  background-color: #f03838;
+}
+.calendarc .calendar li {
+  float: left;
+  font-size: 14px;
+  width: 14%;
+  margin-bottom: 7px;
+  color: #2c2c2c;
+}
+.calendarc .calendar li span {
+  display: block;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.calendarc .calendar li.curr span {
+  color: #fff;
+  background-color: #1e82d2;
+}
+.calendarc .calendar li.repay span {
+  color: #fff;
+  background-color: #cbcbcb;
+}
+.calendarc .calendar li.nopay span {
+  color: #fff;
+  background-color: #ff6600;
+}
+.calendarc .calendar li.overdue span {
+  color: #fff;
+  background-color: #f03838;
+}
+.calendarc .calendar ol li {
+  color: #999;
+  text-align: center;
+}
+.calendarc .calendar .tagging {
+  padding: 0 15px;
+}
+.calendarc .calendar .tagging span {
+  position: relative;
+  display: inline-block;
+  line-height: 38px;
+  font-size: 12px;
+  padding-left: 15px;
+}
+.calendarc .calendar .tagging span + span {
+  margin-left: 19px;
+}
+.calendarc .calendar .tagging span:before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  left: 0;
+  top: calc(50% - 3px);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.calendarc .calendar .tagging span.repay:before {
+  background-color: #cbcbcb;
+}
+.calendarc .calendar .tagging span.nopay:before {
+  background-color: #ff6600;
+}
+.calendarc .calendar .tagging span.overdue:before {
+  background-color: #f03838;
+}
+
+/*# sourceMappingURL=payCalendar.css.map */

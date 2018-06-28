@@ -1,0 +1,137 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, dl, h2, dd, dt {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, span {
+  line-height: 1;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+em, i {
+  font-style: normal;
+}
+
+em {
+  color: #999;
+}
+
+.mui-bar-tab ~ .mui-content {
+  padding-bottom: 60px;
+}
+
+.mui-btn-block.mui-btn:before {
+  border-radius: 0px;
+}
+
+.mui-bar .mui-btn-block {
+  font-size: 16px;
+  top: 0px;
+}
+.mui-bar .mui-btn-block:before {
+  border-radius: 0px !important;
+}
+
+.canclek {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #1E81D2;
+}
+.canclek .mui-btn-bottom {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  padding: 14px 0;
+}
+.canclek .mui-btn-bottom:before {
+  border: 0;
+  border-radius: 0;
+}
+.canclek .mui-btn-bottom.mui-btn:enabled:active {
+  border-radius: 0px;
+}
+
+.alltrans .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}
+.alltrans h2 {
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 40px;
+}
+.alltrans .trlist {
+  margin-bottom: 10px;
+}
+.alltrans .trlist span, .alltrans .trlist em {
+  display: inline-block;
+  line-height: 21px;
+  font-size: 15px;
+}
+.alltrans .trlist2 {
+  margin-bottom: 0px;
+}
+.alltrans .zlist {
+  margin: 0;
+  width: 100%;
+  color: #2c2c2c;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alltrans .zlist dt span {
+  font-size: 14px;
+  display: inline-block;
+  color: #2c2c2c;
+}
+.alltrans .zlist dd {
+  margin-left: 0;
+}
+.alltrans .zlist dd p {
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+  line-height: 18px;
+}
+.alltrans .zlist dd p:first-of-type {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #2c2c2c;
+  line-height: 21px;
+}
+.alltrans .bottommore {
+  background-color: #fff;
+  color: #1e82d2;
+  text-align: center;
+  font-size: 14px;
+  line-height: 44px;
+}
+
+/*# sourceMappingURL=allTransferDetail.css.map */

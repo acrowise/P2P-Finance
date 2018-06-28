@@ -1,0 +1,109 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, h3, b {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-content .mui-table-view {
+  margin: 10px 10px 0 10px;
+  border-radius: 6px;
+  background-color: transparent;
+}
+.mui-content .mui-table-view:after, .mui-content .mui-table-view:before {
+  display: none;
+}
+.mui-content .mui-table-view .mui-table-view-cell {
+  background-color: #FFFFFF;
+  font-size: 12px;
+  color: #999;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+.mui-content .mui-table-view .mui-table-view-cell:after, .mui-content .mui-table-view .mui-table-view-cell:before {
+  display: none;
+}
+.mui-content .mui-table-view .mui-table-view-cell .title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 15px;
+}
+.mui-content .mui-table-view .mui-table-view-cell .title-box:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.mui-content .mui-table-view .mui-table-view-cell .title-box h2 {
+  font-size: 14px;
+  color: #2c2c2c;
+  padding-bottom: 13px;
+  white-space: nowrap;
+}
+.mui-content .mui-table-view .mui-table-view-cell .title-box .btn-box {
+  padding-bottom: 13px;
+}
+.mui-content .mui-table-view .mui-table-view-cell .title-box .btn-box .mui-btn {
+  padding: 2px 10px;
+  font-size: 12px;
+  line-height: initial;
+  border-radius: 25px;
+}
+.mui-content .mui-table-view .mui-table-view-cell .title-box .btn-box .mui-btn + button {
+  margin-left: 2px;
+}
+.mui-content .mui-table-view .mui-table-view-cell p {
+  line-height: 0;
+  margin-bottom: 15px;
+}
+.mui-content .mui-table-view .mui-table-view-cell p:last-child {
+  margin-bottom: 0px;
+}
+.mui-content .mui-table-view .mui-table-view-cell p span {
+  color: #2c2c2c;
+}
+.mui-btn-grey:before {
+  border-radius: 36px;
+}
+/*# sourceMappingURL=invitationDetail.css.map */

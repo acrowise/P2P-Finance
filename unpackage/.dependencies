@@ -1,0 +1,651 @@
+{
+  "views/huifu/realAuth.html": {
+    "href": "views/huifu/realAuth.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/huifu/realAuth.js"
+    ],
+    "priority": 0
+  },
+  "views/my/upload.html": {
+    "href": "views/my/upload.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/cropper.min.css",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.min.js",
+      "js/cropper.min.js",
+      "js/my/upload.js"
+    ],
+    "refer": [
+      "views/my/userinfo.html"
+    ],
+    "priority": 1
+  },
+  "views/huifu/loginHuiFu.html": {
+    "href": "views/huifu/loginHuiFu.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/huifu/loginHuiFu.js"
+    ],
+    "priority": 2
+  },
+  "views/my/userinfo.html": {
+    "href": "views/my/userinfo.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/my.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/my/userinfo.js",
+      "images/my-logo.png"
+    ],
+    "refer": [
+      "views/huifu/loginHuiFu.html"
+    ],
+    "priority": 0
+  },
+  "views/my/riskEvaluation.html": {
+    "href": "views/my/riskEvaluation.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/riskEvaluation.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/riskEvaluation.js"
+    ],
+    "refer": [
+      "views/my/userinfo.html"
+    ],
+    "priority": 0
+  },
+  "views/root/sureOauth.html": {
+    "href": "views/root/sureOauth.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/authLogin.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/sureOauth.js",
+      "images/my-logo.png"
+    ],
+    "refer": [
+      "views/root/login.html",
+      "views/root/oauthLogin.html"
+    ],
+    "priority": 2
+  },
+  "views/root/modifyOauth.html": {
+    "href": "views/root/modifyOauth.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/authLogin.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/modifyOauth.js",
+      "images/my-logo.png"
+    ],
+    "refer": [
+      "views/root/login.html",
+      "views/root/oauthLogin.html"
+    ],
+    "priority": 3
+  },
+  "views/my/forgetPwd.html": {
+    "href": "views/my/forgetPwd.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/md5.min.js",
+      "js/my/forgetPwd.js"
+    ],
+    "priority": 5
+  },
+  "views/root/loginBind.html": {
+    "href": "views/root/loginBind.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/loginBind.js",
+      "images/my-logo.png"
+    ],
+    "refer": [
+      "views/root/modifyOauth.html",
+      "views/root/noviceLoan.html",
+      "views/my/forgetPwd.html"
+    ],
+    "priority": 2
+  },
+  "views/help/qrcodeLogin.html": {
+    "href": "views/help/qrcodeLogin.html",
+    "resources": [
+      "js/help/qrcodeLogin.js"
+    ],
+    "priority": 4
+  },
+  "views/help/scanQrcode.html": {
+    "href": "views/help/scanQrcode.html",
+    "resources": [
+      "css/help/barcoded.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/help/barcoded.js"
+    ],
+    "refer": [
+      "views/help/qrcodeLogin.html"
+    ],
+    "priority": 4
+  },
+  "views/help/regProtocol.html": {
+    "href": "views/help/regProtocol.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/help/regProtocol.css",
+      "js/mui.min.js"
+    ],
+    "priority": 5
+  },
+  "views/help/riskNote.html": {
+    "href": "views/help/riskNote.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/help/riskNote.css",
+      "js/mui.min.js"
+    ],
+    "priority": 8
+  },
+  "views/root/reg.html": {
+    "href": "views/root/reg.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/md5.min.js",
+      "js/root/reg.js"
+    ],
+    "refer": [
+      "views/root/login.html",
+      "views/help/scanQrcode.html",
+      "views/my/riskEvaluation.html",
+      "views/root/oauthLogin.html",
+      "views/help/riskNote.html",
+      "views/root/noviceLoan.html"
+    ],
+    "priority": 3
+  },
+  "views/root/oauthLogin.html": {
+    "href": "views/root/oauthLogin.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/authLogin.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/oauthLogin.js",
+      "images/my-logo.png"
+    ],
+    "refer": [
+      "views/root/login.html"
+    ],
+    "priority": 1
+  },
+  "views/my/safetyCode.html": {
+    "href": "views/my/safetyCode.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/md5.min.js",
+      "js/my/safetyCode.js"
+    ],
+    "refer": [
+      "views/my/riskEvaluation.html"
+    ],
+    "priority": 3
+  },
+  "views/root/login.html": {
+    "href": "views/root/login.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/login.js",
+      "images/my-logo.png",
+      "images/my-qq.png",
+      "images/my-wechat.png"
+    ],
+    "refer": [
+      "views/root/noviceLoan.html",
+      "views/my/safetyCode.html"
+    ],
+    "priority": 0
+  },
+  "views/root/noviceLoan.html": {
+    "href": "views/root/noviceLoan.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/noviceLoan.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/noviceLoan.js",
+      "images/mycenter2.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/root/newsDetail.html": {
+    "href": "views/root/newsDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/newsDetail.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/immersed.js",
+      "js/root/newsDetail.js",
+      "images/share/fx3.png",
+      "images/publogo.png",
+      "images/share/fx7.png",
+      "images/share/fx1.png",
+      "images/share/fx2.png",
+      "images/share/fx4.png",
+      "images/share/fx6.png",
+      "images/share/fx5.png",
+      "images/share/fx8.png"
+    ],
+    "priority": 1
+  },
+  "views/root/slide.html": {
+    "href": "views/root/slide.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/root/slide.css",
+      "js/mui.min.js",
+      "js/root/slide.js",
+      "images/slide/one.png",
+      "images/slide/two.png",
+      "images/slide/three.png",
+      "images/slide/four.png"
+    ],
+    "priority": 3
+  },
+  "views/huifu/authAutoTender.html": {
+    "href": "views/huifu/authAutoTender.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/huifu/authAutoTender.js"
+    ],
+    "priority": 6
+  },
+  "views/help/Authorize.html": {
+    "href": "views/help/Authorize.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/help/Authorize.css",
+      "js/mui.min.js"
+    ],
+    "priority": 7
+  },
+  "views/invest/investProjectList.html": {
+    "href": "views/invest/investProjectList.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/invest/investment.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/invest/investProjectList.js"
+    ],
+    "refer": [],
+    "priority": 9
+  },
+  "views/invest/investStandard.html": {
+    "href": "views/invest/investStandard.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/invest/investStandard.css",
+      "css/mui.picker.min.css",
+      "js/mui.min.js",
+      "js/mui.picker.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/invest/investStandard.js"
+    ],
+    "refer": [
+      "views/root/login.html",
+      "views/huifu/authAutoTender.html",
+      "views/help/Authorize.html",
+      "views/huifu/realAuth.html",
+      "views/invest/investProjectList.html"
+    ],
+    "priority": 5
+  },
+  "views/invest/investDetail.html": {
+    "href": "views/invest/investDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/invest/investDetail.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/invest/investDetail.js",
+      "images/mycenter.png",
+      "images/monthRate.png"
+    ],
+    "refer": [
+      "views/root/login.html",
+      "views/huifu/realAuth.html"
+    ],
+    "priority": 4
+  },
+  "default.html": {
+    "href": "default.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "js/mui.min.js",
+      "js/statistic.js",
+      "images/default-banner.png"
+    ],
+    "refer": [
+      "views/root/login.html"
+    ],
+    "priority": 0
+  },
+  "invest.html": {
+    "href": "invest.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/invest/investment.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/r.immersed.js",
+      "js/invest/invest.js"
+    ],
+    "refer": [],
+    "priority": 2
+  },
+  "views/my/automaticBidRules.html": {
+    "href": "views/my/automaticBidRules.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/pubExplain.css",
+      "js/mui.min.js",
+      "js/common.js"
+    ],
+    "priority": 4
+  },
+  "my.html": {
+    "href": "my.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/my.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/my/my.js",
+      "images/my-logo.png",
+      "images/mycenter.png"
+    ],
+    "refer": [
+      "views/huifu/realAuth.html"
+    ],
+    "priority": 3
+  },
+  "views/my/transfereeDetail.html": {
+    "href": "views/my/transfereeDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/allTransferDetail.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/transfereeDetail.js"
+    ],
+    "priority": 4
+  },
+  "views/my/transferRules.html": {
+    "href": "views/my/transferRules.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/pubExplain.css",
+      "js/mui.min.js"
+    ],
+    "priority": 5
+  },
+  "views/my/transfer.html": {
+    "href": "views/my/transfer.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/transfer.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/transfer.js"
+    ],
+    "priority": 6
+  },
+  "views/my/transferDetail.html": {
+    "href": "views/my/transferDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/allTransferDetail.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/transferDetail.js"
+    ],
+    "priority": 8
+  },
+  "views/my/myTransfer.html": {
+    "href": "views/my/myTransfer.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/my/myTransfer.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/t.immersed.js",
+      "js/my/myTransfer.js"
+    ],
+    "refer": [
+      "views/my/transfereeDetail.html",
+      "views/invest/investDetail.html",
+      "views/my/transferDetail.html"
+    ],
+    "priority": 4
+  },
+  "views/help/agreement.html": {
+    "href": "views/help/agreement.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/help/aggrement.js"
+    ],
+    "priority": 7
+  },
+  "views/assets/checkAgreement.html": {
+    "href": "views/assets/checkAgreement.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/assets/checkAgreement.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/assets/checkAgreement.js"
+    ],
+    "refer": [],
+    "priority": 7
+  },
+  "views/assets/receivablesPlan.html": {
+    "href": "views/assets/receivablesPlan.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/assets/receivablesPlan.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/immersed.js",
+      "js/vue2.min.js",
+      "js/assets/receivablesPlan.js",
+      "images/mycenter2.png"
+    ],
+    "refer": [],
+    "priority": 6
+  },
+  "views/assets/assetsRecord.html": {
+    "href": "views/assets/assetsRecord.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf",
+      "css/mui.picker.min.css",
+      "css/assets/assetsRecord.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/mui.picker.min.js",
+      "js/assets/assetsRecord.js"
+    ],
+    "refer": [
+      "views/invest/investDetail.html"
+    ],
+    "priority": 6
+  },
+  "assets.html": {
+    "href": "assets.html",
+    "resources": [
+      "css/mui.min.css",
+      "fonts/qhlead.ttf",
+      "images/assets-bg.png",
+      "js/mui.min.js",
+      "js/immersed.js",
+      "js/common.js",
+      "fonts/qhlead.ttf",
+      "js/vue2.min.js",
+      "js/assets/assets.js"
+    ],
+    "refer": [
+      "default.html",
+      "assets.html",
+      "invest.html",
+      "my.html",
+      "views/root/login.html"
+    ],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "fonts/mui.ttf",
+      "fonts/qhlead.ttf"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

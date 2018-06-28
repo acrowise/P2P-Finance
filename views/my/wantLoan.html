@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>我要借款</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/wantLoan.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-24
+        	描述：我要借款
+       -->
+		<div class="mui-content myloan" id="vue-app">
+			<h2>10秒钟登记，急速获取借款</h2>
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>姓名</label>
+					<input type="text" placeholder="请输入您的名字" maxlength="10"  v-model="txtName"/>
+				</div>
+				<div class="mui-input-row">
+					<label>手机号</label>
+					<input type="text" placeholder="请输入您的手机号码" maxlength="11"  v-model="txtMobile"/>
+				</div>
+				<!--<div class="remark">
+					<label>备注</label>
+					<div class="outlined">
+						<textarea cols="50" rows="5" maxlength="120" placeholder="如您有特殊说明，请在此填写(选填)" style="z-index: 1;position: relative;"  v-model="txtRemark"></textarea>
+					</div>
+				</div>
+				<div class="mui-input-row teshurow">
+					<label>工作类型</label>
+					<input type="text" readonly value="自雇人士(1.09%/月)"  unselectable="on" onfocus="this.blur()"/>	
+					<span class="mui-icon mui-icon-arrowright"></span>
+				</div>-->
+			</form>
+			<div class="lijibtn">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="btnApply">立即申请</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>		
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>	
+		<script type="text/javascript" src="../../js/my/wantLoan.js" ></script>	
+	</body>
+</html>

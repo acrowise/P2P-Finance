@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人开户</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/mui.picker.min.css">
+		<link rel="stylesheet" href="../../css/bank/businessOpening.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-05-28
+        	描述：企业开户
+      -->
+		<div class="mui-content" id="vue-app" :class="{'ios-scroll-bounce':isIos}">
+               <div class="bg">
+               	 <img src="../../images/bank/bankLogo.png" />
+               </div>
+               <div class="login">
+				<div class="input_list mui-input-row ">
+					<span class="tit">公司名称</span>
+					<input  type="text" placeholder="请输入公司名称" v-model="postData.companyName" />
+				</div>
+				<div class="input_list mui-input-row " >
+					<span class="tit wid128" >统一社会信用编码</span>
+					<input  type="text" class="wid54"  placeholder="请输入统一社会信用编码" v-model="postData.uniSocCreCode" />
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit">住所</span>
+					<input  type="text"  placeholder="请输入营业执照住所" v-model="postData.bizLicDomicile"/>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit">成立日期</span>
+					<a class="mui-navigate-right" @tap="btnPicker">
+						<input  type="text"  placeholder="请选择成立日期" readonly="readonly" v-model="postData.dateOfEst"/>
+					</a>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit">法人姓名</span>
+					<input  type="text"  placeholder="请输入法人姓名" v-model="postData.username"/>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit">身份证号</span>
+					<input  type="text"  placeholder="请输入身份证号" v-model="postData.certNo"/>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit wid98">对公银行名称</span>
+					<input  type="text" class="wid64"  placeholder="请输入对公银行名称" v-model="postData.corpAccBankNm"/>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit wid98" >对公银行行号</span>
+					<input  type="text" class="wid64"  placeholder="请输入对公银行行号"  v-model="postData.corpAccBankNo"/>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit">对公账号</span>
+					<input  type="text"  placeholder="请输入对公账号" v-model="postData.corpacc"/>
+				</div>
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label>我已阅读并同意</label>
+					<input name="checkbox"  type="checkbox" v-model="postData.agree"/>
+					<a @tap="btnAgree">《企业开户协议》</a><a @tap="btnRisk">《风险提示书》</a>
+				</div>
+				<div class="login_btn">
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="btnOpening" >立即开通</button>
+				</div>
+			</div>
+		</div>		
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/bank/businessOpening.js" ></script>
+	</body>
+</html>

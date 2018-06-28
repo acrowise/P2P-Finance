@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/root/pubAccount.css">
+	</head>
+	<body >
+		<!--
+        	作者：dingyong
+        	时间：2018-01-08
+        	描述：注册
+        -->
+        <div class="tips" id="tipsBar">市场有风险，出借需谨慎</div>
+		<div class="mui-content c-primary" id="vue-app">
+			<div class="mui-input-group wrap wraps">
+				<div class="pub-wrap  reg-wrap">
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-shoujihao" for="phone"></label>
+						<input id="phone" class="phone" type="text" placeholder="请输入手机号码"  v-model="txtMobile" maxlength="11"/>
+					</div>
+					<div class="input-container idcode">
+						<label class="mui-icon iconfont icon-anquan" for="identifycode"></label>
+						<input id="identifycode" class="identifycode" type="text" placeholder="请输入验证码" v-model="txtCode" maxlength="4"/>
+						<button class="mui-btn mui-btn-primary mui-small-btn" type="button" @tap="btnSend" :disabled="btnState">{{value}}</button>
+					</div>
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-mima" for="psw"></label>
+						<input id="psw" class="psw" type="password" placeholder="请输入登录密码"  v-model="txtPwd"/>
+					</div>
+					<div class="input-container mui-hidden">
+						<label class="mui-icon iconfont icon-mima" for="psw"></label>
+						<input id="psw" class="psw" type="password" placeholder="请输入安全码(不能与登录密码一致)" />
+					</div>
+					<div class="input-container qcode">
+						<label class="mui-icon iconfont icon-yonghu" for="referee"></label>
+						<input id="referee" class="referee" type="text" placeholder="请输入推荐人的手机号(选填)"  v-model="txtUser" />
+						<a  class="mui-icon iconfont icon-erweima" @tap.stop="btnScan" ></a>
+					</div>
+				</div>
+				<div class="mui-input-row mui-checkbox mui-left txtoption">					
+					<label for="agreen">我已阅读并同意</label><a  @tap="btnAgree">《注册协议》</a><a  @tap="btnRisk">《风险提示书》</a>
+					<input id="agreen"  type="checkbox"  v-model="agree" >
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="btnReg">注册</button>	
+				</div>
+				<div class="pwdtips">密码8~20位，由字母+数字和符号两种以上组合</div>
+			</div>		
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/md5.min.js" ></script>
+		<script type="text/javascript" src="../../js/root/reg.js" ></script>
+	</body>
+</html>

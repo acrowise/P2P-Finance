@@ -1,0 +1,92 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, b, img {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-bar .mui-icon.helpico {
+  font-size: 20px;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.mui-content .mhead {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.mui-content .mhead img {
+  width: 80px;
+  border-radius: 50%;
+  margin: 24px 0px;
+}
+.mui-content .mhead .minfo {
+  display: flex;
+  justify-content: space-around;
+}
+.mui-content .mhead .minfo span p {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.mui-content .mhead .minfo span p:first-child {
+  font-size: 15px;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+}
+.mui-content .mui-table-view .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}
+.mui-content .mui-table-view .mui-table-view-cell > span {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+.mui-content .mui-table-view .mui-table-view-cell > span .receive {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ff6c00;
+}
+.receive:active{opacity: .5;}
+.mui-content .mui-table-view .mui-table-view-cell em {
+  color: #1e82d2;
+}
+.mui-content .startbtn {
+  padding: 34px 15px 0px;
+}
+
+/*# sourceMappingURL=investMaster.css.map */

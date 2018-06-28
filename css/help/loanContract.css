@@ -1,0 +1,47 @@
+.mui-content {
+  padding:  20px 15px 30px;
+  background-color:#fff;
+}
+
+.mui-content h1 {
+  margin: 0 0 10px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.mui-content h2 {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.mui-content p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 23px;
+  color: #000000;
+  text-align: justify;
+}
+.mui-content p span {
+  font-weight: bold;
+}
+.mui-content p span.textLine {
+  font-weight: normal;
+  border-bottom: 1px solid;
+  display: inline-block;
+  width: 80px;
+}
+.mui-content table {
+  width: 100%;
+  font-size: 12px;
+}
+.mui-content table tr {
+  height: 35px;
+  line-height: 35px;
+}
+.mui-content table tr td {
+  width: 50%;
+}
+
+/*# sourceMappingURL=loanContract.css.map */

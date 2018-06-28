@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>意见反馈</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/help/feedback.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-02-01
+        	描述：意见反馈
+        -->		
+		<div class="mui-content feedback" id="vue-app">
+			<div class="outlined" >
+				 <textarea cols="50" rows="7"  placeholder="请输入您的意见反馈" v-model="feedback"></textarea>
+			</div>
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-block " @tap="btnSubmit">提交</button>
+		</div>		
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/help/feedback.js" ></script>
+	</body>
+</html>

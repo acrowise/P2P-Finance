@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>我的二维码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/qrcode.css">	
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav main-index">
+				<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+				<h1 class="mui-title">我的二维码</h1>
+				<a class="mui-btn mui-btn-link mui-pull-right"  href="#Share">分享</a>
+		</header>
+		<div class="mui-content myqrcode">
+			<div id="container"></div>
+			<img id="img-buffer" src="../../images/publogo.png" />
+	        <input id="label" type="hidden" value="扫码分享" />
+			<p>扫一扫，推荐好友，领取奖励</p>
+		</div>
+	    <div class="share mui-popover mui-popover-action mui-popover-bottom"  id="Share">
+	    	<div class="share_ul">
+	    		<a class="share_li" sid="0">
+	    			<img src="../../images/share/fx1.png">
+	    			<span>微信</span>
+	    		</a>
+	    		<a class="share_li" sid="1">
+	    			<img src="../../images/share/fx2.png">
+	    			<span>朋友圈</span>
+	    		</a>
+	    		<a class="share_li" sid="2">
+	    			<img src="../../images/share/fx4.png">
+	    			<span>QQ</span>
+	    		</a>
+	    	</div>
+	    	<a class="share_btn" href="#Share">取消</a>
+	    </div>
+	    <div class="saveLocal" id="saveLocal">保存到本地相册</div>
+	    <div class="mui-backdrop mui-hidden"  id="mui-backdrop"></div>
+	    <img id="pic" src="../images/logo.png"/>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/immersed.js" ></script>
+		<script type="text/javascript" src="../../js/jquery-2.0.3.min.js" ></script>
+	   <script type="text/javascript" src="../../js/jquery.qrcode.min.js" ></script>
+	   <script type="text/javascript" src="../../js/common.js" ></script>
+	   <script type="text/javascript" src="../../js/my/qrcode.js" ></script>
+	</body>
+</html>

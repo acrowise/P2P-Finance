@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>提现</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/withdrawals.css">
+	</head>
+	<body>
+		<div id="vue-app">			
+			<header class="mui-bar mui-bar-nav main-index">
+				<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+				<h1 class="mui-title">提现</h1>
+				<a class="mui-icon iconfont icon-wenhao mui-pull-right helpico" @tap="href"></a>
+			</header>
+			<div class="mui-content draws" :class="{'ios-scroll-bounce':isIos}">
+				<div class="psrow">
+					<div class="account">
+						<span>可提现金额：</span>
+						<em>{{amount | getAmount}}</em>
+					</div>
+					<div class="money">
+						<p>提现金额</p>
+						<input type="text" v-model="wAmount" @input="countFee" placeholder="请输入提现金额" />
+					</div>
+				</div>
+				<div class="choose mui-clearfix">
+					<span>提现类型</span>	
+					<div class="mui-input-row mui-radio mui-left">
+						<label >一般提现</label>
+						<input  v-model.number="kind"  value="2"   type="radio" name="radio" @change="countFee">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label >即时提现</label>
+						<input  v-model.number="kind"  value="3"  type="radio" name="radio"  @change="countFee">
+					</div>
+				</div>
+				<div class="charge">
+					<span>提现手续费：</span>
+					<em>{{fee | getAmount}}</em>
+				</div>
+				<div class="defaultbtn">
+					<button type="button"  class="mui-btn mui-btn-primary mui-btn-block" @tap="btnWithdraw">提现</button>
+				</div>
+				<div class="tip">
+					<h5>温馨提示</h5>
+					<p>
+						身份认证、账户托管开通、提现银行卡均设置成功后，才能进行提现操作。
+					</p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>	
+		<script type="text/javascript" src="../../js/immersed.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>		
+		<script type="text/javascript" src="../../js/my/withdrawals.js"></script>
+	</body>
+</html>

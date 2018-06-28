@@ -1,0 +1,189 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, h5 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, h5 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-table-view-cell.noactive > a:not(.mui-btn).mui-active {
+  background-color: #fff;
+}
+
+.mui-btn-primary.mui-chose.mui-btn:enabled:active {
+  background-color: #fff;
+}
+
+.mui-btn.mui-chose:enabled:active {
+  background-color: #fff;
+}
+
+.mui-btn:enabled:active, button:enabled:active {
+  color: #333;
+}
+
+.mui-btn-outlined.mui-btn-primary:enabled:active {
+  color: #0062cc;
+}
+
+.mui-btn.mui-save:enabled:active, button:enabled:active {
+  color: #fff;
+}
+
+.addbid {
+  font-size: 15px;
+  color: #2c2c2c;
+}
+.addbid .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}
+.addbid .mui-icon-info {
+  font-size: 18px;
+  color: #1e82d2;
+  margin-left: 5px;
+}
+.addbid input[type=text] {
+  display: inline-block;
+  height: 22px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  width: calc(100% - 118px);
+  font-size: 15px;
+}
+.addbid .gtbalance {
+  background-color: #fff;
+  padding: 11px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.addbid .bidtip {
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+.addbid .tzcontent {
+  margin-bottom: 10px;
+}
+.addbid .tzcontent .tzmoney, .addbid .tzcontent .tzchoose {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addbid .tzcontent .tzmoney input {
+  height: 22px;
+}
+.addbid .tzcontent .tzchoose div {
+  display: inline-block;
+  line-height: 22px;
+}
+.addbid .tzcontent .tzchoose .mui-radio.mui-left input[type=radio] {
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+}
+.addbid .tzcontent .tzchoose .mui-radio.mui-left label {
+  font-size: 15px;
+  padding: 0px 4px 0px 26px;
+}
+.addbid .tzcontent .tzchoose .mui-radio input[type=radio]:before {
+  font-size: 18px;
+}
+.addbid .tzcondition a span {
+  line-height: 21px;
+}
+.addbid .tzcondition a em {
+  margin-right: 14px;
+}
+.addbid .tzcondition a em.specem {
+  display: inline-block;
+  width: calc(100% - 88px);
+  text-align: right;
+}
+.addbid .tzcondition .tztype .tip {
+  line-height: 28px;
+}
+.addbid .tzcondition .tztype .type a {
+  display: inline-block;
+  width: 69px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border: 1px solid #cbcbcb;
+  color: #2c2c2c;
+  font-size: 14px;
+  float: left;
+}
+.addbid .tzcondition .tztype .type a + a {
+  margin-left: 15px;
+}
+.addbid .tzcondition .tztype .type a.active {
+  color: #1e82d2;
+  border: 1px solid #1e82d2;
+}
+.addbid .tzcondition .tztype .type .mui-btn {
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  width: 69px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  font-size: 14px;
+  float: left;
+}
+.addbid .tzcondition .tztype .type .mui-btn + button {
+  margin-left: 15px;
+}
+.addbid .tzcondition input[type=text] {
+  width: calc(100% - 85px);
+}
+.addbid .tzcondition input[type=text].qishu {
+  width: calc(100% - 124px);
+  position: relative;
+}
+.addbid .tzcondition i {
+  margin-left: 5px;
+}
+.addbid .tzcondition2 {
+  margin-top: 10px;
+}
+.addbid .addbidbtn {
+  padding: 33px 15px 0;
+}
+
+/*# sourceMappingURL=addAutomaticBid.css.map */

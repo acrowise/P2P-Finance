@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>邀请明细</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/invitationDetail.css" />
+	</head>
+	<body>
+		<!--
+        	作者：hxg
+        	时间：2018-01-16
+        	描述：邀请明细
+        -->			
+		<div class="mui-scroll-wrapper mui-content invdetail" id="pullrefresh">
+			<div class="mui-scroll">
+				<ul id="vue-app" class="mui-table-view">
+					<li class="mui-table-view-cell" v-for="item in inviList">
+					<div class="title-box">
+						<h2>{{item.Mobile}}</h2>
+						<div class="btn-box">
+							<button class="mui-btn  mui-btn-outlined" :class="{'mui-btn-warning':item.State==1,'mui-btn-grey':item.State==2}">{{item.State==1?"有效":"无效"}}</button>
+						</div>
+					</div>
+					<div class="content">
+						<p>姓名：<span>{{item.Name}}</span></p>
+						<p>是否实名：<span>{{item.IsRealName}}</span></p>
+						<p>已得奖励：<span>{{item.EarnedAward}}</span></p>
+						<p>注册时间：<span>{{item.RegisterTime}}</span></p>
+						<p>奖励过期时间：<span>{{item.AwardExpireTime}}</span></p>
+					</div>
+				</li>
+				</ul>				
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/my/invitationDetail.js" ></script>
+	</body>
+</html>

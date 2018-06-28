@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>推送消息设置</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/my.css" />
+		<style>.mui-pull-right{color: #777 !important; font-size: 15px;}</style>
+	</head>
+	<body >
+		<!--
+        	作者：dingyong
+        	时间：2018-01-27
+        	描述：推送消息设置
+        -->
+		<div class="mui-content account pub" id="vue-app">
+			<ul class="mui-table-view ul1 push">
+				<li class="mui-table-view-cell mui-hidden" ref="iosSet" @tap="iosSet">
+					消息推送总开关<span class="mui-pull-right" >去设置</span>
+				</li>
+				<li class="mui-table-view-cell" v-if="!isIos">
+					<a>
+				        <span>消息推送总开关</span>		
+					    <div class="mui-switch mui-switch-mini" @toggle="btnSwitch($event,'AppNotice')" :class="{'mui-active':model.AppNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+			</ul>
+			<div class="mui-content-padded" v-if="!isIos">
+				<p>若关闭，当有新消息通知时，通知提醒将不再显示</p>
+			</div>
+			<div class="mui-content-padded mui-hidden" ref="iosTips">
+				<p>如果你要关闭或开启前海领投的通知消息提醒，请在iPhone的“设置”-“通知”功能中，找到应用程序“前海领投”更改。</p>
+			</div>
+			<ul class="mui-table-view ul1 push">
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>新标消息推送</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="toogleSwitch($event,'LoanNotice')" :class="{'mui-active':model.LoanNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>回款消息推送</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="toogleSwitch($event,'ReceiptNotice')" :class="{'mui-active':model.ReceiptNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+			 <!--<li class="mui-table-view-cell" >
+					<a>
+				        <span>自动投标消息推送</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="toogleSwitch($event,'AutoTenderNotice')" :class="{'mui-active':model.AutoTenderNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>-->
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>还款消息推送</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="toogleSwitch($event,'RefundNotice')" :class="{'mui-active':model.RefundNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>提现消息推送</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="toogleSwitch($event,'WithdrawNotice')" :class="{'mui-active':model.WithdrawNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a>
+				        <span>优惠券消息推送</span>		
+					    <div class="mui-switch mui-switch-mini" @toggle="toogleSwitch($event,'CouponNotice')" :class="{'mui-active':model.CouponNotice}">
+							<div class="mui-switch-handle"></div> 
+					    </div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" >
+					<a>
+				        <span>资讯消息推送</span>		
+					    <div class="mui-switch mui-switch-mini"  @toggle="toogleSwitch($event,'NewsNotice')" :class="{'mui-active':model.NewsNotice}">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>		
+        <script type="text/javascript" src="../../js/help/pushMessage.js" ></script>		
+	</body>
+</html>

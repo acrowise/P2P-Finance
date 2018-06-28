@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人开户</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/bank/businessAuth.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-05-28
+        	描述：业务授权
+      -->
+		<div class="mui-content" id="vue-app">
+               <div class="bg">
+               	 <img src="../../images/bank/bankLogo.png" />
+               </div>
+               <div class="login">
+				<div class="input_list mui-input-row ">
+					<span class="tit wid96">开通授权业务</span>
+					<input  type="text"  class="wid65" placeholder="请选择授权业务" readonly="readonly" value="授权投标、还款"/>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit">授权期限</span>
+					<input  type="text"  placeholder="请选择授权期限"  readonly="readonly" value="2038年12月30日"/>
+				</div>
+				<div class="input_list mui-input-row ">
+					<span class="tit wid92">授权金额(元)</span>
+					<input  type="text" class="wid67"  placeholder="请输入授权金额"   v-model="postData.authAmount" />
+				</div>
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label>我已阅读并同意</label>
+					<input name="checkbox"  type="checkbox" v-model="postData.agree"/>
+					<a @tap="btnRisk">《风险提示书》</a>
+				</div>
+				<div class="login_btn">
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="checkPayPassword">确定</button>
+				</div>
+			</div>
+		</div>		
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/bank/businessAuth.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>说明</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/investExplain.css" />
+	</head>
+	<body >	
+		<!--
+        	作者：1062884167@qq.com
+        	时间：2018-03-01
+        	描述：说明
+        -->
+		<div class="mui-content" id="container">
+			<div class="leveldesc">				
+				<h2>级别说明<i></i></h2>
+
+				<div class="cont-box">
+					<div>
+						<p><img src="../../images/level/1.png" class="img"/>新秀</p>
+						<p>好友总待收本金＜20万，奖励年利率：0.36%</p>
+					</div>
+				</div>
+				<div class="cont-box">
+					<div>
+						<p><img src="../../images/level/2.png" class="img"/>少侠</p>
+						<p>20万≤好友总待收本金＜100万，奖励年利率：0.72%</p>
+					</div>
+				</div>
+				<div class="cont-box">
+					<div>
+						<p><img src="../../images/level/3.png" class="img"/>大侠</p>
+						<p>100万≤好友总待收本金＜300万，奖励年利率：0.78%</p>
+					</div>
+				</div>
+				<div class="cont-box">
+					<div>
+						<p><img src="../../images/level/4.png" class="img"/>掌门</p>
+						<p>300万≤好友总待收本金＜500万，奖励年利率：0.84%</p>
+					</div>
+				</div>
+				<div class="cont-box">
+					<div>
+						<p><img src="../../images/level/5.png" class="img"/>宗师</p>
+						<p>好友总待收本金和≥500万 奖励年利率：0.90%</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="ruledesc">
+				<h2>规则说明<i></i></h2>
+				<ul class="rule-ul">
+					<li>1、只统计各邀请用户自注册日起一年内的待收本金，注册一年后此用户的待收本金不再计提奖励；</li>
+					<li>2、好友总待收本金=好友A总待收本金+好友B总待收本金； </li>
+					<li>3、 每天凌晨2:00计算昨日奖励，发放的奖励用户需手动领取至用户余额，可用于提现或出借； </li>
+					<li>4、当日奖励金额=好友总待收本金*奖励年利率/365；发放奖励金额小于0.01元，则记为0.00元；</li>
+					<li>5、若发现用户恶意刷奖，前海领投有权拒绝发放奖励并取消该用户邀请好友资格；</li>
+					<li>6、满天星功能邀请的用户统一升级为邀请好友。</li>
+					<li>注：2017年11月6日之前推荐的好友，统计各邀请用户自注册日起两年内的待收本金；2017年11月6日之后推荐的好友，只统计各邀请用户自注册日起一年内的待收本金。平台所有邀请奖励金额的计算方式都按新规则进行。</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js"></script>
+		<script>
+			(function(){
+				if(mui.os.ios){
+					window.plus&&plus.webview.currentWebview().setStyle({scrollIndicator: 'none'});
+					document.getElementById("container").classList.add('ios-scroll-bounce');
+				}
+			})(mui);
+		</script>
+	</body>
+</html>

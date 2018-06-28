@@ -1,0 +1,192 @@
+@charset "UTF-8";
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+/*登录注册忘记密码,等公共css*/
+body {
+  background-color: #fff;
+  position: relative;
+}
+
+.mui-small-btn:before {
+  border-radius: 12px;
+}
+
+p {
+  color: #2c2c2c;
+}
+
+.loghead {
+  background-color: #fff;
+  padding-top: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loghead > img {
+  width: 75px;
+  height: 75px;
+  margin: 6px 0;
+  border-radius: 50%;
+}
+.loghead > p {
+  line-height: 36px;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: #fff;
+}
+.wrap:before, .wrap:after {
+  display: none;
+}
+.wrap .pub-wrap {
+  width: 100%;
+  margin-bottom: 33px;
+}
+.wrap .pub-wrap .input-container {
+  position: relative;
+}
+.wrap .pub-wrap .input-container:after {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #e5e5e5;
+}
+.wrap .pub-wrap .input-container input[type="text"], .wrap .pub-wrap .input-container input[type="password"] {
+  border: 0px;
+  width: calc(100% - 30px);
+  font-size: 16px;
+  margin: 22px 0 3px 30px;
+}
+.wrap .pub-wrap .input-container > label {
+  position: absolute;
+  display: inline-block;
+  bottom: 15px;
+  left: 7px;
+  color: #ccc;
+}
+.wrap .pub-wrap .input-container > label.mui-icon {
+  font-size: 17px;
+}
+.wrap .pub-wrap .idcode input[type="text"] {
+  width: calc(100% - 120px);
+}
+.wrap .pub-wrap .idcode button {
+  margin: 22px 0 0;
+  padding: 6px 0;
+  width: 80px;
+  font-size: 12px;
+}
+.wrap .pub-wrap .qcode input[type="text"] {
+  width: calc(100% - 60px);
+}
+.wrap .pub-wrap .qcode a {
+  color: #1E81D2;
+  font-size: 19px;
+}
+.wrap .login-wrap {
+  margin-bottom: 19px;
+}
+.wrap .agreement-tips {
+  line-height: 1;
+  margin-bottom: 19px;
+}
+.wrap .agreement-tips a {
+  color: #999;
+}
+.wrap .agreement-tips a:active {
+  opacity: .5;
+}
+.wrap .reg-wrap {
+  margin-bottom: 9px;
+}
+.wrap .fg-wrap {
+  margin-bottom: 21px;
+}
+.wrap .txtoption {
+  margin-bottom: 12px;
+}
+.wrap .txtoption:after {
+  display: none;
+}
+.wrap .txtoption a {
+  color: #1E81D2;
+  font-size: 14px;
+}
+.wrap .txtoption label {
+  width: auto;
+  padding-left: 30px;
+  padding-right: 0;
+  font-size: 14px;
+}
+.wrap .txtoption input[type=checkbox] {
+  left: 0px;
+  top: 7px;
+}
+.wrap .txtoption input[type=checkbox]:before {
+  font-size: 22px;
+}
+.wrap .btn-wrap button {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.wrap .otherlogin-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrap .otherlogin-wrap .optlogin-wrap {
+  margin-top: 9px;
+  margin-bottom: 39px;
+}
+.wrap .otherlogin-wrap .optlogin-wrap a {
+  display: inline-block;
+}
+.wrap .otherlogin-wrap .optlogin-wrap a img {
+  width: 49px;
+  height: 49px;
+}
+.wrap .otherlogin-wrap .optlogin-wrap a:last-of-type img {
+  margin-left: 64px;
+}
+
+.wraps {
+  padding-top: 22px;
+}
+.wraps .pub-wrap .input-container:first-of-type input[type="text"] {
+  margin-top: 0px;
+}
+.tips{font-size: 14px; text-align: center ; position: fixed; bottom:5px;width: 100%; color: #B3B3B3;z-index: -1;}
+.c-primary{background: #FFFFFF; padding-bottom: 5px;}
+.pwdtips{font-size: 13px;color: #B3B3B3;}
+/*# sourceMappingURL=pubAccount.css.map */

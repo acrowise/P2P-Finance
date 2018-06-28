@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>受让详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/allTransferDetail.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-23
+        	描述：受让详情
+        -->
+		<div class="mui-content alltrans" :class="{'ios-scroll-bounce':isIos}" id="vue-app">
+			<ul class="mui-table-view trlist">
+				<li class="mui-table-view-cell">
+				 	<span class="mui-pull-left">项目名称</span>
+				 	<em class="mui-pull-right">{{model.Name}}</em>
+				</li>
+		        <li class="mui-table-view-cell">
+		         	<span class="mui-pull-left">年利率</span>
+				 	<em class="mui-pull-right">{{model.Rate}}</em>
+		        </li>
+		        <li class="mui-table-view-cell">
+		         	<span class="mui-pull-left">出借金额</span>
+				 	<em class="mui-pull-right">{{model.TenderAmount}}</em>
+		        </li>
+		        <li class="mui-table-view-cell">
+		         	<span class="mui-pull-left">受让金额</span>
+				 	<em class="mui-pull-right">{{model.AcquirerAmount}}</em>
+		        </li>
+		        <li class="mui-table-view-cell">
+		         	<span class="mui-pull-left">待收利息</span>
+				 	<em class="mui-pull-right">{{model.Interest}}</em>
+		        </li>
+		        <li class="mui-table-view-cell">
+		         	<span class="mui-pull-left">期数</span>
+				 	<em class="mui-pull-right">{{model.SurplusPeriod}}</em>
+		        </li>
+		        <li class="mui-table-view-cell">
+		         	<span class="mui-pull-left">还款方式</span>
+				 	<em class="mui-pull-right">{{model.RefundWays}}</em>
+		        </li>
+		        <li class="mui-table-view-cell">
+		         	<span class="mui-pull-left">受让时间</span>
+				 	<em class="mui-pull-right">{{model.InsertTime}}</em>
+		        </li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/my/transfereeDetail.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../css/help/qrcodeLogin.css" rel="stylesheet"/>
+</head>
+<body>
+	<!--
+    	作者：dingyong
+    	时间：2018-01-08
+    	描述：扫码登录确认
+    -->
+  <div class="mui-content">
+  	<div class="login" id="vue-app">
+		<div class="line">
+		    <img src="../../images/pcLogin.png" class="login_img"/>
+		    <div class="login_tip">前海领投电脑端登录确认</div>
+		    <div :class="{msg:true,show:errShow}">{{errMsg}}</div>
+		</div>
+		<div class="login_btn">
+			<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="btnLogin()">确认登录电脑端</button>
+		</div>
+		<div class="login_btn">
+			<button type="button" class="mui-btn  mui-btn-block"  @tap="cancle()">取消登录</button>
+		</div>
+	</div>
+ </div>
+ <script type="text/javascript" src="../../js/mui.min.js" ></script>
+ <script type="text/javascript" src="../../js/common.js" ></script>
+ <script type="text/javascript" src="../../js/vue2.min.js" ></script>
+ <script type="text/javascript" src="../../js/help/qrcodeLogin.js" ></script>
+</body>
+</html>

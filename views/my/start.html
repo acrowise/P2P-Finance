@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>出借大师</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/investMaster.css" />
+	</head>
+	<body >
+		<div  id="vue-app">		
+			<header class="mui-bar mui-bar-nav main-index">
+				<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+				<h1 class="mui-title">邀请好友</h1>
+				<a class="mui-icon iconfont icon-wenhao mui-pull-right helpico" @tap="href({url:'levelExplain.html',id:'levelExplain.html',title:true,name:'说明'})"></a>
+			</header>
+			<div class="mui-content">
+				<div class="mhead">
+					<img src="../../images/level/1.png"  class="img" :src="levelImg(model.Level)"/>
+					<div class="minfo">
+						<span>
+							<p>{{model.InvestNum||0}}</p>
+							<p>已出借人数</p>
+						</span>
+						<span>
+							<p>{{model.TotalNum||0}}</p>
+							<p>总邀请人数</p>
+						</span>
+						<span>
+							<p>{{model.Award||'0.00'}}</p>
+							<p>已入账奖励</p>
+						</span>
+					</div>
+				</div>
+				<ul class="mui-table-view">	
+					<li class="mui-table-view-cell">
+						<span>
+							待领取奖励：<em>{{model.UnclaimedAward | getAmount}}</em>
+							<a class="receive" @tap="receiveAwards" v-show="model.UnclaimedAward>0">立即领取</a>
+						</span>
+					</li>
+					<li class="mui-table-view-cell" @tap="href({url:'myReward.html',id:'myReward.html',title:true,name:'我的奖励'})">
+						<a class="mui-navigate-right">
+					       <span>我的奖励</span>				       
+						</a>
+					</li>	
+					<li class="mui-table-view-cell" @tap="href({url:'invitationDetail.html',id:'invitationDetail.html',title:true,name:'邀请明细'})">
+						<a class="mui-navigate-right">
+					       <span>邀请明细</span>				       
+						</a>
+					</li>
+				</ul>
+				<div class="startbtn">
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="href({url:'qrcode.html',id:'qrcode.html',title:false})">立即邀请</button>
+				</div>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/immersed.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/my/start.js"></script>
+	</body>
+</html>

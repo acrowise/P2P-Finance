@@ -1,0 +1,72 @@
+@charset "UTF-8";
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+input, select, textarea {
+  font-size: 16px;
+  color: #2c2c2c;
+}
+
+/*编辑地址，新增地址start*/
+.address {
+  margin-bottom: 19px;
+}
+.address .mui-input-row a {
+  color: #2c2c2c;
+}
+.address .mui-input-row label {
+  width: 27%;
+  font-size: 14px;
+  padding: 11px 13px;
+}
+.address .mui-input-row input {
+  width: 73%;
+}
+.address .mui-input-row input[type="text"] {
+  padding: 11px 13px;
+}
+
+.default {
+  position: relative;
+  height: 49px;
+  line-height: 49px;
+  padding: 0 15px;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  margin-bottom: 44px;
+}
+.default span {
+  color: #2c2c2c;
+}
+.default .mui-switch {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.btn_box {
+  padding: 0 15px;
+}
+
+/*编辑地址，新增地址end*/
+
+/*# sourceMappingURL=editAddress.css.map */

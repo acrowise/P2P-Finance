@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/my/my.css" />
+	</head>
+	<body >
+		<div class="mui-content account" id="vue-app">
+			<div class="header">
+				<img src="images/mycenter.png"  class="img"/>
+				<div class="wave" >
+					<svg xmlns="http://www.w3.org/2000/svg"  
+						 xmlns:xlink="http://www.w3.org/1999/xlink" 
+						 width="100%" 
+						 height="150"
+                         >     
+						<g fill="rgba(255,255,255,0.03)">       
+						<path d="M 0 70 Q 75 39, 150 70 T 300 70 T 450 70 T 600 70 T 750 70  T 900 70  T 1050 70 T 1200 70 T 1350 70 V 150 H 0 V 0"></path>         
+						<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-300" dur="8s" repeatCount="indefinite"></animateTransform>    
+						</g>    
+						<g fill="rgba(255,255,255,0.045)">        
+						<path d="M 0 70 Q 87.5 47, 175 70 T 350 70 T 525 70 T 700 70 T 875 70 T 1050 70 T 1225 70 T 1400 70  T 1575 70  V 150 H 0 V 0"></path>       
+						<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-350" dur="16s" repeatCount="indefinite"></animateTransform>    
+						</g>    
+						<g fill="rgba(255,255,255,0.057)" transform="translate(-903.868 0)">        
+						<path d="M 0 70 Q 135 36, 270 70 T 540 70 T 810 70 T 1080 70 T 1350 70 T 1620 70  V 150 H 0 V 0" transform="translate(-38.232284367796474, 0)"></path>        
+						<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-540" dur="10s" repeatCount="indefinite"></animateTransform>    
+						</g>
+					</svg>
+				</div>
+				<div class="loghead" id="userInfo" @tap="href({url:'views/my/userinfo.html',id:'userinfo.html',title:true,name:'个人资料'})">
+					<a class="">
+						<img :src="pic" />
+					</a>					
+					<p>{{userName}}</p>
+				</div>
+			</div>
+			<div class="mynav">
+				<div class="mynav-content">
+					<span>账户余额：{{amount}}</span>
+					<div class="mynav-btn">
+						<button class="mui-btn mui-btn-primary " @tap="href({url:'views/my/recharge.html',id:'recharge.html',title:true,name:'充值'})">充值</button>
+						<button class="mui-btn mui-btn-primary mui-btn-outlined" @tap="href({url:'views/my/withdrawals.html',id:'withdrawals.html',title:false})">提现</button>
+					</div>						
+				</div>			
+			</div>
+			<ul class="mui-table-view ul1">
+				<li class="mui-table-view-cell returncal" @tap="href({url:'views/my/payCalendar.html',id:'payCalendar.html',title:true,name:'回款日历'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-riliriqi2"></span>
+				       <span>回款日历</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell myassign" @tap="href({url:'views/my/myTransfer.html',id:'myTransfer.html',title:true,name:'我的转让'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-zhuanrang-"></span>
+				       <span>我的转让</span>				       
+					</a>
+				</li>	
+				<li class="mui-table-view-cell mycard" @tap="href({url:'views/my/coupon.html',id:'coupon.html',title:true,name:'我的卡券'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-quanqia"></span>
+				       <span>我的卡券</span>				       
+					</a>
+				</li>
+				<!--<li class="mui-table-view-cell autobid" @tap="autoTender({url:'views/my/automaticBid.html',id:'automaticBid.html',title:true,name:'自动投标',text:'\ue705'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-autotender"></span>
+				       <span>自动投标</span>				       
+					</a>
+				</li>-->
+				<li class="mui-table-view-cell myloan" @tap="href({url:'views/my/myLoan.html',id:'myLoan.html',title:false})"> 
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-jiekuan"></span>
+				       <span>我的借款</span>				       
+					</a>
+				</li>							
+			</ul>
+			<ul class="mui-table-view ul2">
+				<li class="mui-table-view-cell capdetail" @tap="href({url:'views/my/fundDetail.html',id:'fundDetail.html',title:true,name:'资金明细'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-zijinjihua"></span>
+				       <span>资金明细</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell rechargelist" @tap="href({url:'views/my/rechargeList.html',id:'rechargeList.html',title:false})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-chongzhi"></span>
+				       <span>充值记录</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell presentlist" @tap="href({url:'views/my/withdrawList.html',id:'withdrawList.html',title:false})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-tixian"></span>
+				       <span>提现记录</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell start" @tap="href({url:'views/my/start.html',id:'start.html',title:false})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-xing"></span>
+				       <span>邀请好友</span>				       
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view ul2">
+				<li class="mui-table-view-cell message" @tap="href({url:'views/my/message.html',id:'message.html',title:true,name:'消息'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-xiaoxi"></span>
+				       <span>消息</span>	
+				       <i class="mui-badge mui-badge-danger" v-show="msgNum>0"></i> 
+					</a>
+				</li>
+				<li class="mui-table-view-cell option" @tap="href({url:'views/my/set.html',id:'set.html',title:true,name:'设置'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-shezhi"></span>
+				       <span>设置</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell more" @tap="href({url:'views/my/more.html',id:'more.html',title:true,name:'更多'})">
+					<a class="mui-navigate-right">
+				       <span class="mui-icon iconfont icon-gengduo"></span>
+				       <span>更多</span>				       
+					</a>
+				</li>
+			</ul>
+			<!--弹层 start -->
+		 <div class="black_overlay"  :class="{'mui-hidden':mask}" @touchmove="preventDefault($event)"></div>
+		  <div class="mask_content" :class="{'mui-hidden':mask}" @touchmove="preventDefault($event)">
+		    <img  src="images/bank/bankBanner.png" class="mask-banner"/>
+		    <div class="mask-content">
+		    	<div class="tips">开通银行存管账户，让您的资金更安全</div>
+		        <div class="bank-process mui-popup-inner">
+		            <div class="process">
+		                <img src="images/bank/imgAuth.png" />
+		                <span>开户</span>
+		            </div>
+		            <div class="process">
+		                <img src="images/bank/imgPwd.png" />
+		                <span>设置交易密码</span>
+		            </div>
+		            <div class="process">
+		                <img src="images/bank/imgSafety.png" />
+		                <span>授权</span>
+		            </div>
+		            <div class="process">
+		                <img src="images/bank/imgCard.png" />
+		                <span>绑卡</span>
+		            </div>
+		            <div class="process-line"></div>
+		        </div>
+                 <div class="mui-popup-buttons">
+                 	<span class="mui-popup-button"  @tap="opening(1)">个人开户</span>
+                 	<span class="mui-popup-button mui-popup-button-bold" @tap="opening(2)">企业开户</span>
+                 </div>
+		    </div>
+		    <span class="mui-icon  mui-icon mui-icon-closeempty" @tap="closeMask"></span>
+		</div>
+		<!--弹层 end-->
+		</div>
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/vue2.min.js"></script>
+		<script type="text/javascript" src="js/my/my.js" ></script>
+		<script>
+//			mui.confirm('您还未设置宜宾银行交易密码，请先设置','',['取消','立即设置'],function(e){
+//			    				if(e.index==1){
+//			    					sui.open('views/bank/setPayPwd.html','setPayPwd.html',{},{});
+//			    				}
+//			    			},'div');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/root/default.css">
+		<link rel="stylesheet" href="css/check.version.css" />
+	</head>
+	<body>
+		<div class="mui-content default" :class="{pad51:pad51}"  id="vue-app" v-cloak>
+			<div id="slider" class="mui-slider" >
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a >
+							<img src="images/default-banner.png" :id="lastBannerId" @tap="bannerTap(banner[banner.length-1])">
+							 <!--2-->
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item" v-for="item in banner">
+						<a>
+							<img src="images/default-banner.png" :id="item.Id" @tap="bannerTap(item)">
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a>
+							<img src="images/default-banner.png" :id="firstBannerId" @tap="bannerTap(banner[0])">  
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div  v-for="(item,index) in banner" class="mui-indicator " :class="{'mui-active':index==0}"></div>
+				</div>
+			</div>
+			<div class="infocenter">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell returncal">
+						<a class="mui-navigate-right showa">
+					       <span class="mui-icon iconfont icon-lingdang"></span>
+					       <span class="notice" @tap="href({url:'views/root/newsDetail.html',id:'newsDetail.html',newsId:news.Id,title:false})" >{{news.Title}}</span>	
+					       <em class="more mui-pull-right" @tap="href({url:'views/root/news.html',id:'news.html',title:true,name:'资讯中心'})">更多</em>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="mui-table-view navul">
+				<li class="mui-table-view-cell" @tap="href({url:'views/help/scanQrcode.html',id:'scanQrcode.html',title:false})">
+					<i class="mui-icon iconfont icon-saoyisao"></i>
+					<span>扫一扫</span>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'views/help/safety.html',id:'safety.html',title:false})">
+					<i class="mui-icon iconfont icon-anquan"></i>
+					<span>安全保障</span>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'views/help/information.html',id:'information.html',title:false})">
+					<i class="mui-icon iconfont icon-yunyingbaobiao"></i>
+					<span>信息披露</span>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'views/help/manage.html',id:'manage.html',title:false})">
+					<i class="mui-icon iconfont icon-iconfontpaixingbang"></i>
+					<span>运营数据</span>
+				</li>
+			</ul>
+			<div class="novice" v-show="noviceLoan.IsOnline">
+				<div class="noviceico">新手专享</div>
+				<h1>{{getRate}}<em>%</em></h1>
+				<p>年利率</p>
+				<div class="novicelist">
+					<div>
+						<p>{{ noviceLoan.LoanTerm | getTerm(noviceLoan.LoanTermUnit)}}</p>
+						<p>出借期限</p>
+					</div>
+					<div>
+						<p>{{noviceLoan.Amount | getAmount}}</p>
+						<p>体验金额</p>
+					</div>
+					<div>
+						<p>{{noviceLoan.Profit | getAmount}}</p>
+						<p>预计收益</p>
+					</div>
+				</div>
+				<div class="defaultbtn">
+					<button type="button" id="gonovice" class="mui-btn mui-btn-primary mui-btn-block" @tap="novice">
+						立即领取
+					</button>
+				</div>
+				
+			</div>
+			<ul class="mui-table-view monthitem">
+					<li class="mui-table-view-cell monthli" @tap="btnLoan">
+							<div class="publist2">
+								<div class="title-box">
+									<h2 v-text="loan.Name"></h2>
+									<div class="btn-box">
+										<button class="mui-btn mui-btn-warning mui-btn-outlined">{{loan.RiskLevel}}</button>
+										<button class="mui-btn mui-btn-warning mui-btn-outlined">{{loan.RefundWays | refundWays}}</button>
+							            <!-- 6-可加入 7-撤标中 8-流标 9-已结束 10-放款中 11-还款中 12-还款完成-->
+							            <button class="mui-btn" :class="{'mui-btn-grey':loan.State!=6,'mui-btn-warning':loan.State==6}">{{loan.State | statusDesc}}</button>
+									</div>
+								</div>
+								<div class="main" :class="{unenable:loan.State!=6}">
+									<div class="item">
+										<h3 v-html="getLoanRate(loan.Rate,loan.RaiseRate)"></h3>
+										<span>年利率</span>
+									</div>
+									<div class="item">
+										<p>{{loan.LoanTerm | getTerm(loan.LoanTermUnit)}}</p>
+										<span>借款期限</span>
+									</div>
+									<div class="item">
+										<p>{{loan.SurplusAmount}}</p>
+										<span>可投金额</span>
+									</div>
+								</div>
+							</div>							
+						</li>
+			</ul>					
+		</div>
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/vue2.min.js"></script>
+		<script type="text/javascript" src="js/cache.img.js" ></script>
+		<script type="text/javascript" src="js/statistic.js" ></script>
+		<script type="text/javascript" src="js/check.version.js" ></script>
+		<script type="text/javascript" src="js/root/default.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+/*出借记录，充值记录公共css*/
+ul, p, h2, h3, b, dd, dt {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h3, h2 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.rglist {
+  margin: 0;
+  padding: 0;
+  color: #2c2c2c;
+  font-size: 15px;
+  line-height: 1;
+}
+.rglist dt {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 11px;
+}
+.rglist dt span {
+  display: inline-block;
+  line-height: inherit;
+  vertical-align: middle;
+}
+.rglist dt span:first-of-type {
+  float: left;
+}
+.rglist dt span:last-of-type {
+  float: right;
+}
+.rglist dd {
+  display: inline-block;
+  width: 100%;
+  line-height: 20px;
+  height: 20px;
+  margin-left: 0px;
+}
+.rglist dd span, .rglist dd time {
+  display: inline-block;
+  line-height: inherit;
+  vertical-align: middle;
+}
+.rglist dd span {
+  float: left;
+}
+.rglist dd time {
+  float: right;
+  font-size: 12px;
+  color: #999;
+}
+
+.clist {
+  margin: 0;
+  width: 100%;
+  color: #2c2c2c;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clist dt p {
+  color: #2c2c2c;
+  line-height: 27px;
+}
+.clist dd {
+  margin-left: 0;
+}
+.clist dd p {
+  color: #999;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=rechargeList.css.map */

@@ -1,0 +1,82 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+.investlist .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}
+.investlist .zlist {
+  margin: 0;
+  width: 100%;
+  color: #2c2c2c;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.investlist .zlist dt i {
+  display: inline-block;
+  width: 20px;
+  vertical-align: top;
+}
+.investlist .zlist dt i.iconfont {
+  height: 20px;
+  vertical-align: middle;
+  font-size: 20px;
+  color: #1E82D2;
+}
+.investlist .zlist dt i.iconfont.icon-dashboard {
+  font-size: 18px;
+}
+.investlist .zlist dt i.iconfont.icon-weixin1 {
+  font-size: 22px;
+  vertical-align: top;
+}
+.investlist .zlist dt i.iconfont.icon-zhifubao {
+  font-size: 21px;
+}
+.investlist .zlist dt i.iconfont.icon-shouji {
+  font-size: 22px;
+}
+.investlist .zlist dt i img {
+  width: 20px;
+}
+.investlist .zlist dt span {
+  font-size: 15px;
+  display: inline-block;
+  color: #2c2c2c;
+}
+.investlist .zlist dd {
+  margin-left: 0;
+}
+.investlist .zlist dd p {
+  text-align: right;
+  color: #999;
+  font-size: 12px;
+  line-height: 20px;
+}
+.investlist .zlist dd p:first-of-type {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #2c2c2c;
+  line-height: 21px;
+}
+
+/*# sourceMappingURL=investRecord.css.map */

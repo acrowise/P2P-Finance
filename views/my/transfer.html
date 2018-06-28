@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>转让</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/transfer.css">
+	</head>
+	<body>
+		<div id="vue-app">
+			<!--<header class="mui-bar mui-bar-nav main-index">
+			<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+			<h1 class="mui-title">转让</h1>
+			<a class="mui-icon iconfont icon-wenhao mui-pull-right helpico" @tap="href('transferRules.html','transferRules.html','转让规则')"></a>
+		</header>-->
+		<div class="mui-content alltrans" :class="{'ios-scroll-bounce':isIos}">
+			<ul class="transhead">
+				<li>
+					<div class="title-box">
+						<h2 v-text="model.Name || '加载中...'"></h2>
+					</div>
+					<div class="main">
+						<p>
+							<span>剩余本金：<em>{{model.SurplusCapital | getAmount}}</em></span> 
+							<span>剩余期数：<em>{{model.SurplusPeriods || 0}}个月</em></span>
+						</p>
+						<p>
+							<span>当期应收利息： <em>{{model.CurrentInterest | getAmount}}</em></span> 
+							<span>最近还款日：<em>{{model.CurrentReceiptDate | getDate}}</em></span>
+						</p>
+						<p>
+							<span>转让手续费：<em>{{model.Fee | getAmount}}</em></span> 
+							<span>还款方式： <em>{{model.RefundWays}}</em></span> 
+						</p>
+					</div>
+				</li>
+			</ul>
+			<div class="transalert">
+				<ul class="mui-table-view goul">
+					<li class="mui-table-view-cell pad">
+						<div class="mui-input-row mui-radio mui-left">
+							<label >折价</label>
+							<input    value="1"   type="radio" name="radio"  v-model.number="kind" @change="rateDiscount"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label >溢价</label>
+							<input   value="2"  type="radio" name="radio" v-model.number="kind" @change="rateDiscount"/>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<input class="money" type="text" :placeholder="placeholder()" v-model="amount" @input="rateDiscount"/>
+					</li>
+					<li class="mui-table-view-cell">
+						<span class="mui-pull-left" @tap="href('transferHelp.html','transferHelp.html','转让帮助')">折溢率<a class="mui-icon iconfont icon-wenhao mui-pull-right" ></a></span>
+						<em class="mui-pull-right">{{rate}}%</em> 
+					</li>
+					<li class="mui-table-view-cell">
+						<span class="mui-pull-left" @tap="href('transferHelp.html','transferHelp.html','转让帮助')">实际到账金额<a class="mui-icon iconfont icon-wenhao mui-pull-right"></a></span>
+						<em class="mui-pull-right">{{factAmt}}</em>
+					</li>
+					<li class="mui-table-view-cell lastli mui-hidden">	
+				    	<input class="safecode mui-pull-left" type="password" placeholder="请输入安全码" />
+				    	<a class="mui-pull-right fgsafe" @tap="href('safetyCode.html','safetyCode.html','安全码')">忘记安全码</a>
+					</li>
+				</ul>			
+			</div>
+			<div class="mui-input-row mui-checkbox mui-left agreeopt">					
+				<label for="agreen" class="mui-pull-left">我已阅读并同意前海领投的</label>
+				<input id="agreen" name="agreen"  type="checkbox" v-model="agree">
+				<a @tap="href('../help/transferProtocol.html','transferProtocol.html','债权转让协议')">《债权转让协议》</a>			
+			</div>
+			<div class="btnbox">
+				<button class="mui-btn mui-btn-primary mui-btn-block" @tap.stop="btnSure">立即转让</button>	
+			</div>	
+		</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<!--<script type="text/javascript" src="../../js/immersed.js" ></script>-->
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/my/transfer.js" ></script>
+	</body>
+</html>

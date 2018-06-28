@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人资料</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/my.css" />
+	</head>
+	<body >
+	   <!--
+       	作者：dingyong
+       	时间：2018-01-09
+       	描述：个人资料
+       -->
+		<div class="mui-content" id="vue-app">
+			<div class="account pub userinfo">							
+				<ul class="mui-table-view ul0">
+					<li class="mui-table-view-cell userheader" @tap="plusReady">
+						<a class="mui-navigate-right">
+						<img  src="../../images/my-logo.png" :src="pic"/> 
+						<span v-text="userName"></span>			       
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view ul1">
+					<li class="mui-table-view-cell" @tap="href({url:'qrcode.html',id:'qrcode.html',title:false})">
+						<a class="mui-navigate-right">
+					       <span>我的二维码</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell" @tap="realAuth">
+						<a class="mui-navigate-right">
+					       <span>银行存管开户</span>	
+					       <span class="rightword" v-text="isRealAuth?'已开户':'未开户'"></span>
+						</a>
+					</li>
+	
+				</ul>
+				<ul class="mui-table-view ul2">
+					<li class="mui-table-view-cell bancard" @tap="href({url:'bankCard.html',id:'bankCard.html',title:false})">
+						<a class="mui-navigate-right">
+					       <span>银行卡管理</span>				       
+						</a>
+					</li>
+					<li class="mui-table-view-cell address" @tap="href({url:'address.html',id:'address.html',title:true,name:'地址管理'})">
+						<a class="mui-navigate-right">
+					       <span>地址管理</span>				       
+						</a>
+					</li>
+				</ul>
+				<ul class="mui-table-view ul2">
+					<li class="mui-table-view-cell" @tap="href({url:'riskEvaluation.html',id:'riskEvaluation.html',title:true,name:'风险测评'})">
+						<a class="mui-navigate-right">
+					       <span>风险测评</span>	
+					       <span class="rightword" v-text="riskType"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/my/userinfo.js" ></script>
+	</body>
+</html>

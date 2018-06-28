@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>借款人基本信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/invest/pubDisplay.css" />
+	</head>
+	<body>
+		<!--
+	    	作者：hxg
+	    	时间：2018-01-30
+	    	描述：借款人基本信息
+	    -->
+		<div class="mui-content pubInfo mui-hidden" id="vue-app" :class="{'ios-scroll-bounce':isIos}" ref="container">
+			<ul>
+				<li>
+					<span>姓名</span>
+					<span>{{model.Name}}</span>					
+				</li>
+				<li>
+					<span>性别</span>
+					<span>{{model.Sex}}</span>
+				</li>
+				<li>
+					<span>年龄</span>
+					<span>{{model.Age}}</span>
+				</li>
+				<li>
+					<span>工作性质</span>
+					<span>{{model.Job}}</span>
+				</li>
+				<li>
+					<span>借款人收入</span>
+					<span>{{model.Income}}</span>
+				</li>
+				<li>
+					<span>当前负债</span>
+					<span>{{model.CurrentDebt}}</span>
+				</li>
+				<li>
+					<span>平台历史逾期次数</span>
+					<span>{{model.OverdueTimes}}</span>
+				</li>
+				<li>
+					<span>平台历史逾期金额</span>
+					<span>{{model.HistoryOverdue}}</span>
+				</li>
+				<li>
+					<span>平台当前逾期金额</span>
+					<span>{{model.CurrentOverdue}}</span>
+				</li>
+				<li>
+					<span>涉诉情况</span>
+					<span>{{model.Lawsuits}}</span>
+				</li>
+				<li>
+					<span>受行政处罚情况</span>
+					<span>{{model.Chufa}}</span>
+				</li>
+				<li>
+					<span>在其他网络借贷平台借款情况</span>
+					<span>
+						{{model.BorrowCase}}
+					</span>
+				</li>
+				<li>
+					<span>近6个月征信报告中的逾期情况</span>
+					<span>{{model.OverdueDesc}}</span>
+				</li>
+				<li>
+					<span>审核信息</span>
+					<p class="renzheng">
+						<span v-show="model.IsRealAuth"><i class="mui-icon iconfont icon-gou1"></i>身份认证</span>
+						<span v-show="model.IsMobileAuth"><i class="mui-icon iconfont icon-gou1"></i>手机认证</span>
+						<span v-show="model.IsSpotAuth"><i class="mui-icon iconfont icon-gou1"></i>实地认证</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/invest/loanManInfo.js" ></script>
+	</body>
+</html>

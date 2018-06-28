@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>房产信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/invest/pubDisplay.css" />
+	</head>
+	<body class="orginal">
+		<!--
+	    	作者：hxg
+	    	时间：2018-01-30
+	    	描述：房产信息
+	    -->
+	   
+		<div class="mui-content houseInfo mui-hidden"  id="vue-app"  :class="{'ios-scroll-bounce':isIos}" ref="container">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell publist publist1" v-for="(model,index) in houseList">
+					<div class="title-box">
+						<h2>房产{{index | getChinese}}</h2>
+					</div>
+					<div class="content">
+						<p>
+							<span><em>购买时间：</em>{{model.BuyDate | getDate}}</span>
+							<span><em>房产面积：</em>{{model.Mianji}}</span>
+						</p>
+						<p>
+							<span><em>购买金额：</em>{{model.BuyAmount | getAmount}}</span>
+							<span><em>房产年限：</em>{{model.AgeLimit}}年</span>
+						</p>
+						<p>
+							<span><em>是否装修：</em>{{model.IsZhuangxiu?"已装修":"未装修"}}</span>
+							<span><em>是否有房贷：</em>{{model.HasLoan?"有":"无"}}</span>
+						</p>
+						<p>
+							<span><em>房贷金额：</em>{{model.LoanAmount | getAmount}}</span>
+							<span><em>房贷期限：</em>{{model.LoanYears}}年</span>
+						</p>						
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+        <script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+	   <script type="text/javascript" src="../../js/invest/houseInfo.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>风控措施</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/invest/pubSection.css" />
+	</head>
+	<body>
+		<!--
+	    	作者：dingyong
+	    	时间：2018-01-18
+	    	描述：风控措施
+	    -->
+		<div class="mui-content" id="vue-app" :class="{'ios-scroll-bounce':isIos}">
+			<div class="measures" v-if="show" v-html="content"></div>
+			<div class="measures" v-else>
+				<h3>信用记录</h3>
+				<p>
+					经人民银行征信系统查询债务人征信报告正常，债务人过往借款记录优良，
+					无借款逾期、拖欠本息记录。提供银行流水真实充足。
+				</p>
+				<h3>还款来源：</h3>
+				<p>1.第一还款来源：借款人每月经营收入所得。</p>
+				<p>2.第二还款来源：借款人该房产每月租金收入所得。</p>
+				<h3>涉诉状况：</h3>
+				<p>
+					经全国法院被执行人信息查询系统、
+					全国法院失信被执行人名单信息公布与查询平台及互联网搜索，未发现借款人涉诉信息。
+				</p>
+				<h3>风控措施：</h3>
+				<p>1.借款人已签定了相关的借款合同，手续合法有效。</p>
+				<p>2.已进行实地考察周边地段的情况，核实该房产的市场价值、房产状况及租赁情况。</p>
+				<p>3.已与借款人签署租赁权转移协议，如借款人不能按时还款，我司将强制收取租金以保证每月按时还款。</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/invest/measures.js" ></script>
+	</body>
+</html>

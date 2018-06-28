@@ -1,0 +1,219 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, h3, b {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h3, h2 {
+  font-weight: normal;
+}
+
+span, b {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-table-view {
+  background-color: transparent;
+}
+.mui-table-view:before, .mui-table-view:after {
+  display: none;
+}
+
+.mui-table-view-cell {
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.mui-table-view-cell:before, .mui-table-view-cell:after {
+  display: none;
+}
+
+.mui-btn-grey:before {
+  border-radius: 36px;
+}
+
+.nav {
+  background-color: #1e82d2;
+}
+.nav .investtag {
+  background-color: #1E81D2;
+  border-radius: 0;
+  border: 0;
+  display: flex;
+  top: 5px;
+  width: 64%;
+}
+.nav .investtag .mui-control-item {
+  border: 0;
+  color: #b1cfff;
+  display: inline-block;
+  width: auto;
+  flex: 1;
+}
+/*.nav .investtag .mui-control-item:nth-child(2) {
+  flex: 0 1 auto;
+}*/
+
+.nav .investtag .mui-control-item.mui-active {
+  position: relative;
+  background-color: inherit;
+  color: #fff;
+}
+.nav .investtag .mui-control-item.mui-active:after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 15px);
+  bottom: 0px;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.mui-content {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0px;
+}
+.mui-content.projectList {
+  bottom: 0px;
+}
+.mui-content .wrapper {
+  position: absolute;
+  left: 0;
+  top: 44px;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+.mui-content .wrapper .content {
+  padding: 10px;
+}
+.mui-content .wrapper .content ul li {
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.pubinvest {
+  background-color: transparent;
+  margin: 10px;
+}
+.pubinvest .publist {
+  border-radius: 6px;
+}
+.pubinvest .publist .title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  line-height: 1;
+}
+.pubinvest .publist .title-box:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.pubinvest .publist .title-box h2 {
+  font-size: 14px;
+  color: #2c2c2c;
+  padding-bottom: 13px;
+  white-space: nowrap;
+}
+.pubinvest .publist .title-box .btn-box {
+  padding-bottom: 13px;
+}
+.pubinvest .publist .title-box .btn-box .mui-btn {
+  padding: 2px 9px;
+  font-size: 12px;
+  line-height: initial;
+  border-radius: 25px;
+}
+.pubinvest .publist .title-box .btn-box .mui-btn + button {
+  margin-left: 2px;
+}
+.pubinvest .publist .main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0px 12px;
+}
+.pubinvest .publist .main .item {
+  text-align: center;
+}
+.pubinvest .publist .main .item h3 {
+  color: #ff6c00;
+  font-size: 19px;
+  line-height: 36px;
+}
+.pubinvest .publist .main .item h3 b {
+  font-size: 29px;
+  line-height: 36px;
+}
+.pubinvest .publist .main .item h3 .bigspan {
+  color: #ff6c00;
+  font-size: 29px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.pubinvest .publist .main .item p {
+  line-height: 40px;
+  color: #2c2c2c;
+  font-size: 14px;
+}
+.pubinvest .publist .main .item span {
+  width: 100%;
+  line-height: 22px;
+  color: #999999;
+  font-size: 12px;
+}
+.pubinvest .publist .main.unenable .item h3 {
+  color: #999;
+}
+.pubinvest .publist .main.unenable .item p {
+  color: #999;
+}
+.pubinvest .publist .main.unenable .item .bigspan {
+  color: #999;
+}
+.banner {
+      padding: 15px 12px;
+      width: 100%;
+      background: #FFFFFF;
+      color: #FF7900;
+      font-size: 14px;
+      line-height: 20px;
+    }
+/*# sourceMappingURL=investment.css.map */

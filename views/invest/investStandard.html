@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>出借标的</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/invest/investStandard.css" />
+		<link rel="stylesheet" href="../../css/mui.picker.min.css" />
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-18
+        	描述：出借
+        -->
+      <div id="vue-app">
+      	  <nav class="mui-bar mui-bar-tab sureopt">
+				<button type="button" class="mui-btn  mui-btn-block mui-btn-primary" @tap="sendTender" :class="{'mui-btn-grey':grey}" :disabled="grey">确认出借</button>
+				<div class="invest-tips">市场有风险，出借需谨慎</div>
+		</nav>
+		<div class="mui-content container" :class="{'ios-scroll-bounce':isIos}">
+			<div class="investop">
+				<div class="investhead">
+					<div class="balance">
+						<p>账户余额</p>
+						<p>{{model.AvailBal | getAmount}}</p>
+					</div>
+					<div class="sulplus">
+						<p>可投金额</p>
+						<p>{{model.SurplusAmount | getAmount}}</p>
+					</div>
+				</div>
+				<ul class="mui-table-view investopt">
+					<li class="mui-table-view-cell higcell">
+						<input class="mui-pull-left" type="text" :placeholder="placeholder(model.MinInvestAmount,model.MaxInvestAmount || model.SurplusAmount)" v-model="viewModel.amount" @input="inputEvent"/>
+						<a class="mui-pull-right" @tap="href('../my/recharge.html','recharge.html','充值')">去充值</a>
+					</li>
+					<li class="alltou mui-clearfix">
+						<span class="mui-pull-left">一键全投：</span>
+						<div class="mui-pull-right mui-switch mui-switch-mini" @toggle="btnSwitch($event)">
+							<div class="mui-switch-handle"></div>
+					    </div>
+					</li>
+				</ul>
+			</div>
+			<ul class="mui-table-view ul1">
+				<li class="mui-table-view-cell " @tap="choicePeriods">
+					<a class="mui-clearfix"  :class="{'mui-navigate-right':viewModel.isChoice,'sui-white':!viewModel.isChoice}">
+				       <span class="mui-pull-left">{{viewModel.sName}}：</span>	
+				       <i class="mui-pull-right">{{viewModel.pName}}</i>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+			       <span class="mui-pull-left">年利率：</span>	
+			       <i class="mui-pull-right">{{model.Rate}}</i>
+				</li>
+				<li class="mui-table-view-cell">
+			       <span class="mui-pull-left">预期收益：</span>	
+			       <i class="mui-pull-right">{{viewModel.profit}}</i>
+				</li>
+			</ul>
+			<ul class="mui-table-view ul2">
+				<li class="mui-table-view-cell" @tap="choiceCoupon">
+					<a class="mui-navigate-right mui-clearfix">
+				       <span class="mui-pull-left">选择卡券：</span>	
+				       <i class="mui-pull-right hongbaoi" >{{viewModel.hbName}}</i>
+					</a>
+				</li>
+			</ul>
+			<div class="safecode mui-hidden">
+				<input type="password" placeholder="请输入安全码" />
+				<a @tap="href('../my/safetyCode.html','safetyCode.html','安全码')">忘记安全码</a>
+			</div>
+			<div class="mui-input-row mui-checkbox mui-left txtoption">		
+				<label class="mui-pull-left">我已阅读并同意签署</label>
+				<input  type="checkbox" v-model="viewModel.agree" />
+				<a @tap="href('../help/riskNote.html','riskNote.html','风险提示书')">《风险提示书》</a>
+				<!--<a v-if="type==2" @tap="href('../help/monthProtocol.html','monthProtocol.html','月账户出借协议')">《月账户出借协议》</a>		
+				<a v-if="type==3" @tap="href('../help/yearProtocol.html','yearProtocol.html','年账户出借协议')">《年账户出借协议》</a>-->
+				<a @tap="href('../help/loanContract.html','loanContract.html','融资借款合同')">《融资借款合同》</a>
+				<a v-if="type!=1" @tap="href('../help/transferProtocol.html','transferProtocol.html','债权转让协议')">《债权转让协议》</a>
+			</div>
+		</div>
+      </div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/invest/investStandard.js" ></script>
+	</body>
+</html>

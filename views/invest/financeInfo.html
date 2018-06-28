@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>融资信息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/invest/pubDisplay.css" />
+	</head>
+	<body>
+		<!--
+	    	作者：hxg
+	    	时间：2018-01-31
+	    	描述：融资信息
+	    -->
+		<div class="mui-content pubInfo finaceInfo mui-hidden" id="vue-app" :class="{'ios-scroll-bounce':isIos}" ref="container">
+			<ul>
+				<li>
+					<span>项目名称</span>
+					<span>{{model.Name}}</span>					
+				</li>
+				<li>
+					<span>项目简介</span>
+					<span>{{model.Description |reHtml}}</span>
+				</li>
+				<li>
+					<span>借款金额 </span>
+					<span>{{model.Amount | getAmount}}</span>
+				</li>
+				<li>
+					<span>借款用途</span>
+					<span>{{model.Purpose}}</span>
+				</li>
+				<li>
+					<span>还款方式</span>
+					<span>{{model.RefundWays | refundWays}}</span>
+				</li>
+				<li>
+					<span>还款来源</span>
+					<span>{{model.PaymentSource}}</span>
+				</li>
+				<li>
+					<span>服务说明</span>
+					<span>
+						<a @tap="href('../help/riskNote.html','风险提示书')">《风险提示书》</a>
+						<!--<a v-if="type==2" @tap="href('../help/monthProtocol.html','月账户出借协议')">《月账户出借协议》</a>		
+						<a v-if="type==3" @tap="href('../help/yearProtocol.html','年账户出借协议')">《年账户出借协议》</a>-->
+						<a @tap="href('../help/loanContract.html','融资借款合同')">《融资借款合同》</a>
+						<a v-if="type==4" @tap="href('../help/transferProtocol.html','债权转让协议')">《债权转让协议》</a>		
+					</span>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+	   <script type="text/javascript" src="../../js/invest/financeInfo.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,331 @@
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+
+ul, p, h2, h5 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, h5 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+
+.mui-table-view {
+  background-color: transparent;
+}
+.mui-table-view:before, .mui-table-view:after {
+  display: none;
+}
+
+.mui-table-view-cell {
+  background-color: #fff;
+}
+.mui-table-view-cell:before, .mui-table-view-cell:after {
+  display: none;
+}
+.mui-bar-tab{  
+	 display: flex ;
+  }
+.mui-bar-tab ~ .mui-content.calendardt {
+  padding-bottom: 0px;
+}
+
+.mui-bar-tab ~ .mui-content.pdstyle {
+  padding-bottom: 50px !important;
+}
+
+.mui-bar .mui-btn-block.mui-btn-rightbottom {
+  border-radius: 0 !important;
+  padding: 14px 0 !important;
+  flex: 1;
+  top: 0;
+  border: 0  !important;
+}
+.mui-btn:before{
+	border: 0 ;
+	 border-radius: 0 !important;
+}
+.btnCenter{
+	position: relative;
+}
+.btnCenter:before{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.repayalert {
+  background-color: #fff !important;
+  color: #2c2c2c;
+}
+.repayalert h5 {
+  color: #2c2c2c;
+  font-size: 17px;
+  text-align: center;
+  line-height: 44px;
+  position: relative;
+}
+.repayalert h5:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.repayalert h5 a {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #999;
+  font-size: 20px;
+}
+.repayalert .moneyinfo {
+  margin-bottom: 29px;
+}
+.repayalert .moneyinfo p, .repayalert .moneyinfo span {
+  text-align: center;
+}
+.repayalert .moneyinfo p {
+  line-height: 65px;
+  font-size: 29px;
+  color: #2c2c2c;
+}
+.repayalert .moneyinfo span {
+  display: block;
+  font-size: 14px;
+}
+.repayalert .balance {
+  line-height: 44px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.repayalert .balance:after {
+  position: absolute;
+  content: '';
+  left: 15px;
+  bottom: -1px;
+  height: 1px;
+  width: calc(100% - 30px);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.repayalert .balance span {
+  line-height: 42px;
+}
+.repayalert .balance a {
+  font-size: 14px;
+  color: #1e82d2;
+}
+.repayalert .balance a:active {
+  opacity: .5;
+}
+.repayalert .btnbox {
+  padding: 33px 15px 24px;
+}
+
+.calendardt .moneydata {
+  background-color: #1E81D2;
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+.calendardt .moneydata ul {
+  padding: 14px 0;
+}
+.calendardt .moneydata ul .assetdlist {
+  display: flex;
+}
+.calendardt .moneydata ul .assetdlist:first-of-type {
+  margin-bottom: 18px;
+}
+.calendardt .moneydata ul .assetdlist div {
+  flex: 1 1 auto;
+}
+.calendardt .moneydata ul .assetdlist div:last-of-type {
+  flex: 0 1 auto;
+}
+.calendardt .moneydata ul .assetdlist div p:first-child {
+  line-height: 24px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #9dd3ff;
+}
+.calendardt .moneydata ul .assetdlist div p:first-child i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #9dd3ff;
+  margin-right: 6px;
+}
+.calendardt .moneydata ul .assetdlist div p:last-child {
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+}
+.calendardt .moneydata ul .assetdlist.assetdlist2 div:nth-child(2) {
+  padding-left: 10px;
+}
+.calendardt .moneydata ul .paylist {
+  width: 100%;
+  display: inline-block;
+}
+.calendardt .moneydata ul .paylist div {
+  width: 32%;
+  display: inline-block;
+}
+.calendardt .moneydata ul .paylist div:not(.notmargin) {
+  margin-bottom: 18px;
+}
+.calendardt .moneydata ul .paylist div p:first-child {
+  line-height: 24px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #9dd3ff;
+}
+.calendardt .moneydata ul .paylist div p:first-child i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #9dd3ff;
+  margin-right: 6px;
+}
+.calendardt .moneydata ul .paylist div p:last-child {
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+}
+.item-box{
+	background: #FFFFFF;
+	padding: 12px 15px;
+	margin-bottom: 10px;
+}
+.calendardt .calendar-content ul {
+  padding: 0px 10px 10px;
+}
+.calendardt .calendar-content ul li {
+  padding: 9px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  position: relative;
+}
+.title-box:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.title-box h2 {
+  font-size: 15px;
+  color: #2c2c2c;
+}
+.title-box em {
+  font-size: 14px;
+}
+.title-box2 h2 {
+  font-size: 14px;
+  display: inline-block;
+}
+.title-box2 h2 .txtoption {
+  vertical-align: middle;
+  display: inline-block;
+}
+.title-box2 h2 .txtoption label {
+  padding-left: 6px;
+}
+ .title-box2 h2 .txtoption input[type=checkbox] {
+  top: 0px;
+  left: 0;
+}
+.title-box2 h2 .txtoption input[type=checkbox]:before {
+  font-size: 22px;
+}
+ .main {
+  margin-top: 8px;
+}
+ .main p {
+  font-size: 12px;
+  display: flex;
+}
+ .main p span {
+  flex: 1;
+  color: #999;
+  height: 25px;
+  line-height: 25px;
+}
+ .main p span em {
+  color: #2c2c2c;
+}
+.ystatus .title-box em {
+  color: #999;
+}
+.ystatus h2 {
+  color: #999;
+}
+.ystatus .main p em {
+  color: #999;
+}
+.wstatus .title-box {
+  color: #2c2c2c;
+}
+.wstatus .main p em {
+  color: #2c2c2c;
+}
+.calendardt .calendar-content2 ul li {
+  background-color: #fff;
+}
+.mui-small-btn:before {
+  border-radius: 12px;
+}
+.mui-small-btn {
+  width: 49px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+/*# sourceMappingURL=payCalendarDetail.css.map */

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>我的借款</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/myLoan.css">
+		<style id="stylesheet"></style>
+	</head>
+	<body>
+		<div id="vue-app">
+			<header class="mui-bar mui-bar-nav main-index loanhd" >
+				<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+				<h1 class="mui-title">我的借款</h1>
+				<a class="mui-btn mui-btn-link mui-pull-right " @tap="href('wantLoan.html','wantLoan.html','我要借款')">我要借款</a>
+			</header>
+			<nav class="mui-bar mui-bar-tab paymentbottom" v-show="activeTap==1&&navBar">
+				<div class="chooseopt">
+					<div class="allbtn">
+						<div class="mui-input-row mui-checkbox mui-left txtoption" @tap="btnChecked($event)">					
+							<label>全选</label>
+							<input  type="checkbox"  name="checkbox" v-model="checkAll"  @change="checkEvent($event)" /> 
+						</div>	
+					</div>
+					<div class="huank">
+						<button class="mui-btn mui-btn-primary mui-btn-block mui-btn-rightbottom" @tap="btnRefund">还款</button>
+					</div>
+				</div>
+			</nav>
+			<div  class="mui-segmented-control pubtaghd pubtaghd2" id="tapBar">
+				<a class="mui-control-item left"  :class="{'mui-active':activeTap==0,'mui-disabled':isRefresh}" @tap="tapEvent(0)">借款记录</a>
+				<a class="mui-control-item center"  :class="{'mui-active':activeTap==1,'mui-disabled':isRefresh}" @tap="tapEvent(1)">还款记录</a>
+				<a class="mui-control-items  right" :class="{'mui-disabled':isRefresh}"   @tap="href('repayCalendar.html','repayCalendar.html','还款日历')">还款日历</a>
+			</div>
+			<div class="mui-content myloan mui-scroll-wrapper" id="pullrefresh" :class="{pdstyle:activeTap==1&&navBar}"> 
+				<div class="mui-scroll loancontent">
+					<div  class="mui-control-content content1" :class="{'mui-active':activeTap==0}">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell" v-for="item in loan.list" @tap="investDetail(item.Id,item.LoanType,item.Name)">
+								<div class="title-box">
+									<h2>{{item.Name}}</h2>
+									<span>{{item.State | getState}}</span>
+								</div>
+								<div class="main">
+									<p>
+										<span>借款金额：<em>{{item.Amount | getAmount}}</em></span> 
+										<span>借款利率：<em>{{item.Rate | getRate}}%</em></span>
+									</p>
+									<p>
+										<span>借款期限： <em>{{item.LoanTerm | getTerm(item.LoanTermUnit)}}</em></span> 
+										<span>借款用途：<em>{{item.Purpose}}</em></span>
+									</p>
+									<p>
+										<span>借款时间： <em>{{item.Uptime | getDate}}</em></span> 
+										<span>管理费率：<em>{{item.ManFeeRate | getFeeRate(item.ManFeeMethod)}}</em></span>
+									</p>
+								</div>
+							</li>
+						</ul>				
+					</div>
+					<div  class="mui-control-content content2" :class="{'mui-active':activeTap==1}">
+						<ul class="mui-table-view ">
+							<!-- 还款状态：1-待还 2-还款中 3-已还 4-提前还款 5-逾期 6-逾期还款 7-代偿-->
+							<li :class="{wstatus:model.State!=1 && model.State!=5 && model.State!=7}" v-for="model in refund.list" @tap="refundDetail(model.LoanId)">                                                                           
+								<div class="title-box title-box2">
+									<div class="mui-input-row mui-checkbox mui-left txtoption mui-hidden" @tap="btnChecked($event)">		
+										<label></label>
+									    <input   type="checkbox" :value="model.RefundPlanId"  :disabled="model.State!=1 && model.State!=5 && model.State!=7" v-model="checkedIds"/>
+									</div> 
+									<h2>{{model.LoanName}}</h2>
+									<button class="mui-btn mui-btn-primary mui-small-btn mui-pull-right" type="button" @tap.stop="refundDetail(model.LoanId)" v-if="(model.State==1 || model.State==5 || model.State==7) && model.IsOper">还款</button>
+								</div>
+								<div class="main">
+									<p>
+										<span>本金：<em>{{model.BenJin}}</em></span> 
+										<span>还款总额：<em>{{model.CurTotalAmount}}</em></span>
+									</p>
+									<p>
+										<span>利息： <em>{{model.Interest}}</em></span> 
+										<span>期数：<em>第{{model.CurrentPeriod}}期</em></span>
+									</p>
+									<p>
+										<span>还款时间： <em>{{model.RefundDate}}</em></span> 
+										<span>状态：<em>{{model.RefundState}}</em></span>
+									</p>
+								</div>
+							</li>
+						</ul>						
+					</div>
+				</div>							
+			</div>
+			<div id="myLoanOpt" class="mui-popover mui-popover-action mui-popover-bottom myLoanAlert">
+				<h5>还款 <a href="#myLoanOpt" class="mui-icon iconfont icon-guanbi" ></a></h5>
+				<div class="moneyinfo">
+					<p>{{refundAmt | getAmount}}</p>
+					<span>还款金额</span>
+				</div>
+				<div class="balance">
+					<span>账户余额：<em>{{availBal | getAmount}}</em></span>					
+					<a @tap="href('recharge.html','recharge.html','充值')">去充值</a>
+				</div>
+				<div class="btnbox">
+					<button class="mui-btn mui-btn-primary mui-btn-block" type="button" @tap="btnSure">确定</button>	
+				</div>				
+			</div>	
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>			
+		<script type="text/javascript" src="../../js/l.immersed.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>	
+		<script type="text/javascript" src="../../js/my/myLoan.js"></script>
+	</body>
+</html>

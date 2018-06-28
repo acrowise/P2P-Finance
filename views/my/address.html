@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>地址管理</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/address.css">
+	</head>
+	<body>		
+		<!--
+        	作者：hxg
+        	时间：2018-01-12
+        	描述：地址管理
+        -->	
+		<div class="mui-content"  id="vue-app">
+			<div class="addressopt-wrapper" :class="{'ios-scroll-bounce':isIos}">
+				<ul>
+					<li v-for="(item,index) in addrList">
+						<div class="content">
+							<div class="user">
+								<span class="name">{{item.ShouHuoRen}}</span>
+								<span class="tel">{{item.Phone}}</span>
+							</div>
+							<p>{{item.Area+item.Address}}</p>
+						</div>
+						<div class="operate">
+							<div class="mui-input-row mui-checkbox mui-left isdefault" >
+								<label>默认地址</label>
+								<input name="checkbox"  v-model="item.IsDefault"  type="checkbox"   :disabled="item.IsDefault" @change="setDefault(item,$event)"/>
+							</div>
+							<span class="optionadd">
+								<a class="edit" @tap="goAddress(1,item.Id)"> 
+									<i class="mui-icon iconfont icon-bianji"></i>
+									<span>编辑</span>
+								</a>
+								<a class="delete" @tap="deleteData(index,item.Id)">
+									<i class="mui-icon iconfont icon-p-delet"></i>
+									<span>删除</span>
+								</a>								
+							</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="addressoptbtn">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block mui-btn-bottom addaddr" @tap="goAddress(0)">添加新地址</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>		
+		<script type="text/javascript" src="../../js/common.js" ></script>		
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/my/address.js" ></script>
+	</body>
+</html>

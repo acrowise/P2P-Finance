@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>忘记密码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/root/pubAccount.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-09
+        	描述：忘记密码/修改密码
+        -->
+		<div class="mui-content" id="vue-app">
+			<div class="mui-input-group wrap">
+				<div class="pub-wrap  reg-wrap fg-wrap">
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-shoujihao" for="phone"></label>
+						<input id="phone" class="phone" type="text" placeholder="请输入手机号码" v-model="mobile"  maxlength="11"/>
+					</div>
+					<div class="input-container idcode">
+						<label class="mui-icon iconfont icon-anquan" for="identifycode"></label>
+						<input id="identifycode" class="identifycode" type="text" placeholder="请输入验证码"  v-model="code" maxlength="4"/>
+						<button class="mui-btn mui-btn-primary mui-small-btn" type="button" :disabled="btnState" @tap="btnSend">{{value}}</button>
+					</div>
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-mima" for="npsw"></label>
+						<input id="npsw" class="npsw" type="password" placeholder="请输入新密码" v-model="newPwd"/>
+					</div>
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-mima" for="renpsw"></label>
+						<input id="renpsw" class="renpsw" type="password" placeholder="请再次输入新密码" v-model="confirmPwd"/>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="btnSure">确定</button>
+				</div>
+				<div class="pwdtips">密码8~20位，由字母+数字和符号两种以上组合</div>
+			</div>		
+		</div>		
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/md5.min.js" ></script>
+		<script type="text/javascript" src="../../js/my/forgetPwd.js" ></script>
+	</body>
+</html>

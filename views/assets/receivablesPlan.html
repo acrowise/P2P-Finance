@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>收款计划</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/assets/receivablesPlan.css" />
+	</head>
+	<body>
+		<div id="vue-app">
+		<header class="mui-bar mui-bar-nav main-index">
+			<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+			<h1 class="mui-title">收款计划</h1>
+			<a class="mui-icon iconfont icon-xiangguanxieyi mui-pull-right infoico" @tap="agreement"></a>
+		</header>		
+		<div class="mui-content plan"  :class="{'ios-scroll-bounce':isIos}">
+			<div class="detailhead2" @tap="href(model.Name)">
+				<img src="../../images/mycenter2.png"  class="img"/>
+				<div class="wave">
+					<svg xmlns="http://www.w3.org/2000/svg"  
+						 xmlns:xlink="http://www.w3.org/1999/xlink" 
+						 width="100%" 
+						 height="150"
+                         >     
+						<g fill="rgba(255,255,255,0.03)">       
+						<path d="M 0 70 Q 75 39, 150 70 T 300 70 T 450 70 T 600 70 T 750 70  T 900 70  T 1050 70 T 1200 70 T 1350 70 V 150 H 0 V 0"></path>         
+						<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-300" dur="8s" repeatCount="indefinite"></animateTransform>    
+						</g>    
+						<g fill="rgba(255,255,255,0.045)">        
+						<path d="M 0 70 Q 87.5 47, 175 70 T 350 70 T 525 70 T 700 70 T 875 70 T 1050 70 T 1225 70 T 1400 70  T 1575 70  V 150 H 0 V 0"></path>       
+						<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-350" dur="16s" repeatCount="indefinite"></animateTransform>    
+						</g>    
+						<g fill="rgba(255,255,255,0.057)" transform="translate(-903.868 0)">        
+						<path d="M 0 70 Q 135 36, 270 70 T 540 70 T 810 70 T 1080 70 T 1350 70 T 1620 70  V 150 H 0 V 0" transform="translate(-38.232284367796474, 0)"></path>        
+						<animateTransform attributeName="transform" attributeType="XML" type="translate" from="0" to="-540" dur="10s" repeatCount="indefinite"></animateTransform>    
+						</g>
+					</svg>
+				</div>
+				<div class="showhead">
+					<h2>{{model.Name ||'加载中...'}}</h2>
+					<p>项目名称</p>
+					<div class="detailcontent">
+						<div class="detailitem">
+							<p>{{model.Rate||'0.0'}}%</p>
+							<p>年利率</p>
+						</div>
+						<div class="detailitem">
+							<p>{{totalInterest}}</p>
+							<p>出借奖励</p>
+						</div>
+					</div>
+				</div>
+			</div>							
+			<ul class="specplan">
+				<li class="publi" v-for="item in model.ReceiptPlan"  :class="{rerepay:item.State!=1,norepay:item.State==1}">
+					<h3>第{{item.CurrentPeriod}}期</h3>
+					<p class="mui-clearfix"><span class="mui-pull-left">{{item.State==3?"已收":"待收"}}总额：<em>{{item.CapitalInterest | getAmount}}</em></span> <span class="mui-pull-left">本金：<em>{{item.BenJin | getAmount}}</em></span></p>
+					<p class="mui-clearfix"><span class="mui-pull-left">还款日期： <em>{{item.ReceiptDate | getDate}}</em></span> <span class="mui-pull-left">状态：<em>{{item.State | getState}}</em></span></p>
+				</li>				
+			</ul>
+		</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/immersed.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/assets/receivablesPlan.js" ></script>
+	</body>
+</html>

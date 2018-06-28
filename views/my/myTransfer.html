@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>我的转让</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/myTransfer.css">
+		<style id="stylesheet"></style>
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-09
+        	描述：我的转让
+        -->
+        <div id="vue-app">
+         <div class="mui-segmented-control pubtaghd">
+			<a class="mui-control-item" :class="{'mui-active':activeTap==0,'mui-disabled':isRefresh}" @tap="tapEvent(0)">可转让</a>
+			<a class="mui-control-item" :class="{'mui-active':activeTap==1,'mui-disabled':isRefresh}" @tap="tapEvent(1)">转让记录</a>
+			<a class="mui-control-item" :class="{'mui-active':activeTap==2,'mui-disabled':isRefresh}" @tap="tapEvent(2)">受让记录</a>
+		</div>
+		<div class="mui-scroll-wrapper mui-content mytransfer" id="pullrefresh">						
+			<div class="mui-scroll transcontent">
+				<div  class="mui-control-content content1" :class="{'mui-active':activeTap==0}">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell" v-for="item in can.list" @tap="href(item.LoanId,item.LoanType,item.Name)">
+							<div class="title-box">
+								<h2>{{item.Name}}</h2>
+								<button class="mui-btn mui-btn-primary mui-small-btn" type="button" @tap="btnTransfer(item.TenderDetailId,$event)">转让</button>
+							</div>
+							<div class="main">
+								<p>
+									<span>待收本金：<em>{{item.SurplusCapital | getAmount}}</em></span> 
+									<span>年利率：<em>{{item.Rate | getRate(item.RaiseRate)}}%</em></span>
+								</p>
+								<p>
+									<span>待收利息： <em>{{item.SurplusIntrest | getAmount}}</em></span> 
+									<span>剩余期数：<em>{{item.SurplusPeriods}}个月</em></span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div  class="mui-control-content content2" :class="{'mui-active':activeTap==1}">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell" v-for="model in transfer.list" @tap="href(model.TransferId,4,model.Name)">
+							<div class="title-box">
+								<h2>{{model.Name}}</h2>
+								<button class="mui-btn mui-btn-primary mui-small-btn" type="button"  @tap="transferDetail(model.TransferId,$event)">详情</button>
+							</div>
+							<div class="main">
+								<p>
+									<span>转让金额：<em>{{model.Amount | getAmount}}</em></span> 
+									<span>年利率：<em>{{model.Rate | getRate(0)}}%</em></span>
+								</p>
+								<p>
+									<span>待收本金： <em>{{model.SurplusCapital | getAmount}}</em></span> 
+									<span>剩余期数：<em>{{model.SurplusPeriods}}个月</em></span>
+								</p>
+							</div>
+						</li>
+					</ul>					
+				</div>
+				<div  class="mui-control-content content3" :class="{'mui-active':activeTap==2}">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell" v-for="entity in farmIn.list" @tap="href(entity.TransferId,4,entity.Name)">
+							<div class="title-box">
+								<h2>{{entity.Name}}</h2>
+								<button class="mui-btn mui-btn-primary mui-small-btn" type="button" @tap="farmInDetail(entity.TransferId,entity.TenderDetailId,$event)">详情</button>
+							</div>
+							<div class="main">
+								<p>
+									<span>受让金额：<em>{{entity.Amount | getAmount}}</em></span> 
+									<span>年利率：<em>{{entity.Rate | getRate(0)}}%</em></span>
+								</p>
+								<p>
+									<span>转让人： <em>{{entity.Farmor}}</em></span> 
+									<span>期数：<em>{{entity.Periods}}个月</em></span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>			
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/t.immersed.js" ></script>
+		<script type="text/javascript" src="../../js/my/myTransfer.js" ></script>
+	</body>
+</html>

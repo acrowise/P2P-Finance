@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>还款日历</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../css/my/payCalendar.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-24
+        	描述：还款日历
+        -->
+		<div class="mui-content calendarc" id="vue-app"  :class="{'ios-scroll-bounce':isIos}">
+			<div class="moneydata moneydata2">
+				<p>{{model.TotalAmount || "0.00"}}</p>
+				<span>待还总额</span>
+			</div>
+			<div class="calendar">
+				<h2>
+					<span @tap="btnPicker">{{getDate(model.CurrentDate)}}<i class="iconfont icon-xia-copy"></i></span>
+					<span class="mui-icon mui-icon mui-icon-arrowleft" @tap="upOrDown(0)"></span>
+					<span class="mui-icon mui-icon mui-icon-arrowright" @tap="upOrDown(1)"></span>
+				</h2>
+				<div class="calendar-content">					
+					<ol class="week mui-clearfix">
+						<li>日</li>
+						<li>一</li>
+						<li>二</li>
+						<li>三</li>
+						<li>四</li>
+						<li>五</li>
+						<li>六</li>
+					</ol>
+					<ul class="day mui-clearfix">
+						<li v-for="n in week"></li>
+						<!-- 还款状态： 1 - 待还  2 - 正常：无待还也无已还  3-已还(包括逾期已还)  4-逾期未还(包括垫付状态-未代偿和已代偿都是未还) -->
+						<li v-for="(item,index) in model.StateList" :class="{overdue:item==4,repay:item==3,curr:isEquals(index+1),nopay:item==1}" @tap="href(item,index)"><span>{{index+1}}</span></li>
+					</ul>
+				</div>
+				<div class="tagging">
+					<span class="nopay">未还款</span>
+					<span class="repay">已还款</span>
+					<span class="overdue">逾期</span>
+				</div>				
+			</div>
+		</div>			
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/mui.picker.min.js" ></script>	
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/my/repayCalendar.js"></script>
+	</body>
+</html>

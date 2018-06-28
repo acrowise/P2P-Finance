@@ -1,0 +1,183 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, b {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-btn-grey:before {
+  border-radius: 36px;
+}
+
+.mui-table-view:before, .mui-table-view:after {
+  display: none;
+}
+
+.mui-table-view-cell {
+  background-color: #fff;
+}
+.mui-table-view-cell:not(.specli):before, .mui-table-view-cell:not(.specli):after {
+  display: none;
+}
+
+.mui-content > .mui-table-view:first-child {
+  margin-top: 10px;
+}
+
+.assetsrecord ul {
+  background-color: transparent;
+  margin-top: 10px;
+}
+.assetsrecord ul .publist {
+  border-radius: 6px;
+  margin: 0 10px 10px;
+}
+.assetsrecord ul .publist .title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+.assetsrecord ul .publist .title-box:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.assetsrecord ul .publist .title-box h2 {
+  font-size: 14px;
+  color: #2c2c2c;
+  padding-bottom: 13px;
+  white-space: nowrap;
+}
+.assetsrecord ul .publist .title-box .btn-box {
+  padding-bottom: 13px;
+}
+.assetsrecord ul .publist .title-box .btn-box .mui-btn {
+  padding: 2px 10px;
+  font-size: 12px;
+  line-height: initial;
+  border-radius: 25px;
+}
+.assetsrecord ul .publist .title-box .btn-box .mui-btn + button {
+  margin-left: 2px;
+}
+.assetsrecord ul .publist .content {
+  font-size: 12px;
+  color: #999;
+  padding-top: 9px;
+}
+.assetsrecord ul .publist .content > p {
+  color: #999;
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+}
+.assetsrecord ul .publist .content > p em{
+  font-size: 12px !important;
+}
+.assetsrecord ul .publist2 {
+  padding-bottom: 0px;
+}
+.assetsrecord ul .publist2 .title-box {
+  padding-bottom: 14px;
+}
+.assetsrecord ul .publist2 .title-box::after {
+  display: none;
+}
+.assetsrecord ul .publist2 .specul {
+  margin: 0 -15px;
+  padding-top: 0px;
+}
+.assetsrecord ul .publist2 .specul .specli {
+  position: relative;
+  color: #1e82d2;
+  font-size: 15px;
+}
+.assetsrecord ul .publist2 .specul .specli::after {
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  top: -1px;
+}
+.assetsrecord ul .publist2 .content {
+  padding-top: 0;
+  padding-bottom: 6px;
+}
+.assetsrecord ul .publist2 > button {
+  color: #1e82d2;
+  border: 0;
+  position: relative;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+.assetsrecord ul .publist2 > button:before {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.assetsrecord ul .publist2 > button.mui-btn:enabled:active {
+  color: #1e82d2;
+  background-color: #eee;
+}
+.assetsrecord ul .publist1 .content p {
+  font-size: 12px;
+}
+.assetsrecord ul .publist1 .content p span {
+  line-height: 25px;
+  display: inline-block;
+  font-size: 12px;
+}
+.assetsrecord ul .publist1 .content p span em {
+  font-size: 10px;
+}
+.assetsrecord ul .publist1 .content p span:first-child {
+  width: 55%;
+}
+.assetsrecord ul .publist1 .content p span:last-child {
+  width: 45%;
+}
+
+/*# sourceMappingURL=assetsRecord.css.map */

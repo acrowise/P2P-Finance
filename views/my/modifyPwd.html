@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>修改密码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/root/pubAccount.css">
+	</head>
+	<body>
+		<!--
+        	作者：hxg
+        	时间：2018-01-11
+        	描述：修改密码
+        -->
+		<div class="mui-content" id="vue-app">
+			<div class="mui-input-group wrap">
+				<div class="pub-wrap">
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-mima" for="opsw"></label>
+						<input  class="opsw" type="password" v-model="oldPwd" placeholder="请输入原登录密码" />
+					</div>
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-mima" for="reopsw"></label>
+						<input  class="reopsw" type="password" v-model="newPwd" placeholder="请输入新登录密码"  />
+					</div>
+					<div class="input-container">
+						<label class="mui-icon iconfont icon-mima" for="reotpsw"></label>
+						<input  class="reotpsw" type="password" v-model="confirmPwd" placeholder="请再次输入新登录密码" />
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<button type="button" @tap="btnCommit" class="mui-btn mui-btn-primary mui-btn-block">提交修改</button>
+				</div>
+			</div>		
+		</div>		
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/my/modifyPwd.js"></script>
+	</body>
+</html>

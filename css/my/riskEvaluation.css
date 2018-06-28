@@ -1,0 +1,124 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, h3 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, h2, h3 {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-radio.mui-left input[type=radio] {
+  left: 0px;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+}
+
+.mui-checkbox.mui-left label, .mui-radio.mui-left label {
+  padding: 0px 15px;
+  padding-left: 34px;
+}
+
+.mui-radio input[type=radio]:checked:before {
+  content: '\e441';
+  font-size: 22px;
+}
+
+.mui-radio input[type=radio]:before {
+  font-size: 22px;
+}
+
+.mui-btn:before {
+  border-radius: 12px;
+}
+
+.mui-content {
+  color: #2c2c2c;
+  font-size: 13px;
+  padding: 10px;
+}
+.mui-content ul {
+  padding-bottom: 10px;
+}
+.mui-content ul li {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.mui-content ul li .mui-input-row {
+  margin-bottom: 5px;
+}
+.mui-content ul li h2 {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+.mui-content ul li label {
+  line-height: 25px;
+}
+
+.resultbox {
+  background-color: #fff;
+  padding: 25px;
+  margin: 14px;
+  color: #2c2c2c;
+  border-radius: 6px;
+  position: fixed;
+  z-index: 999;
+  bottom: 28%;
+}
+.resultbox h3 {
+  font-size: 17px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 34px;
+  margin-bottom: 13px;
+}
+.resultbox h3 span {
+  color: #1e82d2;
+}
+.resultbox p {
+  line-height: 20px;
+  text-align: justify;
+  margin-bottom: 22px;
+  color: #2c2c2c;
+}
+.resultbox .btnopt {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.resultbox .btnopt button {
+  min-width: 120px;
+}
+
+/*# sourceMappingURL=riskEvaluation.css.map */

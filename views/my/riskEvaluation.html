@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>风险测评</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/riskEvaluation.css" />
+	</head>
+	<body>
+		<!--
+	    	作者：hxg
+	    	时间：2018-01-31
+	    	描述：风险测评
+	    -->
+		<div id="vue-app">
+			<div class="mui-content"  :class="{'ios-scroll-bounce':isIos}">
+			<ul>
+				<li>
+					<div>
+						<h2>1、您的年龄？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、超过60岁</label>
+							<input name="agerange" type="radio" value="A" v-model="riskArr[0]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、51-60岁</label>
+							<input name="agerange" type="radio" value="B" v-model="riskArr[0]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、18-30岁</label>
+							<input name="agerange" type="radio" value="C" v-model="riskArr[0]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、31-40岁</label>
+							<input name="agerange" type="radio" value="D" v-model="riskArr[0]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>E、41-50岁</label>
+							<input name="agerange" type="radio" value="E" v-model="riskArr[0]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>2、您的家庭年收入为（税后折合人民币）？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、10万以下</label>
+							<input name="term" type="radio" value="A" v-model="riskArr[1]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、10-30万</label>
+							<input name="term" type="radio" value="B" v-model="riskArr[1]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、30-100万</label>
+							<input name="term" type="radio" value="C" v-model="riskArr[1]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、100万以上</label>
+							<input name="term" type="radio" value="D" v-model="riskArr[1]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>3、您会将您收入中的百分之多少用于出借？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、10%以下</label>
+							<input name="aim" type="radio" value="A" v-model="riskArr[2]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、10%-25%</label>
+							<input name="aim" type="radio" value="B" v-model="riskArr[2]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、25%-50%</label>
+							<input name="aim" type="radio" value="C" v-model="riskArr[2]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、50%以上</label>
+							<input name="aim" type="radio" value="D" v-model="riskArr[2]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>4、以下哪项最能说明您的出借经验？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、除存款、国债外，几乎不出借其他金融产品</label>
+							<input name="income" type="radio" value="A" v-model="riskArr[3]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、除存款、国债外，偶尔出借于信托、股票、基金、P2P等产品</label>
+							<input name="income" type="radio" value="B" v-model="riskArr[3]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、资产均匀分布于存款、国债、银行理财产品、信托、股票、基金、P2P等产品</label>
+							<input name="income" type="radio" value="C" v-model="riskArr[3]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、大部分出借于信托、股票、基金、P2P、金融衍生产品等产品，较少出借于存款、国债</label>
+							<input name="income" type="radio" value="D" v-model="riskArr[3]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>5、您有多少年出借信托、股票、基金、P2P、金融衍生产品等产品的经验？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、少于1年</label>
+							<input name="yincome" type="radio" value="A" v-model="riskArr[4]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、1至5年</label>
+							<input name="yincome" type="radio" value="B" v-model="riskArr[4]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、5至10年</label>
+							<input name="yincome" type="radio" value="C" v-model="riskArr[4]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、10年以上</label>
+							<input name="yincome" type="radio" value="D" v-model="riskArr[4]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>6、您是如何理解风险的：</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、风险就是损失</label>
+							<input name="view" type="radio" value="A" v-model="riskArr[5]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、风险代表不确定性，可能会带来收益，也可能带来损失</label>
+							<input name="view" type="radio" value="B" v-model="riskArr[5]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、风险代表机会，可能带来收益</label>
+							<input name="view" type="radio" value="C" v-model="riskArr[5]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、风险代表巨大的额外收益机会</label>
+							<input name="view" type="radio" value="D" v-model="riskArr[5]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>7、以下哪项最符合您的出借态度？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、保障本金无损失，即使出借收益率较低</label>
+							<input name="experience" type="radio" value="A" v-model="riskArr[6]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、若能略高于保本类产品的收益，可以承受本金 10%以内的损失</label>
+							<input name="experience" type="radio" value="B" v-model="riskArr[6]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、若能有较高出借回报，可以承受本金 30%以内的损失</label>
+							<input name="experience" type="radio" value="C" v-model="riskArr[6]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、只要能取得高收益，即使本金损失超过 50%，亦可以承受</label>
+							<input name="experience" type="radio" value="D" v-model="riskArr[6]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>8、您对P2P出借希望达到的年收益率水平？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、7%～10%</label>
+							<input name="yearexp" type="radio" value="A" v-model="riskArr[7]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、10%～15%</label>
+							<input name="yearexp" type="radio" value="B" v-model="riskArr[7]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、15%～20%</label>
+							<input name="yearexp" type="radio" value="C" v-model="riskArr[7]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、20%以上</label>
+							<input name="yearexp" type="radio" value="D" v-model="riskArr[7]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>9、出借一家P2P平台，您的主要决策是来自于？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、主要取决于平台背景、管理团队、信息披露、资金安全等方面</label>
+							<input name="loss" type="radio" value="A" v-model="riskArr[8]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>B、媒体广告</label>
+							<input name="loss" type="radio" value="B" v-model="riskArr[8]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、不会考虑太多，主要依赖亲朋好友推荐</label>
+							<input name="loss" type="radio" value="C" v-model="riskArr[8]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、收益高、期限短</label>
+							<input name="loss" type="radio" value="D" v-model="riskArr[8]"/>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h2>10、您目前出借了多少家P2P平台？</h2>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>A、0-3家</label>
+							<input name="totalsize" type="radio" value="A" v-model="riskArr[9]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left" >
+							<label>B、4-8家</label>
+							<input name="totalsize" type="radio" value="B" v-model="riskArr[9]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>C、8-12家</label>
+							<input name="totalsize" type="radio" value="C" v-model="riskArr[9]"/>
+						</div>
+						<div class="mui-input-row mui-radio mui-left">
+							<label>D、12家以上</label>
+							<input name="totalsize" type="radio" value="D" v-model="riskArr[9]"/>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button"  class="mui-btn mui-btn-primary mui-btn-block"  @tap="btnCommit">查看结果</button>
+		</div>
+			<div class="resultbox" v-show="show">
+			<h3>您属于<span>{{riskType | getType}}</span>出借者</h3>
+			<p>
+				{{riskType | getExplain}}
+			</p>
+			<div class="btnopt">
+				<button type="button"  class="mui-btn mui-btn-primary  mui-action-back">确认</button>
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined " @tap="btnReset" >重新测评</button>				
+			</div>
+		</div>
+		<div class="mui-backdrop" v-show="show"></div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/my/riskEvaluation.js" ></script>
+	</body>
+</html>

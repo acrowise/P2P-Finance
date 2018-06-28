@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>提现记录</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/dataRecord.css">
+	</head>
+	<body>
+		<div id="vue-app">			
+			<header class="mui-bar mui-bar-nav main-index whead">
+				<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+				<h1 class="mui-title">提现记录</h1>
+				<a class="mui-btn mui-btn-link mui-pull-right" @tap="href">提现</a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper recharge-item" id="pullrefresh">
+				<div class="mui-scroll">
+					<ul id="item1" class="mui-table-view recharge-list" v-show="show">
+						 <li class="mui-table-view-cell" v-for="item in withdrawList">
+						 	<dl class="rglist">
+								<dt class="clearfix">
+									<span>{{item.WithdrawAmout | getAmount}}</span>
+									<span>{{item.State | getState}}</span>
+								</dt>
+								<dd class="clearfix">
+									<span>{{item.BankName}}</span>
+									<time>{{item.WithdrawTime | formatDate}}</time>
+								</dd>
+							</dl>
+						 </li>
+					</ul>
+				</div>
+			</div>			
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>		
+		<script type="text/javascript" src="../../js/immersed.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>		
+		<script type="text/javascript" src="../../js/my/withdrawList.js" ></script>
+	</body>
+</html>

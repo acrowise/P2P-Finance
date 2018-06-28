@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>回款日历</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/payCalendarDetail.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-22
+        	描述：回款日历
+        -->
+		<div class="mui-content calendardt"  :class="{'ios-scroll-bounce':isIos}" id="vue-app">
+			<div class="moneydata">
+				<ul>
+					<li class="paylist">
+						<div class="mui-text-center">
+							<p><i></i>待收总额</p>
+							<p>{{model.CapitalInterest | format}}</p>
+						</div>
+						<div class="mui-text-center">
+							<p><i></i>待收本金</p>
+							<p>{{model.DueInCapital | format}}</p>
+						</div>
+						<div class="mui-text-center">
+							<p><i></i>待收利息</p>
+							<p>{{model.DueInInterest | format}}</p>
+						</div>
+						<div class="notmargin mui-text-center">
+							<p><i></i>待收出借奖励</p>
+							<p>{{model.DueInRaiseInterest | format}}</p>
+						</div>
+						<div class="notmargin mui-text-center">
+							<p><i></i>回款日期</p>
+							<p>{{currDate | getDate}}</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="calendar-content">
+				<ul class="mui-table-view">
+					<!--状态：1-待收 2-还款中 3-已收 4-还款失败 5-已转让 -->
+					<li class="mui-table-view-cell" v-for="item in model.ReceiptPlan" :class="{ystatus:item.State!=1&&item.State!=2,wstatus:item.State==1||item.State==2}"  @tap="href(item.Id,item.LoanType,item.TenderDetailId,item.LoanId)">
+						<div class="title-box">
+							<h2>{{item.Name}}</h2>
+							<em>{{item.State | getState}}</em>
+						</div>
+						<div class="main">
+							<p>
+								<span>{{item.State==3?"已收总额":"待收总额"}}：<em>{{item.CapitalInterest | format}}</em></span> 
+								<span>{{item.State==3?"已收本金":"待收本金"}}：<em>{{item.BenJin | format}}</em></span>
+							</p>
+							<p>
+								<span>{{item.State==3?"已收利息":"待收利息"}}： <em>{{item.State==3?item.FactInterest:item.Interest | format}}</em></span> 
+								<span>{{item.State==3?"已收出借奖励":"待收出借奖励"}}：<em>{{item.State==3?item.FactRaiseInterest:item.RaiseInterest | format}}</em></span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>			
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/my/payCalendarDetail.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>资产</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/assets/assets.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav main-index">
+			<h1 class="mui-title">资产</h1>
+		</header>
+		<div class="mui-content asssets" id="vue-app" :class="{'ios-scroll-bounce':isIos}">
+			<div class="assetshead">
+				<div class="assetcard">
+					<p><i class="mui-icon iconfont icon-zijinjihua"></i>资产总额</p>
+					<h2>{{model.TotalAmount | format}}</h2>
+					<div class="assetsitem">
+						<div>
+							<p>账户余额</p>
+							<p>{{model.AvailBal | format}}</p>
+						</div>
+						<div>
+							<p>待收本息</p>
+							<p>{{model.CapitalInterest | format}}</p>
+						</div>
+						<div>
+							<p>冻结金额</p>
+							<p>{{model.FreezeAmount | format}}</p>
+						</div>
+					</div>
+				</div>
+				<div class="showhead">
+					<div class="startitem">
+						<p>待还金额</p>
+						<p>{{model.RefundAmount | format}}</p>
+					</div>
+					<div class="startitem">
+						<p>未用红包</p>
+						<p>{{model.HongBao | format}}</p>
+					</div>
+					<div class="startitem">
+						<p>未用We券</p>
+						<p>{{model.RateCoupons}}</p>
+					</div>
+				</div>				
+			</div>
+			<div class="assetsdata">
+				<ul>
+					<li class="assetdlist">
+						<div>
+							<p><i></i>累计出借金额</p>
+							<p>{{model.TotalInvest | format}}</p>
+						</div>
+						<div>
+							<p><i></i>待收本金</p>
+							<p>{{model.DueInCapital | format}}</p>
+						</div>
+						<div>
+							<p><i></i>待收利息</p>
+							<p>{{model.DueInInterest | format}}</p>
+						</div>
+					</li>
+					<li class="assetdlist">
+						<div>
+							<p><i></i>已赚利息</p>
+							<p>{{model.EarnInterest | format}}</p>
+						</div>
+						<div>
+							<p><i></i>已赚出借奖励</p>
+							<p>{{model.EarnRaiseInterest | format}}</p>
+						</div>
+						<div>
+							<p><i></i>待领奖励</p>
+							<p>{{model.UnclaimedAward | format}}</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul class="mui-table-view detailist2">
+				<!--<li class="mui-table-view-cell intro" @tap="href({type:2,name:'月账户'})">
+					<a class="mui-navigate-right">
+				       <span>月账户</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell measures" @tap="href({type:3,name:'年账户'})">
+					<a class="mui-navigate-right">
+				       <span>年账户</span>				       
+					</a>
+				</li>-->
+				<li class="mui-table-view-cell projectlist" @tap="href({type:1,name:'房易融'})">
+					<a class="mui-navigate-right">
+				       <span>房易融</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell record" @tap="transfer">
+					<a class="mui-navigate-right">
+				       <span>债权转让</span>				       
+					</a>
+				</li>
+			</ul>
+		</div>	
+		<script type="text/javascript" src="js/mui.min.js" ></script>
+		<script type="text/javascript" src="js/immersed.js" ></script>	
+		<script type="text/javascript" src="js/common.js" ></script>
+		<script type="text/javascript" src="js/vue2.min.js"></script>
+		<script type="text/javascript" src="js/assets/assets.js" ></script>
+	</body>
+</html>

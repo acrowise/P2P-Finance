@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>自动投标</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/automaticBid.css">
+	</head>
+	<body>
+		<div id="vue-app">
+			<!--<header class="mui-bar mui-bar-nav main-index">
+				<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+				<h1 class="mui-title">自动投标</h1>
+				<a class="mui-icon iconfont icon-wenhao mui-pull-right helpico" @tap="href({url:'automaticBidRules.html',id:'automaticBidRules.html',title:true,name:'自动投标规则'})"></a>
+			</header>-->
+			<div class="mui-content bid">
+				<div class="bidhead">
+					<p v-text="model.SortNo>=0?model.SortNo:'暂无排名'"></p>
+					<span>排名</span>
+				</div>
+				<div class="totalswitch">
+					<span >是否开启</span>
+					<div class="mui-switch mui-switch-mini mui-disabled"  :class="{'mui-active':model.IsOpenTender }"  ref="btnSwitch" @tap="btnSwitch($event)">
+						<div class="mui-switch-handle" ref="setSwitch"></div>
+					</div>
+				</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<span>账户保留金额</span>
+						<em class="mui-pull-right">{{ruleModel.AccountBal | getAmount}}</em>
+					</li>
+					<li class="mui-table-view-cell">
+						<span>出借类型</span>
+						<em class="mui-pull-right">{{ruleModel.LoanType | loanType}}</em>
+					</li>
+					<li class="mui-table-view-cell">
+						<span>预期收益</span>
+						<em class="mui-pull-right">8.0~12.0%</em>
+					</li>
+					<li class="mui-table-view-cell">
+						<span>出借期限</span>
+						<em class="mui-pull-right">{{ruleModel.InvestTerm||0}}个月</em>
+					</li>
+					<li class="mui-table-view-cell">
+						<span>优惠券</span>
+						<em class="mui-pull-right">{{ruleModel.Coupon | getCoupon}}</em>
+					</li>
+				</ul>		
+				<div class="addbidtbtn">
+					<button type="button"  class="mui-btn mui-btn-primary mui-btn-block mui-btn-bottom" 
+						@tap="href({url:'addAutomaticBid.html',id:'addAutomaticBid.html',title:true,name:'自动投标设置'})">
+						修改投标设置
+					</button>
+				</div>
+			</div>
+			<div id="openbid" class="mui-popover mui-popover-action mui-popover-bottom openalert">
+				<h5>{{title}}自动投标 <a href="#openbid" class="mui-icon iconfont icon-guanbi"></a></h5>
+				<div class="insafe mui-clearfix">	
+			    	<input class="safecode mui-pull-left inputTxt" type="password"  v-model="safeCode" placeholder="请输入安全码" id="txtsafeCode"/>
+			    	<a class="mui-pull-right fgsafe" @tap="href({url:'safetyCode.html',id:'safetyCode.html',title:true,name:'安全码'})">忘记安全码</a>
+				</div>
+				<div class="btnbox">
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap.stop="btnCommit($event)" >确定</button>	
+				</div>				
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>		
+		<script type="text/javascript" src="../../js/common.js" ></script>	
+	<!--	<script type="text/javascript" src="../../js/immersed.js" ></script>-->
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/my/automaticBid.js"></script>		
+	</body>
+</html>

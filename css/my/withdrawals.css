@@ -1,0 +1,141 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, li, p, h5 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-bar .mui-icon.helpico {
+  font-size: 20px;
+  padding-bottom: 13px;
+  padding-top: 13px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.mui-radio.mui-left input[type=radio] {
+  left: 0px;
+  top: 8px;
+  width: 22px;
+  height: 22px;
+}
+.mui-radio.mui-left input[type=radio]:before {
+  font-size: 22px;
+}
+
+.mui-radio.mui-left label {
+  padding-right: 4px;
+  padding-left: 29px;
+}
+
+.draws .psrow, .draws .defaultbtn, .draws .tip {
+  padding: 0 15px;
+}
+.draws .psrow {
+  background-color: #fff;
+  margin: 24px 0 34px;
+  height: 138px;
+  color: #2c2c2c;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.draws .psrow div.money {
+  padding-top: 16px;
+}
+.draws .psrow div.money p {
+  color: #2c2c2c;
+}
+.draws .psrow div.account {
+  height: 44px;
+  line-height: 44px;
+  margin: 0 -15px;
+  padding: 0 15px;
+  position: relative;
+}
+.draws .psrow div.account:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.draws .psrow input {
+  border: 0;
+  padding: 0;
+}
+.draws .charge {
+  background-color: #fff;
+  padding: 11px 15px;
+  line-height: 22px;
+  margin-bottom: 34px;
+  font-size: 14px;
+}
+.draws .charge span {
+  color: #2c2c2c;
+}
+.draws .charge em {
+  color: #1e82d2;
+}
+.draws .choose {
+  background-color: #fff;
+  margin: 19px 0;
+  font-size: 15px;
+  padding: 3px 15px;
+  display: flex;
+}
+.draws .choose span {
+  flex: 1 0 auto;
+  line-height: 38px;
+}
+.draws .choose div {
+  display: inline-block;
+  flex: 1 0 auto;
+}
+.draws .defaultbtn {
+  margin-bottom: 43px;
+}
+.draws .tip h5 {
+  margin-bottom: 15px;
+}
+.draws .tip p {
+  line-height: 25px;
+}
+
+/*# sourceMappingURL=withdrawals.css.map */

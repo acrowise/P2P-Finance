@@ -1,0 +1,7 @@
+html,body,.mui-content{background: #FFFFFF;}
+.login{width:100%;padding:5px 15px;margin-top: 35px;}
+.login_btn{display:block;height:50px;width:100%;margin-top:30px;}
+.logo{width: 70px;height:70px;border-radius: 50%;margin: 0 auto}
+.logo_img{width: 70px;height:70px;border-radius:50%;display: block; margin: 0 auto; }
+.nickname{text-align: center; color: #000;font-size: 17px;padding: 12px 0 8px 0;}
+.msg2{text-align: center;color: #888; font-size: 14px;}

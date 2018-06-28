@@ -1,0 +1,81 @@
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>设置</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/my.css" />
+	</head>
+	<body >
+		<!--
+        	作者：dingyong
+        	时间：2018-01-09
+        	描述：设置
+        -->
+		<div class="mui-content account pub set" id="vue-app">
+			<ul class="mui-table-view ul1">
+				<li class="mui-table-view-cell" @tap="href({url:'userinfo.html',id:'userinfo.html',name:'个人资料'})">
+					<a class="mui-navigate-right">
+				       <span>个人资料</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'forgetPwd.html',id:'forgetPwd.html',name:'修改密码'})">
+					<a class="mui-navigate-right">
+				       <span>登录密码</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'../bank/setPayPwd.html',id:'setPayPwd.html',name:false})">
+					<a class="mui-navigate-right">
+				       <span>交易密码</span>	
+				       <em class="mui-pull-right">银行存管交易密码</em>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'../bank/businessAuth.html',id:'businessAuth.html',name:'业务授权'})">
+					<a class="mui-navigate-right">
+				       <span>业务授权</span>	
+				       <em class="mui-pull-right">授权投标、还款</em>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'validateMobile.html',id:'validateMobile.html',name:'验证原手机号'})">
+					<a class="mui-navigate-right">
+				       <span>更换手机号</span>				       
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view ul2 ul3" >
+				<li class="mui-table-view-cell" @tap="href({url:'../help/pushMessage.html',id:'pushMessage.html',name:'推送消息设置'})">
+					<a class="mui-navigate-right">
+				       <span>新消息通知</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell" @tap="href({url:'../help/pushSms.html',id:'pushSms.html',name:'短信消息设置'})">
+					<a class="mui-navigate-right">
+				       <span>短信通知</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell" @tap="score">
+					<a class="mui-navigate-right">
+				       <span>给我鼓励</span>				       
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-hidden" @tap="cancel">
+					<a class="mui-navigate-right">
+				       <span>注销账号</span>				       
+					</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view mui-text-center">
+				<li class="mui-table-view-cell" @tap="exitLogin">
+					  退出登录
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/my/set.js" ></script>
+	</body>
+</html>

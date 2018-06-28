@@ -1,0 +1,2226 @@
+{
+  "index-main.html": {
+    "resources": [
+      "images/cbd.jpg",
+      "images/muwu.jpg",
+      "images/yuantiao.jpg",
+      "images/index-title.jpg",
+      "images/shuijiao.jpg",
+      "images/zhuantai-1.png",
+      "css/mui.css",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "images/zhuantai-2.png",
+      "images/zhuantai-3.png",
+      "js/zepto.min.js"
+    ],
+    "refer": [
+      "examples/template.html",
+      "examples/Project.html",
+      "examples/list-news-more.html"
+    ]
+  },
+  "login/login.html": {
+    "resources": [
+      "css/login/style.css",
+      "images/logo.png",
+      "js/login/app.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/login/mui.enterfocus.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "js/zepto.min.js"
+    ],
+    "refer": [
+      "examples/myid.html",
+      "examples/zhaohuimima.html",
+      "examples/chongshemima.html",
+      "login/reg.html",
+      "examples/qrcode.html",
+      "examples/chongzhi.html",
+      "examples/yinhangka-2.html",
+      "examples/gerenziliao.html",
+      "examples/yaoqing.html",
+      "examples/temp-pullrefresh.html",
+      "examples/zijinjilv.html"
+    ]
+  },
+  "examples/list-news.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "css/iconfont.css",
+      "css/demo.css",
+      "images/IDmin.png",
+      "css/mui.css",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/zepto.min.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "examples/list-news-more.html"
+    ]
+  },
+  "index-new.html": {
+    "resources": [
+      "index-main.html",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mui.min.css",
+      "css/mystyle.css",
+      "css/owen-icon.css",
+      "js/update.js",
+      "examples/myid.html",
+      "js/zepto.min.js",
+      "examples/list-news.html"
+    ],
+    "refer": [
+      "news-list.html",
+      "index-main.html",
+      "login/login.html",
+      "examples/list-news.html",
+      "examples/myid.html",
+      "examples/qrcode.html",
+      "examples/guide.html",
+      "examples/temp-pullrefresh.html"
+    ]
+  },
+  "examples/myid.html": {
+    "resources": [
+      "images/head.jpeg",
+      "fonts/mui.ttf",
+      "fonts/owen-icon.ttf",
+      "js/update.js",
+      "css/demo.css",
+      "css/owen-icon.css",
+      "css/mui.css",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "images/IDmin.png",
+      "images/logo.png",
+      "js/zepto.min.js"
+    ],
+    "refer": [
+      "examples/yonghubangzhu.html",
+      "examples/shezhi.html",
+      "examples/shenglibao.html",
+      "examples/tixian.html",
+      "examples/chongzhi.html",
+      "examples/jiaxiquan.html",
+      "examples/zijinjilv.html",
+      "examples/yinhangka-2.html",
+      "examples/gerenziliao.html",
+      "examples/huodong.html",
+      "examples/yaoqing.html",
+      "login/login.html",
+      "examples/temp-pullrefresh.html",
+      "examples/guide.html"
+    ]
+  },
+  "examples/qrcode.html": {
+    "resources": [
+      "images/erweima.jpg",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "css/mui.css",
+      "css/login/style.css",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/owen-icon.css",
+      "js/html2canvas.js",
+      "js/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "examples/shezhi.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "examples/about.html",
+      "examples/chongshemima.html",
+      "js/update.js",
+      "js/common.js",
+      "js/zepto.min.js"
+    ],
+    "refer": [
+      "examples/about.html",
+      "examples/chongshemima.html",
+      "examples/guide.html"
+    ]
+  },
+  "examples/shenglibao.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "examples/pnrpay-shenglibao.html"
+    ],
+    "refer": [
+      "examples/pnrpay-shenglibao.html"
+    ]
+  },
+  "examples/pnrpay-shenglibao.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "examples/tixian.html": {
+    "resources": [
+      "js/common.js",
+      "css/login/style.css",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "js/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "examples/list-news-more.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "js/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "examples/chongzhi.html": {
+    "resources": [
+      "js/common.js",
+      "css/login/style.css",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "js/zepto.min.js",
+      "js/mui.js",
+      "examples/pnrpay-recharge.html"
+    ],
+    "refer": [
+      "examples/pnrpay-recharge.html"
+    ]
+  },
+  "examples/template.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css"
+    ],
+    "refer": []
+  },
+  "news-list.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "css/mui.min.css",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "examples/jiaxiquan.html": {
+    "resources": [
+      "js/common.js",
+      "images/jxq-blue.png",
+      "js/tab.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "js/mui.pullToRefresh.js",
+      "images/jxq-gray.png",
+      "js/mui.pullToRefresh.material.js",
+      "js/zepto.min.js"
+    ],
+    "refer": []
+  },
+  "examples/zijinjilv.html": {
+    "resources": [
+      "css/login/style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "examples/jiaoyijilv.html",
+      "examples/weishouhui.html",
+      "examples/yishouhui.html",
+      "examples/touzijilv-new.html",
+      "js/common.js",
+      "js/zepto.min.js"
+    ],
+    "refer": [
+      "examples/jiaoyijilv.html",
+      "examples/weishouhui.html",
+      "examples/yishouhui.html",
+      "examples/touzijilv-new.html",
+      "examples/chongzhijilv.html"
+    ]
+  },
+  "examples/jiaoyijilv.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "examples/zijinjilv.html",
+      "css/owen-icon.css"
+    ],
+    "refer": [
+      "examples/zijinjilv.html"
+    ]
+  },
+  "examples/yinhangka-2.html": {
+    "resources": [
+      "js/common.js",
+      "images/bank/bank_bocom.jpg",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "js/zepto.min.js",
+      "fonts/mui.ttf",
+      "js/mui.js",
+      "images/bank/bank_cib.jpg",
+      "images/bank/bank_bos.jpg",
+      "images/bank/bank_abc.jpg"
+    ],
+    "refer": []
+  },
+  "examples/yishouhui.html": {
+    "resources": [
+      "examples/zijinjilv.html",
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css"
+    ],
+    "refer": [
+      "examples/zijinjilv.html"
+    ]
+  },
+  "examples/weishouhui.html": {
+    "resources": [
+      "examples/zijinjilv.html",
+      "css/mystyle.css"
+    ],
+    "refer": [
+      "examples/zijinjilv.html"
+    ]
+  },
+  "examples/gerenziliao.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+      "fonts/mui.ttf",
+      "css/owen-icon.css",
+      "js/common.js",
+      "images/logo.png",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "libs/easymob-webim-sdk/json2.js",
+      "libs/easymob-webim-sdk/jquery-1.11.1.js",
+      "css/feedback-page.css",
+      "js/feedback.js",
+      "js/feedback-page.js",
+      "libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+      "js/mui.view.js",
+      "images/iconfont-tianjia.png",
+      "login/login.html"
+    ],
+    "refer": [
+      "login/login.html"
+    ]
+  },
+  "examples/Project.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "images/more-img.png",
+      "js/mui.pullToRefresh.material.js",
+      "css/Project.css",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mui.css",
+      "css/owen-icon.css"
+    ],
+    "refer": [
+      "examples/toubiaoshuru.html",
+      "login/login.html",
+      "examples/jisuanqi.html",
+      "examples/login-new.html"
+    ]
+  },
+  "examples/zhaohuimima.html": {
+    "resources": [
+      "fonts/owen-icon.ttf",
+      "js/jquery.min.js",
+      "css/mystyle.css",
+      "css/owen-icon.css"
+    ],
+    "refer": []
+  },
+  "examples/chongshemima.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "fonts/owen-icon.ttf",
+      "examples/shezhi.html"
+    ],
+    "refer": [
+      "examples/shezhi.html"
+    ]
+  },
+  "examples/huodong.html": {
+    "resources": [
+      "images/cbd.jpg",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mui.css",
+      "css/owen-icon.css"
+    ],
+    "refer": []
+  },
+  "examples/yonghubangzhu.html": {
+    "resources": [
+      "css/login/style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "fonts/owen-icon.ttf",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "examples/yonghu-more.html"
+    ],
+    "refer": [
+      "examples/yonghu-more.html"
+    ]
+  },
+  "examples/yaoqing.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "fonts/owen-icon.ttf",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "js/zepto.min.js",
+      "css/weui.min.css",
+      "js/app-shiying.js"
+    ],
+    "refer": []
+  },
+  "login/reg.html": {
+    "resources": [
+      "js/common.js",
+      "css/login/style.css",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mystyle.css",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "examples/about.html": {
+    "resources": [
+      "images/aboutus3.png",
+      "css/mui.min.css",
+      "images/aboutus2.png",
+      "examples/shezhi.html",
+      "images/aboutus1.png",
+      "js/mui.min.js",
+      "css/owen-icon.css"
+    ],
+    "refer": [
+      "examples/shezhi.html"
+    ]
+  },
+  "examples/temp-pullrefresh.html": {
+    "resources": [
+      "examples/chongzhi.html",
+      "js/mui.js",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "fonts/mui.ttf",
+      "fonts/owen-icon.ttf",
+      "examples/yinhangka-2.html",
+      "examples/qrcode.html",
+      "examples/list-news-dongtai.html",
+      "js/mui.min.js",
+      "fontsNEW/font2/iconfont.css",
+      "fontsNEW/iconfont.css",
+      "examples/list-news-zixun.html",
+      "examples/list-news-toutiao.html",
+      "examples/list-news-licai.html",
+      "examples/list-news-hangye.html",
+      "examples/list-news-xinwen.html"
+    ],
+    "refer": [
+      "examples/chongzhi.html",
+      "examples/yinhangka-2.html",
+      "examples/tixian.html",
+      "examples/yaoqing.html",
+      "examples/qrcode.html",
+      "examples/list-news-dongtai.html",
+      "examples/list-news-zixun.html",
+      "examples/list-news-toutiao.html",
+      "examples/list-news-xinwen.html",
+      "examples/list-news-licai.html",
+      "examples/list-news-hangye.html"
+    ]
+  },
+  "examples/guide.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "images/interface/iPhone/1242-2208/1242-2208-2.png",
+      "images/interface/iPhone/1242-2208/1242-2208-1.png",
+      "images/interface/iPhone/1242-2208/1242-2208-3.png",
+      "images/interface/iPhone/640-1136/640-1136-3.png",
+      "images/interface/iPhone/640-1136/640-1136-2.png",
+      "images/interface/iPhone/640-1136/640-1136-1.png"
+    ],
+    "refer": []
+  },
+  "examples/toubiaoshuru.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "examples/pnrpay-bid.html"
+    ],
+    "refer": [
+      "examples/pnrpay-bid.html"
+    ]
+  },
+  "examples/yonghu-more.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/owen-icon.ttf",
+      "css/mui.css",
+      "css/owen-icon.css",
+      "examples/yonghubangzhu.html"
+    ],
+    "refer": [
+      "examples/yonghubangzhu.html"
+    ]
+  },
+  "examples/touzijilv-new.html": {
+    "resources": [
+      "css/mystyle.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "css/mui.css",
+      "css/owen-icon.css"
+    ],
+    "refer": []
+  },
+  "index-main-new.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "fontsNEW/iconfont.css",
+      "css/mui.min.css",
+      "index-jingpin.html",
+      "fontsNEW/iconfont.woff",
+      "fonts/mui.ttf",
+      "examples/woyaotouzi.html",
+      "fontsNEW/iconfont.ttf",
+      "examples/list-news.html",
+      "examples/zixun.html",
+      "examples/vip.html",
+      "fontsNEW/iconfont_1/iconfont.css",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont_1/iconfont.woff",
+      "examples/vip-modify.html",
+      "fontsNEW/iconfont_1/iconfont.ttf"
+    ],
+    "refer": [
+      "examples/woyaotouzi.html",
+      "examples/zixun.html",
+      "index-jingpin.html",
+      "examples/vip.html",
+      "examples/list-news.html",
+      "examples/list-news-dongtai.html",
+      "examples/guide.html",
+      "examples/Project.html",
+      "examples/xiaoxi.html",
+      "examples/vip-modify.html"
+    ]
+  },
+  "index-jingpin.html": {
+    "resources": [
+      "images/cbd.jpg",
+      "images/muwu.jpg",
+      "images/yuantiao.jpg",
+      "js/circle-progress.js",
+      "js/jquery.min.js",
+      "images/shuijiao.jpg",
+      "css/mui.css",
+      "js/common.js",
+      "js/zepto.min.js",
+      "js/mui.min.js",
+      "js/circles.min.js",
+      "js/app-shiying.js"
+    ],
+    "refer": [
+      "examples/Project-newbie.html",
+      "examples/list-news-more.html"
+    ]
+  },
+  "examples/woyaotouzi.html": {
+    "resources": [
+      "images/xinshou.png",
+      "images/shouxin.png",
+      "js/zepto.min.js",
+      "css/demo.css",
+      "css/mui.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "fontsNEW/iconfont.css",
+      "fontsNEW/iconfont.woff",
+      "fontsNEW/font2/iconfont.css",
+      "js/circle-progress.js",
+      "js/jquery.min.js",
+      "fontsNEW/font2/iconfont.woff",
+      "fontsNEW/font2/iconfont.ttf",
+      "fontsNEW/iconfont.ttf",
+      "images/shouqin.png",
+      "js/circles.min.js",
+      "images/huankuan.png",
+      "images/tips.png",
+      "images/once.png",
+      "images/error.png",
+      "images/success.png",
+      "css/common.css"
+    ],
+    "refer": [
+      "examples/Project.html",
+      "examples/Project-newbie.html",
+      "examples/touzichanpin.html"
+    ]
+  },
+  "examples/zixun.html": {
+    "resources": [
+      "images/news5.png",
+      "images/news2.png",
+      "images/news1.png",
+      "images/news3.png",
+      "images/news4.png",
+      "fontsNEW/font2/iconfont.woff",
+      "js/common.js",
+      "js/mui.min.js",
+      "fontsNEW/font2/iconfont.css",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "css/mui.css",
+      "fontsNEW/iconfont.woff",
+      "fontsNEW/font2/iconfont.ttf",
+      "fontsNEW/iconfont.ttf",
+      "images/news_icons/media.png",
+      "images/news_icons/news.png",
+      "images/news_icons/finance.png",
+      "images/news_icons/profession.png",
+      "images/news_icons/qhlead.png",
+      "js/app-shiying.js"
+    ],
+    "refer": [
+      "examples/list-news.html",
+      "examples/list-news-dongtai.html",
+      "examples/temp-pullrefresh.html"
+    ]
+  },
+  "examples/vip.html": {
+    "resources": [
+      "images/moneyBG.jpg",
+      "fonts/mui.ttf",
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "css/demo.css",
+      "css/mui.css",
+      "fontsNEW/iconfont.woff",
+      "fontsNEW/iconfont.ttf",
+      "js/jquery.min.js",
+      "images/news_icons/gift_ certificate.png",
+      "images/news_icons/chongzhi.png",
+      "images/news_icons/share.png",
+      "images/news_icons/account.png",
+      "images/news_icons/more.png",
+      "images/news_icons/tixian.png",
+      "images/news_icons/shenglibao.png",
+      "images/news_icons/zijinlilv.png",
+      "images/news_icons/mantianxing.png",
+      "js/app-shiying.js"
+    ],
+    "refer": [
+      "login/login.html",
+      "examples/chongzhi.html",
+      "examples/shenglibao.html",
+      "examples/yaoqing.html",
+      "examples/zijinjilv.html",
+      "examples/tixian.html",
+      "examples/jiaxiquan.html",
+      "examples/yinhangka-2.html",
+      "examples/myid-new.html",
+      "examples/account.html",
+      "examples/gerenziliao.html",
+      "examples/gerenziliao-new.html",
+      "examples/fenxiang.html",
+      "examples/login-new.html",
+      "examples/zijinjilv-new.html",
+      "examples/chongzhi_new.html",
+      "examples/youhuiquan.html",
+      "examples/tixian_new.html"
+    ]
+  },
+  "examples/jisuanqi.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/echarts.simple.min.js",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "css/mui.css",
+      "css/owen-icon.css"
+    ],
+    "refer": []
+  },
+  "examples/myid-new.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "fonts/mui.ttf",
+      "css/demo.css",
+      "css/mui.css",
+      "fontsNEW/iconfont.woff"
+    ],
+    "refer": [
+      "examples/gerenziliao.html",
+      "examples/about.html",
+      "examples/shezhi.html"
+    ]
+  },
+  "examples/account.html": {
+    "refer": [
+      "examples/gerenziliao.html",
+      "examples/shezhi.html",
+      "examples/about.html",
+      "examples/yonghu-more.html",
+      "examples/login-new.html",
+      "examples/coupon.html",
+      "examples/more.html",
+      "examples/share.html",
+      "examples/userinfo.html",
+      "examples/withdraw.html",
+      "examples/message.html",
+      "examples/fundsflow.html",
+      "examples/help.html",
+      "examples/invitation.html",
+      "examples/recharge.html",
+      "examples/activitycenter.html"
+    ],
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "fonts/mui.ttf",
+      "css/demo.css",
+      "css/mui.css",
+      "fontsNEW/iconfont.woff",
+      "fontsNEW/iconfont.ttf",
+      "fontsNEW/iconfont_1/iconfont.css",
+      "js/app-shiying.js",
+      "fontsNEW/iconfont_1/iconfont.woff",
+      "css/weui.min.css",
+      "images/news_icons/gift_ certificate.png",
+      "images/news_icons/chongzhi.png",
+      "images/news_icons/share.png",
+      "images/news_icons/account.png",
+      "images/news_icons/more.png",
+      "css/common.css",
+      "images/news_icons/tixian.png",
+      "images/news_icons/shenglibao.png",
+      "images/news_icons/zijinlilv.png",
+      "images/news_icons/mantianxing.png",
+      "images/moneyBG.jpg",
+      "js/vue.min.js"
+    ]
+  },
+  "examples/Project-newbie.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "images/more-img.png",
+      "js/mui.pullToRefresh.material.js",
+      "css/Project.css",
+      "css/owen-icon.css",
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.min.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "login/login.html"
+    ]
+  },
+  "examples/pnrpay-recharge.html": {
+    "resources": [
+      "js/jquery.min.js"
+    ],
+    "refer": []
+  },
+  "examples/list-news-dongtai.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/demo.css",
+      "css/mui.css"
+    ],
+    "refer": [
+      "examples/list-news-more.html"
+    ]
+  },
+  "examples/list-news-zixun.html": {
+    "resources": [
+      "css/iconfont.css"
+    ],
+    "refer": []
+  },
+  "examples/list-news-toutiao.html": {
+    "resources": [
+      "css/iconfont.css",
+      "js/common.js",
+      "js/zepto.min.js",
+      "css/mui.min.css",
+      "css/demo.css",
+      "js/mui.min.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "examples/list-news-more.html"
+    ]
+  },
+  "examples/list-news-xinwen.html": {
+    "resources": [
+      "js/common.js",
+      "js/zepto.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/demo.css"
+    ],
+    "refer": [
+      "examples/list-news-more.html"
+    ]
+  },
+  "examples/list-news-licai.html": {
+    "resources": [
+      "js/common.js",
+      "js/zepto.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/demo.css"
+    ],
+    "refer": [
+      "examples/list-news-more.html"
+    ]
+  },
+  "examples/gerenziliao-new.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/demo.css",
+      "fontsNEW/iconfont.woff",
+      "fontsNEW/iconfont.ttf",
+      "js/app-shiying.js"
+    ],
+    "refer": [
+      "examples/yinhangka-2.html",
+      "examples/chongshemima.html"
+    ]
+  },
+  "examples/chongzhijilv.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "css/mystyle.css",
+      "css/mui.css",
+      "css/owen-icon.css"
+    ],
+    "refer": []
+  },
+  "examples/list-news-hangye.html": {
+    "resources": [
+      "js/common.js",
+      "js/zepto.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/demo.css"
+    ],
+    "refer": [
+      "examples/list-news-more.html"
+    ]
+  },
+  "examples/fenxiang.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "css/demo.css",
+      "css/mui.css",
+      "images/fenxiang.jpg",
+      "css/weui.min.css",
+      "js/app-shiying.js"
+    ],
+    "refer": []
+  },
+  "examples/login-new.html": {
+    "resources": [
+      "css/login/style.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "css/mui.css",
+      "fonts/mui.ttf",
+      "js/app-shiying.js",
+      "css/common.css"
+    ],
+    "refer": [
+      "examples/reg-new.html"
+    ]
+  },
+  "examples/zijinjilv-new.html": {
+    "refer": [
+      "examples/zijinmingxi-tzjl-new.html",
+      "examples/zijinmingxi-new.html",
+      "examples/zijinjilv-syjl-new.html"
+    ],
+    "resources": [
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "fonts/mui.ttf",
+      "css/demo.css",
+      "css/mui.css",
+      "fontsNEW/iconfont.woff"
+    ]
+  },
+  "examples/zijinmingxi-tzjl-new.html": {
+    "resources": [
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "css/demo.css",
+      "css/mui.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "examples/zijinmingxi-new.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "css/demo.css",
+      "css/mui.css",
+      "js/app-shiying.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "examples/zijinjilv-syjl-new.html": {
+    "resources": [
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "fonts/mui.ttf",
+      "css/demo.css",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "examples/chongzhi_new.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.picker.min.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "js/mui.poppicker.js",
+      "fonts/mui.ttf",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "css/demo.css",
+      "css/mui.css",
+      "css/common.css"
+    ],
+    "refer": []
+  },
+  "examples/youhuiquan.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "css/demo.css",
+      "css/mui.css",
+      "images/keyong.png",
+      "images/yiduihuan.png",
+      "fonts/mui.ttf",
+      "images/yishiyong.png"
+    ],
+    "refer": []
+  },
+  "examples/tixian_new.html": {
+    "resources": [
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "css/demo.css",
+      "css/mui.css",
+      "css/common.css"
+    ],
+    "refer": []
+  },
+  "examples/xiaoxi.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "fontsNEW/iconfont.css",
+      "css/demo.css",
+      "css/mui.css",
+      "fontsNEW/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "examples/vip-modify.html": {
+    "resources": [
+      "images/news_icons/gift_ certificate.png",
+      "images/news_icons/chongzhi.png",
+      "images/news_icons/share.png",
+      "images/news_icons/account.png",
+      "images/news_icons/more.png",
+      "images/news_icons/tixian.png",
+      "images/news_icons/shenglibao.png",
+      "images/news_icons/zijinlilv.png",
+      "images/news_icons/mantianxing.png",
+      "images/moneyBG.jpg"
+    ],
+    "refer": []
+  },
+  "examples/touzichanpin.html": {
+    "resources": [
+      "images/close.png",
+      "js/jquery.min.js",
+      "js/circles.min.js",
+      "images/news_icons/fkcs.png",
+      "images/news_icons/cpxq.png",
+      "css/mui.css",
+      "js/common.js",
+      "images/news_icons/count.png",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "css/demo.css",
+      "images/news_icons/tzlb.png",
+      "images/news_icons/detail.png"
+    ],
+    "refer": [
+      "examples/login-new.html",
+      "examples/toubiao.html",
+      "examples/touziliebiao.html",
+      "examples/xiangmujindu.html"
+    ]
+  },
+  "examples/toubiao.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/mui.picker.min.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "js/mui.poppicker.js",
+      "fonts/mui.ttf",
+      "css/mui.poppicker.css",
+      "css/mui.picker.min.css",
+      "css/demo.css",
+      "css/mui.css",
+      "css/common.css",
+      "js/zepto.min.js"
+    ],
+    "refer": [
+      "examples/temp-webview.html"
+    ]
+  },
+  "examples/temp-webview.html": {
+    "resources": [
+      "examples/pnrpay-bid.html",
+      "css/mystyle.css",
+      "css/owen-icon.css",
+      "js/mui.min.js",
+      "css/mui.css",
+      "examples/pnrpay-login.html"
+    ],
+    "refer": [
+      "examples/pnrpay-bid.html",
+      "examples/pnrpay-login.html"
+    ]
+  },
+  "examples/touziliebiao.html": {
+    "resources": [
+      "images/jxq-user.png"
+    ],
+    "refer": []
+  },
+  "examples/xiangmujindu.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "images/news_icons/muji.png",
+      "images/news_icons/fangkuan.png",
+      "css/demo.css",
+      "css/mui.css",
+      "images/news_icons/huankuan.png",
+      "images/news_icons/shangxian.png"
+    ],
+    "refer": []
+  },
+  "index.html": {
+    "resources": [
+      "fontsNEW/iconfont_1/iconfont.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "fonts/mui.ttf",
+      "fontsNEW/iconfont_1/iconfont.woff",
+      "css/mui.min.css",
+      "js/vue.min.js",
+      "fontsNEW/iconfont.woff",
+      "examples/account.html",
+      "css/reset.css",
+      "default.html",
+      "assets.html",
+      "js/root/index.js",
+      "invest.html"
+    ],
+    "refer": [
+      "examples/home.html",
+      "examples/creditlist.html",
+      "examples/article.html",
+      "examples/guide.html",
+      "examples/account.html",
+      "examples/message.html",
+      "examples/login-new.html",
+      "examples/search.html",
+      "examples/article2.html",
+      "my.html",
+      "assets.html",
+      "invest.html",
+      "default.html",
+      "views/root/login.html"
+    ]
+  },
+  "examples/home.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/circles.min.js"
+    ],
+    "refer": [
+      "examples/newbie.html",
+      "examples/safety.html",
+      "examples/about.html",
+      "examples/infodis.html",
+      "examples/novwelfare.html"
+    ]
+  },
+  "examples/creditlist.html": {
+    "resources": [
+      "images/tips.png",
+      "js/jquery.countdown.min.js",
+      "js/circles.min.js",
+      "js/jquery.min.js",
+      "images/huankuan.png",
+      "images/once.png",
+      "images/error.png",
+      "images/success.png",
+      "css/common.css",
+      "images/once_2.png",
+      "images/shouqin.png",
+      "js/app-shiying.js",
+      "css/mui.css",
+      "images/yushou.png",
+      "js/common.js",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "examples/project.html",
+      "examples/creditlisttag.html"
+    ]
+  },
+  "examples/article.html": {
+    "resources": [
+      "images/news5.png",
+      "images/news_icons/media.png",
+      "images/news_icons/news.png",
+      "images/news2.png",
+      "images/news1.png",
+      "images/news_icons/finance.png",
+      "images/news3.png",
+      "images/news4.png",
+      "images/news_icons/profession.png",
+      "images/news_icons/qhlead.png",
+      "js/app-shiying.js",
+      "css/mui.css"
+    ],
+    "refer": [
+      "examples/temp-pullrefresh.html"
+    ]
+  },
+  "examples/project.html": {
+    "resources": [
+      "images/close.png",
+      "js/jquery.countdown.min.js",
+      "js/jquery.min.js",
+      "js/circles.min.js",
+      "images/news_icons/fkcs.png",
+      "js/vue.min.js",
+      "images/news_icons/cpxq.png",
+      "css/mui.css",
+      "js/common.js",
+      "images/news_icons/count.png",
+      "js/app-shiying.js",
+      "css/common.css",
+      "js/mui.min.js",
+      "images/news_icons/tzlb.png",
+      "images/news_icons/detail.png"
+    ],
+    "refer": [
+      "examples/toubiao.html",
+      "examples/risk.html",
+      "examples/bidlist.html",
+      "examples/details.html",
+      "examples/investtarget.html",
+      "examples/projectlist.html"
+    ]
+  },
+  "examples/coupon.html": {
+    "resources": [
+      "images/keyong.png",
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "js/zepto.min.js",
+      "css/mui.css",
+      "images/yishiyong.png"
+    ],
+    "refer": []
+  },
+  "examples/risk.html": {
+    "resources": [
+      "images/fengkong-banner.png",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "examples/bidlist.html": {
+    "resources": [
+      "js/common.js",
+      "js/jquery.min.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "images/pc.png",
+      "css/mui.css",
+      "images/mobile.png",
+      "images/jiaxiquan-3.png"
+    ],
+    "refer": []
+  },
+  "examples/details.html": {
+    "resources": [
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "js/vue.min.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "examples/more.html": {
+    "resources": [
+      "fontsNEW/iconfont_1/iconfont.css",
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "js/zepto.min.js",
+      "fontsNEW/iconfont.css",
+      "fonts/mui.ttf",
+      "fontsNEW/iconfont_1/iconfont.woff",
+      "css/weui.min.css",
+      "js/vue.min.js",
+      "css/mui.css",
+      "fontsNEW/iconfont.woff"
+    ],
+    "refer": []
+  },
+  "examples/newbie.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "images/news_icons/hkjh.png",
+      "js/mui.pullToRefresh.material.js",
+      "images/news_icons/cpxq.png",
+      "css/mui.css"
+    ],
+    "refer": [
+      "examples/login-new.html"
+    ]
+  },
+  "examples/share.html": {
+    "resources": [
+      "js/common.js",
+      "js/app-shiying.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "js/zepto.min.js",
+      "css/weui.min.css",
+      "css/mui.css",
+      "images/fenxiang.jpg"
+    ],
+    "refer": []
+  },
+  "examples/userinfo.html": {
+    "refer": [
+      "examples/addressopt.html",
+      "examples/uploadheader.html",
+      "examples/bankcard.html",
+      "examples/accountsecurity.html",
+      "examples/myid-weikaitong.html",
+      "examples/version.html"
+    ],
+    "resources": []
+  },
+  "examples/addressopt.html": {
+    "refer": [
+      "examples/address.html"
+    ],
+    "resources": []
+  },
+  "examples/address.html": {
+    "refer": [
+      "examples/addressopt.html"
+    ],
+    "resources": []
+  },
+  "examples/fundsflow.html": {
+    "refer": [
+      "examples/fundsflowdetails.html"
+    ],
+    "resources": []
+  },
+  "examples/article2.html": {
+    "refer": [
+      "examples/login-new.html"
+    ],
+    "resources": []
+  },
+  "examples/investtarget.html": {
+    "refer": [
+      "examples/temp-webview.html"
+    ],
+    "resources": [
+      "css/mui.picker.all.css"
+    ]
+  },
+  "examples/creditlisttag.html": {
+    "refer": [
+      "examples/project.html"
+    ],
+    "resources": []
+  },
+  "examples/accountsecurity.html": {
+    "refer": [
+      "examples/changepassword.html"
+    ],
+    "resources": []
+  },
+  "examples/bankcard.html": {
+    "refer": [
+      "examples/temp-webview.html"
+    ],
+    "resources": []
+  },
+  "examples/myid-weikaitong.html": {
+    "resources": [
+      "examples/pnrpay-register.html"
+    ],
+    "refer": [
+      "examples/pnrpay-register.html"
+    ]
+  },
+  "examples/novwelfare.html": {
+    "refer": [
+      "examples/login-new.html",
+      "examples/newbie.html"
+    ],
+    "resources": []
+  },
+  "views/help/qrcodeLogin.html": {
+    "href": "views/help/qrcodeLogin.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/help/qrcodeLogin.css",
+      "js/mui.min.js",
+      "js/immersed.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "images/pcLogin.png",
+      "js/help/qrcodeLogin.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "invest.html": {
+    "refer": [
+      "views/invest/investDetail.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/invest/investment.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/r.immersed.js",
+      "js/invest/invest.js"
+    ]
+  },
+  "my.html": {
+    "refer": [
+      "views/root/login.html",
+      "views/my/payCalendar.html",
+      "views/my/myLoan.html",
+      "views/my/automaticBid.html",
+      "views/my/set.html",
+      "views/my/withdrawList.html",
+      "views/my/bearInterest.html",
+      "views/my/start.html",
+      "views/my/more.html",
+      "views/my/myTransfer.html",
+      "views/my/userinfo.html",
+      "views/my/fundDetail.html",
+      "views/my/rechargeList.html",
+      "views/my/coupon.html",
+      "views/my/message.html",
+      "views/my/recharge.html",
+      "views/my/withdrawals.html",
+      "views/my/transfer.html",
+      "views/my/automaticBidRules.html",
+      "views/huifu/realAuth.html",
+      "views/bank/personalOpening.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/my/my.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/my/my.js",
+      "images/my-logo.png",
+      "images/mycenter.png"
+    ]
+  },
+  "views/my/myLoan.html": {
+    "refer": [
+      "views/my/repayCalendar.html",
+      "views/invest/investDetail.html",
+      "views/my/wantLoan.html"
+    ],
+    "resources": []
+  },
+  "views/my/set.html": {
+    "refer": [
+      "views/help/pushMessage.html",
+      "views/my/userinfo.html",
+      "views/my/modifyPwd.html",
+      "views/root/login.html",
+      "views/bank/businessAuth.html",
+      "views/bank/setPayPwd.html",
+      "views/bank/tradePwd.html",
+      "views/my/validateMobile.html",
+      "views/bank/authExplain.html"
+    ],
+    "resources": []
+  },
+  "views/my/userinfo.html": {
+    "refer": [
+      "views/my/bankCard.html",
+      "views/my/address.html",
+      "views/my/qrcode.html",
+      "views/my/upload.html",
+      "views/my/riskEvaluation.html",
+      "views/huifu/realAuth.html",
+      "views/huifu/loginHuiFu.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/my/my.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/my/userinfo.js",
+      "images/my-logo.png"
+    ]
+  },
+  "default.html": {
+    "refer": [
+      "views/root/noviceLoan.html",
+      "views/root/news.html",
+      "views/root/newsDetail.html",
+      "views/invest/investDetail.html",
+      "views/root/slide.html",
+      "views/my/payCalendar.html",
+      "views/help/safety.html",
+      "views/help/information.html",
+      "views/root/login.html",
+      "views/my/riskEvaluation.html",
+      "views/help/notice.html"
+    ],
+    "resources": [
+      "css/check.version.css",
+      "js/common.js",
+      "js/vue2.min.js",
+      "images/default-banner1.png",
+      "js/root/default.js",
+      "js/check.version.js",
+      "css/root/default.css",
+      "js/cache.img.js",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/statistic.js",
+      "images/default-banner.png"
+    ]
+  },
+  "assets.html": {
+    "refer": [
+      "views/assets/assetsRecord.html",
+      "views/my/myTransfer.html",
+      "default.html",
+      "assets.html",
+      "invest.html",
+      "my.html",
+      "views/root/login.html"
+    ],
+    "resources": [
+      "css/assets/assets.css",
+      "css/mui.min.css",
+      "js/mui.min.js",
+      "js/immersed.js",
+      "js/common.js",
+      "fonts/qhlead.ttf",
+      "js/vue2.min.js",
+      "js/assets/assets.js"
+    ]
+  },
+  "views/my/more.html": {
+    "refer": [
+      "views/help/contactsUs.html",
+      "views/help/feedback.html",
+      "views/help/help.html"
+    ],
+    "resources": []
+  },
+  "views/my/payCalendar.html": {
+    "refer": [
+      "views/my/payCalendarDetail.html"
+    ],
+    "resources": []
+  },
+  "views/my/repayCalendar.html": {
+    "refer": [
+      "views/my/repayCalendarDetail.html"
+    ],
+    "resources": []
+  },
+  "views/root/login.html": {
+    "refer": [
+      "views/my/forgetPwd.html",
+      "views/root/reg.html",
+      "views/my/riskEvaluation.html",
+      "views/root/oauthLogin.html",
+      "views/root/noviceLoan.html",
+      "views/my/safetyCode.html",
+      "views/root/regStart.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/login.js",
+      "images/my-logo.png",
+      "images/my-qq.png",
+      "images/my-wechat.png"
+    ]
+  },
+  "views/root/noviceLoan.html": {
+    "refer": [
+      "views/root/login.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/root/noviceLoan.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/noviceLoan.js",
+      "images/mycenter2.png"
+    ]
+  },
+  "views/root/news.html": {
+    "refer": [
+      "views/root/newsDetail.html"
+    ],
+    "resources": []
+  },
+  "views/assets/assetsRecord.html": {
+    "refer": [
+      "views/assets/receivablesPlan.html",
+      "views/invest/investDetail.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/mui.picker.min.css",
+      "css/assets/assetsRecord.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/mui.picker.min.js",
+      "js/assets/assetsRecord.js"
+    ]
+  },
+  "views/invest/investDetail.html": {
+    "refer": [
+      "views/invest/investIntro.html",
+      "views/invest/measures.html",
+      "views/invest/investRecord.html",
+      "views/invest/investProjectList.html",
+      "views/invest/investStandard.html",
+      "views/invest/financeInfo.html",
+      "views/invest/refundRecord.html",
+      "views/my/riskEvaluation.html",
+      "views/root/login.html",
+      "views/huifu/realAuth.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/invest/investDetail.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/invest/investDetail.js",
+      "images/mycenter.png",
+      "images/monthRate.png"
+    ]
+  },
+  "views/invest/investProjectList.html": {
+    "refer": [
+      "views/invest/investDetail.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/invest/investment.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/invest/investProjectList.js"
+    ]
+  },
+  "views/my/address.html": {
+    "refer": [
+      "views/my/editAddress.html"
+    ],
+    "resources": []
+  },
+  "views/my/transfer.html": {
+    "refer": [
+      "views/my/transferHelp.html",
+      "views/help/transferProtocol.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/my/transfer.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/transfer.js"
+    ]
+  },
+  "views/my/automaticBid.html": {
+    "refer": [
+      "views/my/addAutomaticBid.html",
+      "views/huifu/realAuth.html"
+    ],
+    "resources": []
+  },
+  "views/root/reg.html": {
+    "refer": [
+      "views/help/regProtocol.html",
+      "views/root/login.html",
+      "views/help/scanQrcode.html",
+      "views/my/riskEvaluation.html",
+      "views/root/oauthLogin.html",
+      "views/help/riskNote.html",
+      "views/root/noviceLoan.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/md5.min.js",
+      "js/root/reg.js"
+    ]
+  },
+  "views/my/messageDetail.html": {
+    "refer": [
+      "views/invest/investDetail.html"
+    ],
+    "resources": []
+  },
+  "views/my/message.html": {
+    "refer": [
+      "views/my/messageDetail.html"
+    ],
+    "resources": []
+  },
+  "views/my/myTransfer.html": {
+    "refer": [
+      "views/my/transfer.html",
+      "views/my/transferRules.html",
+      "views/my/transfereeDetail.html",
+      "views/invest/investDetail.html",
+      "views/my/transferDetail.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/my/myTransfer.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/t.immersed.js",
+      "js/my/myTransfer.js"
+    ]
+  },
+  "views/my/bankCard.html": {
+    "refer": [
+      "views/huifu/addBankCard.html",
+      "views/huifu/realAuth.html",
+      "views/bank/checkPayPassword.html"
+    ],
+    "resources": []
+  },
+  "views/my/recharge.html": {
+    "refer": [
+      "views/huifu/recharges.html",
+      "views/bank/checkPayPwd.html"
+    ],
+    "resources": []
+  },
+  "views/my/start.html": {
+    "refer": [
+      "views/my/invitationDetail.html"
+    ],
+    "resources": []
+  },
+  "views/invest/investStandard.html": {
+    "refer": [
+      "views/help/riskNote.html",
+      "views/my/recharge.html",
+      "views/root/login.html",
+      "views/huifu/authAutoTender.html",
+      "views/help/Authorize.html",
+      "views/huifu/realAuth.html",
+      "views/invest/investProjectList.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/invest/investStandard.css",
+      "css/mui.picker.min.css",
+      "js/mui.min.js",
+      "js/mui.picker.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/invest/investStandard.js"
+    ]
+  },
+  "views/my/payCalendarDetail.html": {
+    "refer": [
+      "views/assets/receivablesPlan.html"
+    ],
+    "resources": []
+  },
+  "views/assets/receivablesPlan.html": {
+    "refer": [
+      "views/invest/investDetail.html",
+      "views/assets/checkAgreement.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/assets/receivablesPlan.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/immersed.js",
+      "js/vue2.min.js",
+      "js/assets/receivablesPlan.js",
+      "images/mycenter2.png"
+    ]
+  },
+  "views/assets/checkAgreement.html": {
+    "refer": [
+      "views/help/agreement.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/assets/checkAgreement.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/assets/checkAgreement.js"
+    ]
+  },
+  "views/root/oauthLogin.html": {
+    "refer": [
+      "views/root/reg.html",
+      "views/root/loginBind.html",
+      "views/root/login.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/root/authLogin.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/oauthLogin.js",
+      "images/my-logo.png"
+    ]
+  },
+  "views/root/loginBind.html": {
+    "refer": [
+      "views/root/sureOauth.html",
+      "views/root/modifyOauth.html",
+      "views/root/noviceLoan.html",
+      "views/my/forgetPwd.html"
+    ],
+    "resources": [
+      "css/mui.min.css",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/loginBind.js",
+      "images/my-logo.png"
+    ]
+  },
+  "views/huifu/realAuth.html": {
+    "href": "views/huifu/realAuth.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/huifu/realAuth.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/my/upload.html": {
+    "href": "views/my/upload.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/cropper.min.css",
+      "js/mui.min.js",
+      "js/jquery-2.0.3.min.js",
+      "js/cropper.min.js",
+      "js/my/upload.js"
+    ],
+    "refer": [
+      "views/my/userinfo.html"
+    ],
+    "priority": 0
+  },
+  "views/huifu/loginHuiFu.html": {
+    "href": "views/huifu/loginHuiFu.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/huifu/loginHuiFu.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/my/riskEvaluation.html": {
+    "href": "views/my/riskEvaluation.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/my/riskEvaluation.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/riskEvaluation.js"
+    ],
+    "refer": [
+      "views/my/userinfo.html"
+    ],
+    "priority": 0
+  },
+  "views/root/sureOauth.html": {
+    "href": "views/root/sureOauth.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/root/authLogin.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/sureOauth.js",
+      "images/my-logo.png"
+    ],
+    "refer": [
+      "views/root/login.html",
+      "views/root/oauthLogin.html"
+    ],
+    "priority": 0
+  },
+  "views/root/modifyOauth.html": {
+    "href": "views/root/modifyOauth.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/root/authLogin.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/root/modifyOauth.js",
+      "images/my-logo.png"
+    ],
+    "refer": [
+      "views/root/login.html",
+      "views/root/oauthLogin.html"
+    ],
+    "priority": 0
+  },
+  "views/my/forgetPwd.html": {
+    "href": "views/my/forgetPwd.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/md5.min.js",
+      "js/my/forgetPwd.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/help/scanQrcode.html": {
+    "href": "views/help/scanQrcode.html",
+    "resources": [
+      "css/help/barcoded.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/help/barcoded.js"
+    ],
+    "refer": [
+      "views/help/qrcodeLogin.html"
+    ],
+    "priority": 0
+  },
+  "views/help/regProtocol.html": {
+    "href": "views/help/regProtocol.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/help/regProtocol.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/help/riskNote.html": {
+    "href": "views/help/riskNote.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/help/riskNote.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/my/safetyCode.html": {
+    "href": "views/my/safetyCode.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/root/pubAccount.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/md5.min.js",
+      "js/my/safetyCode.js"
+    ],
+    "refer": [
+      "views/my/riskEvaluation.html"
+    ],
+    "priority": 0
+  },
+  "views/root/newsDetail.html": {
+    "href": "views/root/newsDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/root/newsDetail.css",
+      "js/mui.min.js",
+      "js/common.js",
+      "js/vue2.min.js",
+      "js/immersed.js",
+      "js/root/newsDetail.js",
+      "images/share/fx3.png",
+      "images/publogo.png",
+      "images/share/fx7.png",
+      "images/share/fx1.png",
+      "images/share/fx2.png",
+      "images/share/fx4.png",
+      "images/share/fx6.png",
+      "images/share/fx5.png",
+      "images/share/fx8.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/root/slide.html": {
+    "href": "views/root/slide.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/root/slide.css",
+      "js/mui.min.js",
+      "js/root/slide.js",
+      "images/slide/one.png",
+      "images/slide/two.png",
+      "images/slide/three.png",
+      "images/slide/four.png"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/huifu/authAutoTender.html": {
+    "href": "views/huifu/authAutoTender.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/huifu/authAutoTender.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/help/Authorize.html": {
+    "href": "views/help/Authorize.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/help/Authorize.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/my/automaticBidRules.html": {
+    "href": "views/my/automaticBidRules.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/my/pubExplain.css",
+      "js/mui.min.js",
+      "js/common.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/my/transfereeDetail.html": {
+    "href": "views/my/transfereeDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/my/allTransferDetail.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/transfereeDetail.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/my/transferRules.html": {
+    "href": "views/my/transferRules.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/my/pubExplain.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/my/transferDetail.html": {
+    "href": "views/my/transferDetail.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/my/allTransferDetail.css",
+      "js/mui.min.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/my/transferDetail.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/help/agreement.html": {
+    "href": "views/help/agreement.html",
+    "resources": [
+      "css/mui.min.css",
+      "css/lineLoadding.css",
+      "js/mui.min.js",
+      "js/p.immersed.js",
+      "js/vue2.min.js",
+      "js/common.js",
+      "js/help/aggrement.js"
+    ],
+    "refer": [],
+    "priority": 0
+  },
+  "views/root/regStart.html": {
+    "refer": [
+      "default.html",
+      "views/root/reg.html"
+    ],
+    "resources": []
+  },
+  "views/bank/businessAuth.html": {
+    "refer": [
+      "views/bank/checkPayPassword.html"
+    ]
+  },
+  "views/bank/checkPayPassword.html": {
+    "refer": [
+      "views/bank/bindBankCard.html"
+    ]
+  },
+  "views/bank/tradePwd.html": {
+    "refer": [
+      "views/bank/modifyPayPwd.html",
+      "views/bank/resetPayPwd.html"
+    ]
+  },
+  "views/my/validateMobile.html": {
+    "refer": [
+      "views/my/modifyMobile.html"
+    ]
+  },
+  "views/help/safety.html": {
+    "refer": [
+      "views/bank/openingAccount.html"
+    ]
+  },
+  "views/bank/openingAccount.html": {
+    "refer": [
+      "views/bank/businessOpening.html",
+      "views/bank/personalOpening.html"
+    ]
+  },
+  "views/my/repayCalendarDetail.html": {
+    "refer": [
+      "views/invest/investDetail.html"
+    ]
+  }
+}

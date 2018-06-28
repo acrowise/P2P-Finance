@@ -1,0 +1,148 @@
+@charset "UTF-8";
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, h2 {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.about {
+  color: #2c2c2c;
+}
+.about .banner {
+  width: 100%;
+}
+.about .banner img {
+  display: block;
+  width: 100%;
+}
+.about .content {
+  background: #ffffff;
+  padding: 7px 15px 14px;
+  margin-bottom: 7px;
+}
+.about .content:last-child {
+  margin-bottom: 0;
+}
+.about .content .title {
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+  line-height: 48px;
+  margin: 0;
+}
+.about .synopsis p {
+  color: #394659;
+  font-size: 14px;
+  line-height: 25px;
+}
+.about .course ul {
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.about .course ul li {
+  position: relative;
+  padding: 18px 0;
+  line-height: 25px;
+  font-size: 0;
+}
+.about .course ul li > div {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 25px;
+}
+.about .course ul li > div.dateActive {
+  vertical-align: top;
+  width: 73px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #FFFFFF;
+  background: #1e82d2;
+}
+.about .course ul li > div.text {
+  position: absolute;
+  padding: 0 8px;
+  font-size: 12px;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  background: #f4f4f4;
+  color: #787878;
+}
+.about .course ul li .date {
+  font-size: 10px;
+  color: #787878;
+  margin-left: 10px;
+  display: inline-block;
+  min-width: 67px;
+  text-align: right;
+}
+.about .course ul li .round {
+  position: relative;
+  margin: 0 5px;
+  margin-left: 12px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1e82d2;
+}
+.about .course ul li .round:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: -24px;
+  width: 1px;
+  height: 65px;
+  background: #1e82d2;
+}
+.about .course ul li.specli {
+  padding-left: 73px;
+}
+.about .media ul > li {
+  margin-bottom: 9px;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+}
+.about .media ul > li p {
+  height: 21px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background: #858585;
+}
+
+/*关于我们  */
+
+/*# sourceMappingURL=aboutUs.css.map */

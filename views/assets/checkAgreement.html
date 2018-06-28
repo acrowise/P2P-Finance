@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>查看协议</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/assets/checkAgreement.css" />
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-13
+        	描述：查看协议
+        -->
+		<div class="mui-content agreement" id="vue-app"  :class="{'ios-scroll-bounce':isIos}">
+			<ul>
+				<li v-for="item in agreement">
+					<dl>
+						<dt>
+							<p>{{item.name}}</p>
+							<p>{{item.time | getDate}}</p>
+						</dt>
+						<dd @tap="download(item.fileUrl,item.name)">
+							<a >查看</a>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/assets/checkAgreement.js" ></script>
+	</body>
+</html>

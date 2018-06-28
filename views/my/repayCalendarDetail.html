@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>还款日历</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/payCalendarDetail.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-24
+        	描述：还款日历详情
+        -->
+       <div id="vue-app">
+       	 <nav class="mui-bar mui-bar-tab paymentbottom mui-hidden" v-show="navBar">
+	        <div class="chooseopt">
+				<div class="allbtn">
+					<div class="mui-input-row mui-checkbox mui-left txtoption"  @tap="btnChecked($event)">					
+						<label for="all">全选</label>
+						<input id="all" name="all"  type="checkbox" v-model="checkAll" @change="checkEvent($event)"/>
+					</div>	
+				</div>
+				<div class="huank">
+					<button class="mui-btn mui-btn-primary mui-btn-block mui-btn-rightbottom" @tap="btnRefund">还款</button>
+				</div>
+			</div>
+		</nav>
+		<div class="mui-content calendardt" :class="{'ios-scroll-bounce':isIos,pdstyle:navBar}">
+			<div class="repayhd">
+				<div>
+					<p>待还总额</p>
+					<span>{{model.TotalAmount | format}}</span>
+				</div>
+				<div>
+					<p>还款日期</p>
+					<span>{{currDate | getDate}}</span>
+				</div>
+			</div>
+			<div class="calendar-content calendar-content2">
+				<ul >
+					<!--还款状态：1-待还 2-还款中 3-已还 4-提前还款 5-逾期 6-逾期还款 7-代偿 -->
+					<li v-for="item in model.RefundPlan"   :class="{ystatus:item.State!=1 && item.State!=5 && item.State!=7,wstatus:item.State==1 || item.State==5 || item.State==7}" @tap="refundDetail(item.LoanId)">
+						<div class="title-box title-box2">
+							<h2>
+								<div class="mui-input-row mui-checkbox mui-left txtoption mui-hidden" @tap="btnChecked($event)">								
+									<label for="all"></label>
+								    <input  name="item"  type="checkbox" :value="item.Id" :disabled="item.State!=1 && item.State!=5 && item.State!=7" v-model="checkedIds"/>
+								</div> 
+								{{item.Name}}
+							</h2>
+							<em v-if="item.State!=1 && item.State!=5 && item.State!=7">{{item.State | getState}}</em> 
+							<button class="mui-btn mui-btn-primary mui-small-btn mui-pull-right" type="button" @tap.stop="refundDetail(item.LoanId)" v-if="item.State==1 || item.State==5 || item.State==7">还款</button>
+						</div>
+						<div class="main">
+							<p>
+								<span>待还总额：<em>{{item.TotalAmount | format}}</em></span> 
+								<span>期数：<em>第{{item.CurrentPeriod}}期</em></span>
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>			
+		</div>
+		<div id="repayopt" class="mui-popover mui-popover-action mui-popover-bottom repayalert">
+			<h5>还款 <a href="#repayopt" class="mui-icon iconfont icon-guanbi"></a></h5>
+			<div class="moneyinfo">
+				<p>{{refundAmt | format}}</p>
+				<span>还款金额</span>
+			</div>
+			<div class="balance">
+				<span>账户余额：<em>{{availBal | format}}</em></span>					
+				<a @tap="href('recharge.html','recharge.html','充值')">去充值</a>
+			</div>
+			<div class="btnbox">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block"  @tap="btnSure">确定</button>	
+			</div>				
+		</div>
+       </div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/my/repayCalendarDetail.js" ></script>
+	</body>
+</html>

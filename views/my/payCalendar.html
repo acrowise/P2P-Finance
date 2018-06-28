@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>回款日历</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../css/my/payCalendar.css">
+	</head>
+	<body>
+		<!--
+        	作者：dingyong
+        	时间：2018-01-09
+        	描述：回款日历
+        -->
+		<div class="mui-content calendarc" id="vue-app"   :class="{'ios-scroll-bounce':isIos}">
+			<div class="moneydata">
+				<ul>
+					<li class="assetdlist">
+						<div>
+							<p><i></i>待收总额</p>
+							<p>{{model.CapitalInterest | format}}</p>
+						</div>
+						<div>
+							<p><i></i>待收本金</p>
+							<p>{{model.DueInCapital | format}}</p>
+						</div>
+					</li>
+					<li class="assetdlist assetdlist2">
+						<div>
+							<p><i></i>待收利息</p>
+							<p>{{model.DueInInterest | format}}</p>
+						</div>
+						<div>
+							<p><i></i>待收出借奖励</p>
+							<p>{{model.DueInRaiseInterest | format}}</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="calendar">
+				<h2>
+					<span @tap="btnPicker">{{getDate(model.CurrentDate)}}<i class="iconfont icon-xia-copy"></i></span>
+					<span class="mui-icon mui-icon mui-icon-arrowleft" @tap="upOrDown(0)"></span>
+					<span class="mui-icon mui-icon mui-icon-arrowright" @tap="upOrDown(1)"></span>
+				</h2>
+				<div class="calendar-content" >	
+					<ol class="week mui-clearfix">
+						<li>日</li>
+						<li>一</li>
+						<li>二</li>
+						<li>三</li>
+						<li>四</li>
+						<li>五</li>
+						<li>六</li>
+					</ol>
+					<ul class="day mui-clearfix">
+						<li v-for="n in week"></li>
+						<!-- 收款状态：1-待收 2-正常：无待收也无已收 3-已收 -->
+						<li v-for="(item,index) in model.StateList" :class="{repay:item==3,nopay:item==1,curr:isEquals(index+1)}" @tap="href(item,index)"><span>{{index+1}}</span></li>
+					</ul>
+				</div>
+				<div class="tagging">
+					<span class="repay">已还款</span>
+					<span class="nopay">未还款</span>
+				</div>
+			</div>
+		</div>			
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>
+		<script type="text/javascript" src="../../js/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="../../js/common.js" ></script>
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/my/payCalendar.js"></script>
+	</body>
+</html>

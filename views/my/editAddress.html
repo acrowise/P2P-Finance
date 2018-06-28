@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link href="../../css/mui.picker.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/my/editAddress.css">
+	</head>
+	<body>
+		<!--
+        	作者：hxg
+        	时间：2018-01-12
+        	描述：新增、编辑地址
+        -->	
+		<div class="mui-content" id="vue-app">
+			<form  class="mui-input-group address">
+				<div class="mui-input-row">
+					<label for="txtName">姓名：</label>
+					<input  type="text" class="mui-input-clear inputTxt mui-input" v-model="addressFrom.ShouHuoRen"  placeholder="请填写收货人姓名" maxlength="6"/>
+				</div>
+				<div class="mui-input-row">
+					<label for="txtMobile">手机号码：</label>
+					<input  type="text" class="mui-input-clear inputTxt mui-input" v-model="addressFrom.Phone" placeholder="请输入收货人手机号码" maxlength="11"/>
+				</div>
+				<div class="mui-input-row" @tap.stop="picker">
+					<a class="mui-navigate-right">
+						<label>所在地区：</label>
+						<input  type="text" class="mui-input" v-model="addressFrom.Area" placeholder="请选择省份/城市/地区" readonly="readonly"  unselectable="on" onfocus="this.blur()"/>
+					</a>
+				</div>
+				<div class="detail">
+					<textarea  v-model="addressFrom.Address" placeholder="请填写详细地址，不少于5个字"></textarea>
+				</div>
+			</form>
+			<div class="default">
+				<span>设置为默认地址：</span>
+				<div class="mui-switch mui-switch-mini " @toggle="btnSwitch($event)" :class="{'mui-active':addressFrom.IsDefault}">
+					<div class="mui-switch-handle"></div>
+				</div>
+			</div>
+			<div class="btn_box">
+				<button type="button" class="mui-btn mui-btn-primary mui-btn-block" @tap="btnCommit">保存</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>		
+		<script type="text/javascript" src="../../js/common.js" ></script>	
+		<script type="text/javascript" src="../../js/vue2.min.js" ></script>
+		<script type="text/javascript" src="../../js/mui.picker.min.js" ></script>
+		<script type="text/javascript" src="../../js/city.data-3.js" ></script>
+		<script type="text/javascript" src="../../js/my/editAddress.js" ></script>
+	</body>
+</html>

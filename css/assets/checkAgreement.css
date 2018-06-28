@@ -1,0 +1,76 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+p {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.agreement ul {
+  padding: 10px;
+}
+.agreement ul li {
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+.agreement ul li dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.agreement ul li dl dt, .agreement ul li dl dd {
+  display: inline-block;
+  color: #2c2c2c;
+}
+.agreement ul li dl dt p:first-child {
+  color: #2c2c2c;
+  line-height: 44px;
+  font-size: 15px;
+}
+.agreement ul li dl dt p:last-child {
+  font-size: 12px;
+  color: #999;
+  line-height: 17px;
+}
+.agreement ul li dl dd a {
+  color: #1e82d2;
+  font-size: 15px;
+}
+.agreement ul li dl dd a:active {
+  opacity: .5;
+}
+
+/*# sourceMappingURL=checkAgreement.css.map */

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+/*资金明细*/
+.capitallist .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}
+.capitallist .clist {
+  margin: 0;
+  width: 100%;
+  color: #2c2c2c;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.capitallist .clist dt p {
+  color: #2c2c2c;
+  line-height: 27px;
+}
+.capitallist .clist dd {
+  margin-left: 0;
+}
+.capitallist .clist dd p {
+  color: #999;
+  font-size: 12px;
+}
+.red{color: #ff3535 !important;}
+.green{color: #00c305 !important;}
+/*# sourceMappingURL=fundDetail.css.map */

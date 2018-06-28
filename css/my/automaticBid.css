@@ -1,0 +1,181 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h2, h5 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2, h5 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+.mui-bar .mui-icon.helpico {
+  font-size: 18px;
+  margin-right: -5px;
+}
+
+.mui-switch.mui-disabled {
+  opacity: 1;
+}
+
+.bid {
+  padding-bottom: 55px;
+}
+.bid .bidhead {
+  background-color: #1e82d2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 15px 12px 15px;
+}
+.bid .bidhead p {
+  color: #fff;
+  font-size: 29px;
+  line-height: 38px;
+}
+.bid .bidhead span {
+  display: block;
+  font-size: 12px;
+  line-height: 33px;
+}
+.bid .totalswitch {
+  color: #2c2c2c;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 45px;
+  line-height: 45px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.bid .mui-table-view {
+  font-size: 15px;
+}
+.bid .mui-table-view em {
+  color: #999;
+}
+.bid .mui-table-view .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}
+.bid .addbidtbtn {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: #1e82d2;
+  text-align: center;
+}
+.bid .addbidtbtn .mui-btn-bottom {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  padding: 14px 0;
+}
+.bid .addbidtbtn .mui-btn-bottom:before {
+  border: 0;
+  border-radius: 0;
+}
+.bid .addbidtbtn .mui-btn-bottom.mui-btn:enabled:active {
+  border-radius: 0px;
+}
+
+.openalert {
+  background-color: #fff !important;
+  color: #2c2c2c;
+}
+.openalert h5 {
+  color: #2c2c2c;
+  font-size: 17px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  margin-bottom: 20px;
+  position: relative;
+}
+.openalert h5:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+.openalert h5 a {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  color: #999;
+  font-size: 20px;
+}
+.openalert .insafe {
+  padding: 16px 15px 10px;
+}
+.openalert .insafe input {
+  border: 0;
+  width: 75%;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.openalert .insafe a {
+  color: #1e82d2;
+  font-size: 15px;
+  display: inline-block;
+  line-height: 40px;
+}
+.openalert .insafe a:active {
+  opacity: .5;
+}
+.openalert .btnbox {
+  position: relative;
+  padding: 24px 15px 24px;
+}
+.openalert .btnbox:after {
+  position: absolute;
+  content: '';
+  left: 15px;
+  top: -1px;
+  height: 1px;
+  width: calc(100% - 30px);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  border-top: 1px solid #E3E3EA;
+}
+
+/*# sourceMappingURL=automaticBid.css.map */

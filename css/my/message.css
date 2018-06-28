@@ -1,0 +1,72 @@
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cbcbcb;
+}
+
+/* WebKit browsers */
+[v-cloak] {
+  display: none;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+    -webkit-transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5);
+  }
+}
+ul, p, h3 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+span {
+  line-height: 1;
+}
+
+em, i {
+  font-style: normal;
+}
+
+body, .mui-content {
+  background-color: #fff;
+}
+
+.mui-table-view .mui-table-view-cell > .mui-slider-right .mui-btn {
+  padding: 0 15px;
+}
+
+.mui-slidbtn:before {
+  border: 0;
+}
+
+.message .msgitem:first-child {
+  margin-top: 0;
+}
+.message .msgitem li h3 {
+  font-size: 15px;
+  line-height: 23px;
+  margin-bottom: 8px;
+  color: #2c2c2c;
+}
+.message .msgitem li h3 .mui-badge-danger {
+  padding: 3px;
+  background-color: #ff3535;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.message .msgitem li p {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/*# sourceMappingURL=message.css.map */

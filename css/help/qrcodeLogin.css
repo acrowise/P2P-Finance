@@ -1,0 +1,45 @@
+html,
+body,
+.mui-content {
+	width: 100%;
+	background: #FFFFFF;
+}
+
+.login {
+	width: 100%;
+	padding: 5px 15px;
+	margin-top: 35px;
+}
+
+.login_btn {
+	display: block;
+	height: 50px;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.login_img {
+	width: 56%;
+	display: block;
+	margin: 25px auto;
+}
+
+.login_tip {
+	text-align: center;
+	padding: 15px 0 20px 0;
+	font-size: 18px;
+	color: #333333;
+}
+
+.msg {
+	padding-bottom: 30px;
+	height: 20px;
+	text-align: center;
+	color: #E94245;
+	font-size: 16px;
+	visibility: hidden;
+	font-family: "微软雅黑";
+}
+.show{
+	visibility: visible;
+}

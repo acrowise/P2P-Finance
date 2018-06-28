@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>	
+		<meta charset="utf-8">
+		<title>消息</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/my/message.css">
+	</head>
+	<body>
+		<!--
+        	作者：hxg
+        	时间：2018-01-13
+        	描述：消息
+        -->
+		<div class="mui-scroll-wrapper mui-content message" id="pullrefresh">
+			<div class="mui-scroll">
+				<ul class="mui-table-view msgitem" id="vue-app"  v-show="show">
+					<li class="mui-table-view-cell " v-for="(item,index) in msgList" @tap="href(index,item.Id)">						
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-slidbtn mui-btn-red" @tap.stop="deleteMsg(index,item.Id,$event)">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							<a class="mui-navigate-right">
+								<h3><i class="mui-badge mui-badge-danger" v-if="item.State===1"></i>{{item.Title}}</h3>
+								<p>{{item.InsertTime | formatDate}}</p>
+							</a>
+						</div>													
+					</li>
+				</ul>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/mui.min.js" ></script>		
+		<script type="text/javascript" src="../../js/common.js" ></script>	
+		<script type="text/javascript" src="../../js/vue2.min.js"></script>
+		<script type="text/javascript" src="../../js/my/message.js" ></script>	
+	</body>
+</html>
